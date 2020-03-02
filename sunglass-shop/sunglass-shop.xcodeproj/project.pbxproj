@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A9D154766EB838DDD038FE /* Pods_sunglass_shopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */; };
+		4E6BA16CCB7F7F34B830F0C1 /* Pods_sunglass_shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */; };
 		8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D975240D2D3200364FDF /* AppDelegate.swift */; };
 		8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D977240D2D3200364FDF /* SceneDelegate.swift */; };
 		8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D979240D2D3200364FDF /* HomeViewController.swift */; };
@@ -15,6 +17,7 @@
 		8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */; };
 		8A65D98D240D2D3600364FDF /* sunglass_shopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D98C240D2D3600364FDF /* sunglass_shopTests.swift */; };
 		8A65D998240D2D3600364FDF /* sunglass_shopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D997240D2D3600364FDF /* sunglass_shopUITests.swift */; };
+		B7107D5520BC786FDB0817DB /* Pods_sunglass_shopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D6B7AA6D069EFC3743DA6D /* Pods-sunglass-shopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A9EDE83699A6A713125166F /* Pods-sunglass-shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shop/Pods-sunglass-shop.debug.xcconfig"; sourceTree = "<group>"; };
+		80ACE3911D5519F58AB05F3F /* Pods-sunglass-shopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A65D972240D2D3200364FDF /* sunglass-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sunglass-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65D975240D2D3200364FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A65D977240D2D3200364FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		8A65D993240D2D3600364FDF /* sunglass-shopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sunglass-shopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65D997240D2D3600364FDF /* sunglass_shopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sunglass_shopUITests.swift; sourceTree = "<group>"; };
 		8A65D999240D2D3600364FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopTests/Pods-sunglass-shopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sunglass_shopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E005DF0677A7C91155587B /* Pods-sunglass-shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shop/Pods-sunglass-shop.release.xcconfig"; sourceTree = "<group>"; };
+		F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sunglass_shopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F342396380293C1B3579BF40 /* Pods-sunglass-shopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopTests/Pods-sunglass-shopTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sunglass_shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6BA16CCB7F7F34B830F0C1 /* Pods_sunglass_shop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7107D5520BC786FDB0817DB /* Pods_sunglass_shopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A9D154766EB838DDD038FE /* Pods_sunglass_shopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34A51B9923A407170A454E3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */,
+				F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */,
+				92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A65D969240D2D3200364FDF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				8A65D98B240D2D3600364FDF /* sunglass-shopTests */,
 				8A65D996240D2D3600364FDF /* sunglass-shopUITests */,
 				8A65D973240D2D3200364FDF /* Products */,
+				CD911001D499DE261EC64575 /* Pods */,
+				34A51B9923A407170A454E3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +195,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CD911001D499DE261EC64575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A9EDE83699A6A713125166F /* Pods-sunglass-shop.debug.xcconfig */,
+				95E005DF0677A7C91155587B /* Pods-sunglass-shop.release.xcconfig */,
+				8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */,
+				F342396380293C1B3579BF40 /* Pods-sunglass-shopTests.release.xcconfig */,
+				80ACE3911D5519F58AB05F3F /* Pods-sunglass-shopUITests.debug.xcconfig */,
+				16D6B7AA6D069EFC3743DA6D /* Pods-sunglass-shopUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A65D99C240D2D3600364FDF /* Build configuration list for PBXNativeTarget "sunglass-shop" */;
 			buildPhases = (
+				8A486F48A32F714351168343 /* [CP] Check Pods Manifest.lock */,
 				8A65D96E240D2D3200364FDF /* Sources */,
 				8A65D96F240D2D3200364FDF /* Frameworks */,
 				8A65D970240D2D3200364FDF /* Resources */,
@@ -192,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A65D99F240D2D3600364FDF /* Build configuration list for PBXNativeTarget "sunglass-shopTests" */;
 			buildPhases = (
+				3FFF0BBD9807E6E409DDAD48 /* [CP] Check Pods Manifest.lock */,
 				8A65D984240D2D3600364FDF /* Sources */,
 				8A65D985240D2D3600364FDF /* Frameworks */,
 				8A65D986240D2D3600364FDF /* Resources */,
@@ -210,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A65D9A2240D2D3600364FDF /* Build configuration list for PBXNativeTarget "sunglass-shopUITests" */;
 			buildPhases = (
+				E540D88A9AD85170635AF450 /* [CP] Check Pods Manifest.lock */,
 				8A65D98F240D2D3600364FDF /* Sources */,
 				8A65D990240D2D3600364FDF /* Frameworks */,
 				8A65D991240D2D3600364FDF /* Resources */,
@@ -293,6 +336,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FFF0BBD9807E6E409DDAD48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sunglass-shopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A486F48A32F714351168343 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sunglass-shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E540D88A9AD85170635AF450 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sunglass-shopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A65D96E240D2D3200364FDF /* Sources */ = {
@@ -472,6 +572,7 @@
 		};
 		8A65D99D240D2D3600364FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A9EDE83699A6A713125166F /* Pods-sunglass-shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +592,7 @@
 		};
 		8A65D99E240D2D3600364FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E005DF0677A7C91155587B /* Pods-sunglass-shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +612,7 @@
 		};
 		8A65D9A0240D2D3600364FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +635,7 @@
 		};
 		8A65D9A1240D2D3600364FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F342396380293C1B3579BF40 /* Pods-sunglass-shopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +658,7 @@
 		};
 		8A65D9A3240D2D3600364FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80ACE3911D5519F58AB05F3F /* Pods-sunglass-shopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -574,6 +679,7 @@
 		};
 		8A65D9A4240D2D3600364FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D6B7AA6D069EFC3743DA6D /* Pods-sunglass-shopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
