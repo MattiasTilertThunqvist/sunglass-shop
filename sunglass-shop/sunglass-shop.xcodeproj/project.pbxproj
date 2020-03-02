@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D975240D2D3200364FDF /* AppDelegate.swift */; };
 		8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D977240D2D3200364FDF /* SceneDelegate.swift */; };
-		8A65D97A240D2D3200364FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D979240D2D3200364FDF /* ViewController.swift */; };
-		8A65D97D240D2D3200364FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D97B240D2D3200364FDF /* Main.storyboard */; };
+		8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D979240D2D3200364FDF /* HomeViewController.swift */; };
+		8A65D97D240D2D3200364FDF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D97B240D2D3200364FDF /* Home.storyboard */; };
 		8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D97E240D2D3600364FDF /* Assets.xcassets */; };
 		8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */; };
 		8A65D98D240D2D3600364FDF /* sunglass_shopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D98C240D2D3600364FDF /* sunglass_shopTests.swift */; };
@@ -38,8 +38,8 @@
 		8A65D972240D2D3200364FDF /* sunglass-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sunglass-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65D975240D2D3200364FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A65D977240D2D3200364FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A65D979240D2D3200364FDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A65D97C240D2D3200364FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A65D979240D2D3200364FDF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8A65D97C240D2D3200364FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		8A65D97E240D2D3600364FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A65D981240D2D3600364FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A65D983240D2D3600364FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 			children = (
 				8A65D975240D2D3200364FDF /* AppDelegate.swift */,
 				8A65D977240D2D3200364FDF /* SceneDelegate.swift */,
-				8A65D979240D2D3200364FDF /* ViewController.swift */,
-				8A65D97B240D2D3200364FDF /* Main.storyboard */,
+				8A65D979240D2D3200364FDF /* HomeViewController.swift */,
+				8A65D97B240D2D3200364FDF /* Home.storyboard */,
 				8A65D97E240D2D3600364FDF /* Assets.xcassets */,
 				8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */,
 				8A65D983240D2D3600364FDF /* Info.plist */,
@@ -234,7 +234,7 @@
 			files = (
 				8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */,
 				8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */,
-				8A65D97D240D2D3200364FDF /* Main.storyboard in Resources */,
+				8A65D97D240D2D3200364FDF /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A65D97A240D2D3200364FDF /* ViewController.swift in Sources */,
+				8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */,
 				8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */,
 				8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */,
 			);
@@ -297,12 +297,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8A65D97B240D2D3200364FDF /* Main.storyboard */ = {
+		8A65D97B240D2D3200364FDF /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A65D97C240D2D3200364FDF /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */ = {
@@ -437,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
 				INFOPLIST_FILE = "sunglass-shop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
 				INFOPLIST_FILE = "sunglass-shop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
