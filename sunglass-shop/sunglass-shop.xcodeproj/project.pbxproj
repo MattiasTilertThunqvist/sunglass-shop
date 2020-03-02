@@ -99,13 +99,11 @@
 		8A65D974240D2D3200364FDF /* sunglass-shop */ = {
 			isa = PBXGroup;
 			children = (
-				8A65D975240D2D3200364FDF /* AppDelegate.swift */,
-				8A65D977240D2D3200364FDF /* SceneDelegate.swift */,
-				8A65D979240D2D3200364FDF /* HomeViewController.swift */,
-				8A65D97B240D2D3200364FDF /* Home.storyboard */,
-				8A65D97E240D2D3600364FDF /* Assets.xcassets */,
-				8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */,
-				8A65D983240D2D3600364FDF /* Info.plist */,
+				8A65D9A5240D335600364FDF /* Home */,
+				8A65D9A6240D336F00364FDF /* Models */,
+				8A65D9A7240D337C00364FDF /* Network Manager */,
+				8A65D9A8240D338C00364FDF /* Resources */,
+				8A65D9AA240D33C100364FDF /* Supporting Files */,
 			);
 			path = "sunglass-shop";
 			sourceTree = "<group>";
@@ -126,6 +124,48 @@
 				8A65D999240D2D3600364FDF /* Info.plist */,
 			);
 			path = "sunglass-shopUITests";
+			sourceTree = "<group>";
+		};
+		8A65D9A5240D335600364FDF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D979240D2D3200364FDF /* HomeViewController.swift */,
+				8A65D97B240D2D3200364FDF /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8A65D9A6240D336F00364FDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A65D9A7240D337C00364FDF /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		8A65D9A8240D338C00364FDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D97E240D2D3600364FDF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A65D9AA240D33C100364FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D975240D2D3200364FDF /* AppDelegate.swift */,
+				8A65D977240D2D3200364FDF /* SceneDelegate.swift */,
+				8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */,
+				8A65D983240D2D3600364FDF /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "sunglass-shop/Info.plist";
+				INFOPLIST_FILE = "sunglass-shop/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "sunglass-shop/Info.plist";
+				INFOPLIST_FILE = "sunglass-shop/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
