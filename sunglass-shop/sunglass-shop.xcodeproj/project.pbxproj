@@ -24,6 +24,12 @@
 		8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */; };
 		8A65D9B8240D75C200364FDF /* UIColor + sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B7240D75C200364FDF /* UIColor + sunglass.swift */; };
 		8A65D9BA240D765D00364FDF /* UIFont + sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */; };
+		8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC52387240E9584008222D7 /* ProductDetails.storyboard */; };
+		8AC5238A240E95D0008222D7 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */; };
+		8AC5238C240E9614008222D7 /* StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238B240E9614008222D7 /* StoryboardInstance.swift */; };
+		8AC5238E240EB19A008222D7 /* LargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */; };
+		8AC52390240EB45C008222D7 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238F240EB45C008222D7 /* BorderView.swift */; };
+		8AC52392240EBA0D008222D7 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC52391240EBA0D008222D7 /* SmallButton.swift */; };
 		B7107D5520BC786FDB0817DB /* Pods_sunglass_shopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +75,12 @@
 		8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
 		8A65D9B7240D75C200364FDF /* UIColor + sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + sunglass.swift"; sourceTree = "<group>"; };
 		8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + sunglass.swift"; sourceTree = "<group>"; };
+		8AC52387240E9584008222D7 /* ProductDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetails.storyboard; sourceTree = "<group>"; };
+		8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		8AC5238B240E9614008222D7 /* StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstance.swift; sourceTree = "<group>"; };
+		8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextLabel.swift; sourceTree = "<group>"; };
+		8AC5238F240EB45C008222D7 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		8AC52391240EBA0D008222D7 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
 		8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopTests/Pods-sunglass-shopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sunglass_shopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E005DF0677A7C91155587B /* Pods-sunglass-shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shop/Pods-sunglass-shop.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				8A65D9A5240D335600364FDF /* Home */,
+				8A65D9BB240D801D00364FDF /* Product Details */,
 				8A65D9A6240D336F00364FDF /* Models */,
 				8A65D9A7240D337C00364FDF /* Network Manager */,
 				8A65D9A8240D338C00364FDF /* Resources */,
@@ -200,6 +213,7 @@
 				8A65D9B6240D758300364FDF /* Extensions */,
 				8A65D9B3240D6E8600364FDF /* UI Components */,
 				8A65D97E240D2D3600364FDF /* Assets.xcassets */,
+				8AC5238B240E9614008222D7 /* StoryboardInstance.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -219,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */,
+				8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */,
+				8AC5238F240EB45C008222D7 /* BorderView.swift */,
+				8AC52391240EBA0D008222D7 /* SmallButton.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -230,6 +247,15 @@
 				8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A65D9BB240D801D00364FDF /* Product Details */ = {
+			isa = PBXGroup;
+			children = (
+				8AC52387240E9584008222D7 /* ProductDetails.storyboard */,
+				8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */,
+			);
+			path = "Product Details";
 			sourceTree = "<group>";
 		};
 		CD911001D499DE261EC64575 /* Pods */ = {
@@ -352,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */,
 				8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */,
 				8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */,
 				8A65D97D240D2D3200364FDF /* Home.storyboard in Resources */,
@@ -439,12 +466,17 @@
 			files = (
 				8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */,
 				8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */,
+				8AC52392240EBA0D008222D7 /* SmallButton.swift in Sources */,
+				8AC5238C240E9614008222D7 /* StoryboardInstance.swift in Sources */,
 				8A65D9BA240D765D00364FDF /* UIFont + sunglass.swift in Sources */,
+				8AC5238A240E95D0008222D7 /* ProductDetailsViewController.swift in Sources */,
 				8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */,
 				8A65D9B8240D75C200364FDF /* UIColor + sunglass.swift in Sources */,
+				8AC5238E240EB19A008222D7 /* LargeTextLabel.swift in Sources */,
 				8A65D9B0240D5E3500364FDF /* ProductItem.swift in Sources */,
 				8A65D9B2240D5EC300364FDF /* ProductList.swift in Sources */,
 				8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */,
+				8AC52390240EB45C008222D7 /* BorderView.swift in Sources */,
 				8A65D9AD240D526E00364FDF /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

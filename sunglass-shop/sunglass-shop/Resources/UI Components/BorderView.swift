@@ -1,14 +1,18 @@
 //
-//  MediumTextLabel.swift
+//  BorderView.swift
 //  sunglass-shop
 //
-//  Created by Mattias Tilert Thunqvist on 2020-03-02.
+//  Created by Mattias Tilert Thunqvist on 2020-03-03.
 //  Copyright © 2020 Mattias Tilert Thunqvist. All rights reserved.
 //
 
 import UIKit
 
-class MediumTextLabel: UILabel {
+class BorderView: UIView {
+    
+    // MARK: Properties
+    
+    let viewHeight: CGFloat = 1
     
     // MARK: Init
     
@@ -30,8 +34,6 @@ class MediumTextLabel: UILabel {
     // MARK: View
     
     func setup() {
-        numberOfLines = 500 //Allow unlimited
-        textColor = .sunglassDarkGrey
-        font = .sunglassRegularFont(.medium)
+        backgroundColor = .sunglassLightGray
     }
 }

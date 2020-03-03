@@ -12,14 +12,15 @@ class HomeViewController: UIViewController {
     
     // MARK: Properties
     
-    private let productList = ProductList(items: [ProductItem(title: "Rayban", price: 59),
-                                            ProductItem(title: "Persol", price: 159),
-                                            ProductItem(title: "Gucci", price: 59),
-                                            ProductItem(title: "Prada", price: 59),
-                                            ProductItem(title: "Lacoste", price: 59),
-                                            ProductItem(title: "Brallor", price: 59)])
-    private let cellIdentifier = HomeCollectionViewCell.cellIdentifier
+    private let productList = ProductList(items: [
+        ProductItem(id: "Ett", title: "Rayban", price: 59, description: "Text!", imageUrlString: "url"),
+        ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url"),
+        ProductItem(id: "Tre", title: "Gucci", price: 69, description: "Text", imageUrlString: "Text"),
+        ProductItem(id: "Fyra", title: "Prada", price: 69, description: "Text", imageUrlString: "Text"),
+        ProductItem(id: "Fem", title: "Lacoste", price: 69, description: "Text", imageUrlString: "Text")
+    ])
     
+    private let cellIdentifier = HomeCollectionViewCell.cellIdentifier
     
     // MARK: IBOutlets
     
@@ -50,6 +51,13 @@ extension HomeViewController {
     private func registerCell() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProductItem = productList.items[indexPath.row]
+        let viewController = StoryboardInstance.productDetailsViewController()
+        viewController.productItem = selectedProductItem
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

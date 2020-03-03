@@ -1,14 +1,14 @@
 //
-//  MediumTextLabel.swift
+//  LargeTextLabel.swift
 //  sunglass-shop
 //
-//  Created by Mattias Tilert Thunqvist on 2020-03-02.
+//  Created by Mattias Tilert Thunqvist on 2020-03-03.
 //  Copyright © 2020 Mattias Tilert Thunqvist. All rights reserved.
 //
 
 import UIKit
 
-class MediumTextLabel: UILabel {
+class LargeTextLabel: UILabel {
     
     // MARK: Init
     
@@ -31,7 +31,7 @@ class MediumTextLabel: UILabel {
     
     func setup() {
         numberOfLines = 500 //Allow unlimited
-        textColor = .sunglassDarkGrey
-        font = .sunglassRegularFont(.medium)
+        textColor = .sunglassBlack
+        font = .sunglassRegularFont(.large)
     }
 }

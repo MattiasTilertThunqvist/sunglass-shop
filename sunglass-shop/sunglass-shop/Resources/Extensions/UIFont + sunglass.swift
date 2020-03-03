@@ -11,9 +11,9 @@ import UIKit
 extension UIFont {
     
     enum textSize: CGFloat {
-        case small = 16
+        case small = 12
         case medium = 14
-        case large = 12
+        case large = 16
     }
     
     class func sunglassRegularFont(_ textSize: textSize) -> UIFont {

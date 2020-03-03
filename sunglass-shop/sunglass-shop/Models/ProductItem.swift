@@ -9,8 +9,9 @@
 import Foundation
 
 struct ProductItem {
+    let id: String
     let title: String
     let price: Double
-    
-    //ID, images, description
+    let description: String
+    let imageUrlString: String
 }
