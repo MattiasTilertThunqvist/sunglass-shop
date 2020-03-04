@@ -58,10 +58,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-Mf-lZi" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                         <state key="normal" title="Find in store"/>
+                                                        <connections>
+                                                            <action selector="findInStoreButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-21-VnX" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="30"/>
                                                         <state key="normal" title="Try it on"/>
+                                                        <connections>
+                                                            <action selector="tryItOnButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -132,6 +138,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-Iq-Xlx" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
                                 <rect key="frame" x="16" y="808" width="382" height="30"/>
                                 <state key="normal" title="Add to cart"/>
+                                <connections>
+                                    <action selector="addToCartButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="W9p-zN-JeI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

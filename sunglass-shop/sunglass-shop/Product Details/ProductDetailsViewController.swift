@@ -22,6 +22,17 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: IBActions
     
+    @IBAction func findInStoreButtonPressed(_ sender: SmallButton) {
+        handleFindInStoreButtonPress()
+    }
+    
+    @IBAction func tryItOnButtonPressed(_ sender: SmallButton) {
+        handleTryItOnButtonPress()
+    }
+    
+    @IBAction func addToCartButtonPressed(_ sender: LargeButton) {
+        handleAddToCartButtonPress()
+    }
     
     // MARK: Lifecycle
 
@@ -32,8 +43,6 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func setup() {
-        
-        
         findInStoreButton.colorScheme = .grayOnTransparent
         findInStoreButton.setTitle("Find in store", for: .normal)
         
@@ -42,5 +51,22 @@ class ProductDetailsViewController: UIViewController {
         
         addToCartButton.colorScheme = .whiteOnGray
         addToCartButton.setTitle("Add to cart", for: .normal)
+    }
+    
+    // MARK: Handle events
+    
+    private func handleFindInStoreButtonPress() {
+        let viewController = StoryboardInstance.storesOnMapViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleTryItOnButtonPress() {
+        let viewController = StoryboardInstance.tryProductViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleAddToCartButtonPress() {
+        let viewController = StoryboardInstance.addToCartViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

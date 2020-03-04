@@ -26,6 +26,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: IBAction
+    
+    @IBAction func storesButtonPressed(_ sender: UIBarButtonItem) {
+        handleStoresButtonPress()
+    }
+    
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -36,6 +43,13 @@ class HomeViewController: UIViewController {
 
     private func setup() {
         
+    }
+    
+    // MARK: Handlers
+    
+    private func handleStoresButtonPress() {
+        let viewController = StoryboardInstance.storesOnMapViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
