@@ -18,7 +18,7 @@ class ProductDetailsViewController: UIViewController {
     
     @IBOutlet weak var findInStoreButton: SmallButton!
     @IBOutlet weak var tryItOnButton: SmallButton!
-    
+    @IBOutlet weak var addToCartButton: LargeButton!
     
     // MARK: IBActions
     
@@ -39,5 +39,8 @@ class ProductDetailsViewController: UIViewController {
         
         tryItOnButton.colorScheme = .whiteOnGray
         tryItOnButton.setTitle("Try it on", for: .normal)
+        
+        addToCartButton.colorScheme = .whiteOnGray
+        addToCartButton.setTitle("Add to cart", for: .normal)
     }
 }

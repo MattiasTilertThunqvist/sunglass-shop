@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-q7-lol">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3Z-ri-KsI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="467"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="974"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray-Ban_sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="M4h-Sz-jgm">
                                                 <rect key="frame" x="16" y="24" width="382" height="200"/>
@@ -78,8 +78,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amt-o3-yAG" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="430.5" width="382" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amt-o3-yAG" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="430.5" width="382" height="527.5"/>
+                                                <mutableString key="text">High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.High fashion and polar lenses unite. This sophisticated style features sleek metallic accents for fashionable elegance. polarised lenses provided richer color and clarity.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -128,17 +129,25 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZBG-z9-vCe"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="q0K-eN-taJ"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-Iq-Xlx" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="808" width="382" height="30"/>
+                                <state key="normal" title="Add to cart"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="top" secondItem="ZPz-et-kub" secondAttribute="top" id="Adj-eh-1on"/>
-                            <constraint firstItem="CdF-q7-lol" firstAttribute="bottom" secondItem="ZPz-et-kub" secondAttribute="bottom" id="PTU-dc-g0r"/>
+                            <constraint firstItem="ZPz-et-kub" firstAttribute="trailing" secondItem="fJM-Iq-Xlx" secondAttribute="trailing" constant="16" id="H7r-4x-1Ao"/>
+                            <constraint firstItem="fJM-Iq-Xlx" firstAttribute="top" secondItem="CdF-q7-lol" secondAttribute="bottom" constant="16" id="JrY-dW-Wel"/>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="trailing" secondItem="ZPz-et-kub" secondAttribute="trailing" id="dGW-uw-bRY"/>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="leading" secondItem="ZPz-et-kub" secondAttribute="leading" id="llZ-Lv-tzv"/>
+                            <constraint firstItem="fJM-Iq-Xlx" firstAttribute="leading" secondItem="ZPz-et-kub" secondAttribute="leading" constant="16" id="wQh-xp-jGp"/>
+                            <constraint firstItem="ZPz-et-kub" firstAttribute="bottom" secondItem="fJM-Iq-Xlx" secondAttribute="bottom" constant="24" id="yXg-U4-3tB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZPz-et-kub"/>
                     </view>
                     <connections>
+                        <outlet property="addToCartButton" destination="fJM-Iq-Xlx" id="WVx-PD-c8w"/>
                         <outlet property="findInStoreButton" destination="vOG-Mf-lZi" id="k3P-im-1pV"/>
                         <outlet property="tryItOnButton" destination="wvZ-21-VnX" id="fzo-jN-btS"/>
                     </connections>
