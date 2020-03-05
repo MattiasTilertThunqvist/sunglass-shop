@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="pT6-XL-9XO">
-                        <barButtonItem key="rightBarButtonItem" image="map.fill" catalog="system" id="nh7-QF-wgb">
+                        <barButtonItem key="rightBarButtonItem" image="pin" id="nh7-QF-wgb">
                             <connections>
                                 <action selector="storesButtonPressed:" destination="BYZ-38-t0r" id="0gW-l1-oSW"/>
                             </connections>
@@ -71,6 +71,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="map.fill" catalog="system" width="64" height="56"/>
+        <image name="pin" width="24" height="24"/>
     </resources>
 </document>

@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ray-Ban_sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-C6-pfO">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-C6-pfO">
                         <rect key="frame" x="16" y="16" width="168" height="111"/>
                     </imageView>
                 </subviews>
@@ -55,6 +55,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Ray-Ban_sunglasses" width="320" height="186.5"/>
+        <image name="Ray-Ban-sunglasses" width="320" height="186.5"/>
     </resources>
 </document>

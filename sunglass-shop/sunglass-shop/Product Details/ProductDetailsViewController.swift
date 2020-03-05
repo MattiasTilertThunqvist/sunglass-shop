@@ -43,17 +43,24 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func setup() {
-        findInStoreButton.colorScheme = .grayOnTransparent
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
+        
+        findInStoreButton.colorScheme = .blackOnTransparent
         findInStoreButton.setTitle("Find in store", for: .normal)
         
-        tryItOnButton.colorScheme = .whiteOnGray
+        tryItOnButton.colorScheme = .whiteOnBlack
         tryItOnButton.setTitle("Try it on", for: .normal)
         
-        addToCartButton.colorScheme = .whiteOnGray
+        addToCartButton.colorScheme = .whiteOnBlack
         addToCartButton.setTitle("Add to cart", for: .normal)
     }
     
     // MARK: Handle events
+    
+    @objc private func handleGoToCartButtonPress() {
+        let viewController = StoryboardInstance.cartViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     private func handleFindInStoreButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
@@ -66,7 +73,6 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func handleAddToCartButtonPress() {
-        let viewController = StoryboardInstance.addToCartViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }

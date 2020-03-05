@@ -16,20 +16,20 @@ class LargeButton: UIButton {
     let buttonHeight: CGFloat = 36
 
     enum ColorScheme {
-        case grayOnTransparent
-        case whiteOnGray
+        case blackOnTransparent
+        case whiteOnBlack
     }
 
-    var colorScheme = ColorScheme.whiteOnGray {
+    var colorScheme = ColorScheme.whiteOnBlack {
         didSet {
             switch colorScheme {
-            case .grayOnTransparent:
+            case .blackOnTransparent:
                 backgroundColor = .clear
-                setTitleColor(.sunglassDarkGrey, for: .normal)
+                setTitleColor(.sunglassBlack, for: .normal)
                 layer.borderWidth = 1
-                layer.borderColor = UIColor.sunglassDarkGrey.cgColor
-            case .whiteOnGray:
-                backgroundColor = .sunglassDarkGrey
+                layer.borderColor = UIColor.sunglassBlack.cgColor
+            case .whiteOnBlack:
+                backgroundColor = .sunglassBlack
                 setTitleColor(.white, for: .normal)
             }
         }

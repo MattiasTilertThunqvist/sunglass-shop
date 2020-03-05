@@ -42,7 +42,8 @@ class HomeViewController: UIViewController {
     }
 
     private func setup() {
-        
+        // TEST
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Hej", style: .plain, target: nil, action: nil)
     }
     
     // MARK: Handlers
