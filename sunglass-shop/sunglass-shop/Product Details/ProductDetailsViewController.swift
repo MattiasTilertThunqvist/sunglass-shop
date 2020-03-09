@@ -59,6 +59,7 @@ class ProductDetailsViewController: UIViewController {
     
     @objc private func handleGoToCartButtonPress() {
         let viewController = StoryboardInstance.cartViewController()
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
     

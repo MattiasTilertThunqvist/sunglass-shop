@@ -36,13 +36,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pT6-XL-9XO">
-                        <barButtonItem key="rightBarButtonItem" image="pin" id="nh7-QF-wgb">
-                            <connections>
-                                <action selector="storesButtonPressed:" destination="BYZ-38-t0r" id="0gW-l1-oSW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pT6-XL-9XO"/>
                     <connections>
                         <outlet property="collectionView" destination="7cd-hI-V6h" id="7IH-kP-YuL"/>
                     </connections>
@@ -70,7 +64,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="pin" width="24" height="24"/>
-    </resources>
 </document>

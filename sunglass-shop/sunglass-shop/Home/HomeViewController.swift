@@ -26,13 +26,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // MARK: IBAction
-    
-    @IBAction func storesButtonPressed(_ sender: UIBarButtonItem) {
-        handleStoresButtonPress()
-    }
-    
-    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -42,14 +35,24 @@ class HomeViewController: UIViewController {
     }
 
     private func setup() {
-        // TEST
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Hej", style: .plain, target: nil, action: nil)
+        navigationItem.title = "Sunglasses"
+        
+        let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
+        navigationItem.leftBarButtonItem = storesButton
+        
+        let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleCartButtonPress))
+        navigationItem.rightBarButtonItem = cartButton
     }
     
     // MARK: Handlers
     
-    private func handleStoresButtonPress() {
+    @objc private func handleStoresButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func handleCartButtonPress() {
+        let viewController = StoryboardInstance.cartViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -57,6 +60,7 @@ class HomeViewController: UIViewController {
 // MARK: UICollectionView
 
 extension HomeViewController {
+    
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -76,14 +80,11 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
-
+extension HomeViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productList.items.count
     }
-}
-
-extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let productItem = productList.items[indexPath.row]

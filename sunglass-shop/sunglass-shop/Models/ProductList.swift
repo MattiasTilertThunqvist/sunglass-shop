@@ -10,5 +10,4 @@ import Foundation
 
 struct ProductList {
     var items: [ProductItem]
-    
 }

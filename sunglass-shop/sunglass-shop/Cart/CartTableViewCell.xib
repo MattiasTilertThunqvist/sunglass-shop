@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CartTableViewCell" customModule="sunglass_shop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-M2-JIH">
+                        <rect key="frame" x="16" y="8" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="EaF-aP-nXa"/>
+                            <constraint firstAttribute="width" constant="80" id="YdL-B0-EVl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz2-72-Eta" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="112" y="8" width="192" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-xU-9Za">
+                        <rect key="frame" x="112" y="33" width="192" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-cg-Hg3" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="112" y="58" width="176" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blu-mi-vOr" customClass="BorderView" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="16" y="87" width="288" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vq4-9o-Cf2"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-45-dAz">
+                        <rect key="frame" x="16" y="91.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="2yA-FD-daw"/>
+                        </constraints>
+                        <state key="normal" title="-"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 for £69" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-kd-Eom" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="62" y="96" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ku-Ts-nlU">
+                        <rect key="frame" x="274" y="91.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="2z4-Eg-0uc"/>
+                        </constraints>
+                        <state key="normal" title="+"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="tka-xU-9Za" secondAttribute="trailing" constant="16" id="8B1-Q4-bFU"/>
+                    <constraint firstItem="7OC-kd-Eom" firstAttribute="top" secondItem="blu-mi-vOr" secondAttribute="bottom" constant="8" id="ATq-CE-SQz"/>
+                    <constraint firstItem="blu-mi-vOr" firstAttribute="top" secondItem="fzY-cg-Hg3" secondAttribute="bottom" constant="8" id="DYI-Ae-XMd"/>
+                    <constraint firstItem="5ku-Ts-nlU" firstAttribute="centerY" secondItem="7OC-kd-Eom" secondAttribute="centerY" id="Ou4-j7-dLD"/>
+                    <constraint firstItem="5ku-Ts-nlU" firstAttribute="leading" secondItem="7OC-kd-Eom" secondAttribute="trailing" constant="16" id="S2t-U7-l8c"/>
+                    <constraint firstItem="oz2-72-Eta" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="U6b-lL-ysU"/>
+                    <constraint firstItem="YHi-45-dAz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UR4-FL-EKF"/>
+                    <constraint firstItem="fzY-cg-Hg3" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="VeT-u3-Zri"/>
+                    <constraint firstItem="Ug0-M2-JIH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="abh-df-Qfg"/>
+                    <constraint firstItem="YHi-45-dAz" firstAttribute="centerY" secondItem="7OC-kd-Eom" secondAttribute="centerY" id="c4n-mC-J6U"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fzY-cg-Hg3" secondAttribute="trailing" constant="16" id="cEe-KT-Qtk"/>
+                    <constraint firstItem="7OC-kd-Eom" firstAttribute="leading" secondItem="YHi-45-dAz" secondAttribute="trailing" constant="16" id="f2E-RI-JYb"/>
+                    <constraint firstItem="fzY-cg-Hg3" firstAttribute="top" secondItem="tka-xU-9Za" secondAttribute="bottom" constant="4" id="f5n-Bu-rd2"/>
+                    <constraint firstAttribute="trailing" secondItem="blu-mi-vOr" secondAttribute="trailing" constant="16" id="gGb-8h-HKd"/>
+                    <constraint firstItem="blu-mi-vOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="i1z-pd-fv3"/>
+                    <constraint firstAttribute="trailing" secondItem="oz2-72-Eta" secondAttribute="trailing" constant="16" id="lfW-He-yY6"/>
+                    <constraint firstItem="tka-xU-9Za" firstAttribute="top" secondItem="oz2-72-Eta" secondAttribute="bottom" constant="4" id="njK-5p-Ub9"/>
+                    <constraint firstAttribute="trailing" secondItem="5ku-Ts-nlU" secondAttribute="trailing" constant="16" id="oVC-MG-ovi"/>
+                    <constraint firstItem="Ug0-M2-JIH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tm2-ed-sE0"/>
+                    <constraint firstItem="oz2-72-Eta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vA4-Dh-YdR"/>
+                    <constraint firstItem="tka-xU-9Za" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="wE5-no-HlK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Ray-Ban-sunglasses" width="320" height="186.5"/>
+    </resources>
+</document>

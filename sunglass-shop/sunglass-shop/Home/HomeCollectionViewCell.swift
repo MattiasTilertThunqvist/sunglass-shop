@@ -16,7 +16,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     // MARK: IBOulets
     
-    
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var titleLabel: MediumTextLabel!
     @IBOutlet weak private var priceLabel: MediumTextLabel!
