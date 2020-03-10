@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,87 +18,114 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-M2-JIH">
-                        <rect key="frame" x="16" y="8" width="80" height="60"/>
+                        <rect key="frame" x="16" y="30" width="80" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="EaF-aP-nXa"/>
                             <constraint firstAttribute="width" constant="80" id="YdL-B0-EVl"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz2-72-Eta" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="112" y="8" width="192" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz2-72-Eta" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="112" y="16" width="157" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-xU-9Za">
-                        <rect key="frame" x="112" y="33" width="192" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-cg-Hg3" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="112" y="58" width="176" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blu-mi-vOr" customClass="BorderView" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="16" y="87" width="288" height="1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-ux-xJr">
+                        <rect key="frame" x="285" y="19.5" width="15" height="20.5"/>
+                        <color key="tintColor" name="Sunglass Dark Grey"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="vq4-9o-Cf2"/>
+                            <constraint firstAttribute="height" constant="20" id="7Fi-Hz-5fV"/>
+                            <constraint firstAttribute="width" constant="15" id="NZT-69-Pct"/>
                         </constraints>
-                    </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-45-dAz">
-                        <rect key="frame" x="16" y="91.5" width="30" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-xU-9Za" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="112" y="49" width="192" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="2yA-FD-daw"/>
+                            <constraint firstAttribute="height" constant="20" id="L9D-vv-B8F"/>
                         </constraints>
-                        <state key="normal" title="-"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 for £69" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-kd-Eom" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="62" y="96" width="196" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ku-Ts-nlU">
-                        <rect key="frame" x="274" y="91.5" width="30" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 x 59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-cg-Hg3" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="112" y="73" width="116" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="2z4-Eg-0uc"/>
+                            <constraint firstAttribute="height" constant="20" id="Vb1-c2-2Yk"/>
                         </constraints>
-                        <state key="normal" title="+"/>
-                    </button>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwg-lt-3cC">
+                        <rect key="frame" x="244" y="73" width="60" height="20"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXT-6Y-4cP" customClass="MiniButton" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qVN-9H-Nxh"/>
+                                    <constraint firstAttribute="width" constant="20" id="woj-2B-yYN"/>
+                                </constraints>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" name="Sunglass Dark Grey"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cME-hq-QbF" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3Fw-AH-Omu"/>
+                                    <constraint firstAttribute="width" constant="20" id="bBv-XV-R85"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Sunglass Dark Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yow-TW-eDG" customClass="MiniButton" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="40" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="FP3-Ms-jYY"/>
+                                    <constraint firstAttribute="height" constant="20" id="ViJ-kF-AOF"/>
+                                </constraints>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" name="Sunglass Dark Grey"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="tka-xU-9Za" secondAttribute="trailing" constant="16" id="8B1-Q4-bFU"/>
-                    <constraint firstItem="7OC-kd-Eom" firstAttribute="top" secondItem="blu-mi-vOr" secondAttribute="bottom" constant="8" id="ATq-CE-SQz"/>
-                    <constraint firstItem="blu-mi-vOr" firstAttribute="top" secondItem="fzY-cg-Hg3" secondAttribute="bottom" constant="8" id="DYI-Ae-XMd"/>
-                    <constraint firstItem="5ku-Ts-nlU" firstAttribute="centerY" secondItem="7OC-kd-Eom" secondAttribute="centerY" id="Ou4-j7-dLD"/>
-                    <constraint firstItem="5ku-Ts-nlU" firstAttribute="leading" secondItem="7OC-kd-Eom" secondAttribute="trailing" constant="16" id="S2t-U7-l8c"/>
+                    <constraint firstAttribute="trailing" secondItem="jzT-ux-xJr" secondAttribute="trailing" constant="20" id="Nt3-mf-YWu"/>
                     <constraint firstItem="oz2-72-Eta" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="U6b-lL-ysU"/>
-                    <constraint firstItem="YHi-45-dAz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UR4-FL-EKF"/>
+                    <constraint firstItem="xwg-lt-3cC" firstAttribute="centerY" secondItem="fzY-cg-Hg3" secondAttribute="centerY" id="Ux4-XR-WK1"/>
                     <constraint firstItem="fzY-cg-Hg3" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="VeT-u3-Zri"/>
-                    <constraint firstItem="Ug0-M2-JIH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="abh-df-Qfg"/>
-                    <constraint firstItem="YHi-45-dAz" firstAttribute="centerY" secondItem="7OC-kd-Eom" secondAttribute="centerY" id="c4n-mC-J6U"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="fzY-cg-Hg3" secondAttribute="trailing" constant="16" id="cEe-KT-Qtk"/>
-                    <constraint firstItem="7OC-kd-Eom" firstAttribute="leading" secondItem="YHi-45-dAz" secondAttribute="trailing" constant="16" id="f2E-RI-JYb"/>
+                    <constraint firstItem="jzT-ux-xJr" firstAttribute="leading" secondItem="oz2-72-Eta" secondAttribute="trailing" constant="16" id="dWZ-vp-zpI"/>
                     <constraint firstItem="fzY-cg-Hg3" firstAttribute="top" secondItem="tka-xU-9Za" secondAttribute="bottom" constant="4" id="f5n-Bu-rd2"/>
-                    <constraint firstAttribute="trailing" secondItem="blu-mi-vOr" secondAttribute="trailing" constant="16" id="gGb-8h-HKd"/>
-                    <constraint firstItem="blu-mi-vOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="i1z-pd-fv3"/>
-                    <constraint firstAttribute="trailing" secondItem="oz2-72-Eta" secondAttribute="trailing" constant="16" id="lfW-He-yY6"/>
+                    <constraint firstItem="xwg-lt-3cC" firstAttribute="leading" secondItem="fzY-cg-Hg3" secondAttribute="trailing" constant="16" id="mgI-N3-wCe"/>
+                    <constraint firstAttribute="trailing" secondItem="xwg-lt-3cC" secondAttribute="trailing" constant="16" id="nYA-b7-XAP"/>
                     <constraint firstItem="tka-xU-9Za" firstAttribute="top" secondItem="oz2-72-Eta" secondAttribute="bottom" constant="4" id="njK-5p-Ub9"/>
-                    <constraint firstAttribute="trailing" secondItem="5ku-Ts-nlU" secondAttribute="trailing" constant="16" id="oVC-MG-ovi"/>
+                    <constraint firstItem="jzT-ux-xJr" firstAttribute="centerY" secondItem="oz2-72-Eta" secondAttribute="centerY" id="nw0-EJ-daV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fzY-cg-Hg3" secondAttribute="bottom" constant="16" id="oHl-OW-3fb"/>
+                    <constraint firstItem="Ug0-M2-JIH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qjy-8h-J60"/>
                     <constraint firstItem="Ug0-M2-JIH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tm2-ed-sE0"/>
-                    <constraint firstItem="oz2-72-Eta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vA4-Dh-YdR"/>
+                    <constraint firstItem="oz2-72-Eta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vA4-Dh-YdR"/>
                     <constraint firstItem="tka-xU-9Za" firstAttribute="leading" secondItem="Ug0-M2-JIH" secondAttribute="trailing" constant="16" id="wE5-no-HlK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+            <connections>
+                <outlet property="addButton" destination="yow-TW-eDG" id="giz-MG-buI"/>
+                <outlet property="quantityLabel" destination="cME-hq-QbF" id="mGo-q7-EA4"/>
+                <outlet property="removeButton" destination="CXT-6Y-4cP" id="oAP-gF-r2p"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Ray-Ban-sunglasses" width="320" height="186.5"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
+        <namedColor name="Sunglass Dark Grey">
+            <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

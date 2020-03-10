@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22A9D154766EB838DDD038FE /* Pods_sunglass_shopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */; };
 		4E6BA16CCB7F7F34B830F0C1 /* Pods_sunglass_shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */; };
+		8A47BA752417FC97002EA40D /* MiniButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47BA742417FC97002EA40D /* MiniButton.swift */; };
 		8A62D4F3240FD1F90054D059 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4F2240FD1F90054D059 /* LargeButton.swift */; };
 		8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A62D4F7240FDA580054D059 /* Stores.storyboard */; };
 		8A62D4FA240FDA790054D059 /* StoresOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4F9240FDA790054D059 /* StoresOnMapViewController.swift */; };
@@ -63,6 +64,7 @@
 		16D6B7AA6D069EFC3743DA6D /* Pods-sunglass-shopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A9EDE83699A6A713125166F /* Pods-sunglass-shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shop/Pods-sunglass-shop.debug.xcconfig"; sourceTree = "<group>"; };
 		80ACE3911D5519F58AB05F3F /* Pods-sunglass-shopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A47BA742417FC97002EA40D /* MiniButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniButton.swift; sourceTree = "<group>"; };
 		8A62D4F2240FD1F90054D059 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		8A62D4F7240FDA580054D059 /* Stores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stores.storyboard; sourceTree = "<group>"; };
 		8A62D4F9240FDA790054D059 /* StoresOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresOnMapViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				8AC5238F240EB45C008222D7 /* BorderView.swift */,
 				8AC52391240EBA0D008222D7 /* SmallButton.swift */,
 				8A62D4F2240FD1F90054D059 /* LargeButton.swift */,
+				8A47BA742417FC97002EA40D /* MiniButton.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A47BA752417FC97002EA40D /* MiniButton.swift in Sources */,
 				8A62D4FE240FDDB50054D059 /* TryProductViewController.swift in Sources */,
 				8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */,
 				8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */,

@@ -17,7 +17,7 @@ extension UIFont {
     }
     
     class func sunglassRegularFont(_ textSize: textSize) -> UIFont {
-        return UIFont(name: "Helvetica", size: textSize.rawValue)!
+        return UIFont(name: "Apple SD Gothic Neo", size: textSize.rawValue)!
     }
 }
 

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-q7-lol">
-                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3Z-ri-KsI" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="974"/>
@@ -57,14 +57,14 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-Mf-lZi" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
-                                                        <state key="normal" title="Find in store"/>
+                                                        <state key="normal" title="FIND IN STORE"/>
                                                         <connections>
                                                             <action selector="findInStoreButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-21-VnX" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="30"/>
-                                                        <state key="normal" title="Try it on"/>
+                                                        <state key="normal" title="TRY IT ON"/>
                                                         <connections>
                                                             <action selector="tryItOnButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
                                                         </connections>
@@ -137,7 +137,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-Iq-Xlx" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
                                 <rect key="frame" x="16" y="808" width="382" height="30"/>
-                                <state key="normal" title="Add to cart"/>
+                                <state key="normal" title="ADD TO CART"/>
                                 <connections>
                                     <action selector="addToCartButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="W9p-zN-JeI"/>
                                 </connections>
@@ -147,7 +147,7 @@
                         <constraints>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="top" secondItem="ZPz-et-kub" secondAttribute="top" id="Adj-eh-1on"/>
                             <constraint firstItem="ZPz-et-kub" firstAttribute="trailing" secondItem="fJM-Iq-Xlx" secondAttribute="trailing" constant="16" id="H7r-4x-1Ao"/>
-                            <constraint firstItem="fJM-Iq-Xlx" firstAttribute="top" secondItem="CdF-q7-lol" secondAttribute="bottom" constant="16" id="JrY-dW-Wel"/>
+                            <constraint firstItem="fJM-Iq-Xlx" firstAttribute="top" secondItem="CdF-q7-lol" secondAttribute="bottom" constant="24" id="JrY-dW-Wel"/>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="trailing" secondItem="ZPz-et-kub" secondAttribute="trailing" id="dGW-uw-bRY"/>
                             <constraint firstItem="CdF-q7-lol" firstAttribute="leading" secondItem="ZPz-et-kub" secondAttribute="leading" id="llZ-Lv-tzv"/>
                             <constraint firstItem="fJM-Iq-Xlx" firstAttribute="leading" secondItem="ZPz-et-kub" secondAttribute="leading" constant="16" id="wQh-xp-jGp"/>

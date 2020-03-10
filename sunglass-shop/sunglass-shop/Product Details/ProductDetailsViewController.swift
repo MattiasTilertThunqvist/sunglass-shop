@@ -45,14 +45,9 @@ class ProductDetailsViewController: UIViewController {
     private func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
         
-        findInStoreButton.colorScheme = .blackOnTransparent
-        findInStoreButton.setTitle("Find in store", for: .normal)
-        
+        findInStoreButton.colorScheme = .blackOnTransparent        
         tryItOnButton.colorScheme = .whiteOnBlack
-        tryItOnButton.setTitle("Try it on", for: .normal)
-        
-        addToCartButton.colorScheme = .whiteOnBlack
-        addToCartButton.setTitle("Add to cart", for: .normal)
+        addToCartButton.colorScheme = .goldOnBlack
     }
     
     // MARK: Handle events

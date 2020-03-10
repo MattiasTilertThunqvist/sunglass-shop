@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,20 +17,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUd-ut-J53">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" name="Sunglass Light Gray"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-K2-LO4" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="808" width="382" height="30"/>
+                                <state key="normal" title="GO TO CHECKOUT"/>
+                                <connections>
+                                    <action selector="checkoutButtonPressed:" destination="wHX-Pp-c4p" eventType="touchUpInside" id="sfX-3v-UbU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-WN-IpU" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="763" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£1345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-1G-rqD" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="348.5" y="763" width="49.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wo8-8Z-UVn" firstAttribute="bottom" secondItem="QTX-K2-LO4" secondAttribute="bottom" constant="24" id="15O-JA-3rx"/>
+                            <constraint firstItem="QTX-K2-LO4" firstAttribute="top" secondItem="lMe-WN-IpU" secondAttribute="bottom" constant="24" id="A3Z-FW-s0i"/>
+                            <constraint firstItem="wo8-8Z-UVn" firstAttribute="trailing" secondItem="QTX-K2-LO4" secondAttribute="trailing" constant="16" id="AyU-Qb-YMl"/>
+                            <constraint firstItem="lMe-WN-IpU" firstAttribute="leading" secondItem="wo8-8Z-UVn" secondAttribute="leading" constant="16" id="SuI-XW-SMw"/>
+                            <constraint firstItem="lMe-WN-IpU" firstAttribute="top" secondItem="uUd-ut-J53" secondAttribute="bottom" constant="24" id="V6V-4h-e0M"/>
                             <constraint firstItem="uUd-ut-J53" firstAttribute="top" secondItem="wo8-8Z-UVn" secondAttribute="top" id="fMi-gl-zEa"/>
                             <constraint firstItem="uUd-ut-J53" firstAttribute="trailing" secondItem="wo8-8Z-UVn" secondAttribute="trailing" id="mLp-Rw-8d9"/>
-                            <constraint firstItem="uUd-ut-J53" firstAttribute="bottom" secondItem="NlH-hs-glk" secondAttribute="bottom" id="vjZ-c8-U2h"/>
+                            <constraint firstItem="wo8-8Z-UVn" firstAttribute="trailing" secondItem="mCg-1G-rqD" secondAttribute="trailing" constant="16" id="tap-F4-7qM"/>
+                            <constraint firstItem="QTX-K2-LO4" firstAttribute="leading" secondItem="wo8-8Z-UVn" secondAttribute="leading" constant="16" id="tjp-fR-sxY"/>
+                            <constraint firstItem="mCg-1G-rqD" firstAttribute="centerY" secondItem="lMe-WN-IpU" secondAttribute="centerY" id="xof-Wa-Y0r"/>
                             <constraint firstItem="uUd-ut-J53" firstAttribute="leading" secondItem="wo8-8Z-UVn" secondAttribute="leading" id="yLo-bF-toY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wo8-8Z-UVn"/>
                     </view>
                     <connections>
+                        <outlet property="checkoutButton" destination="QTX-K2-LO4" id="W78-gu-KYa"/>
                         <outlet property="tableView" destination="uUd-ut-J53" id="qa3-nM-2LX"/>
                     </connections>
                 </viewController>
@@ -38,4 +68,9 @@
             <point key="canvasLocation" x="85.507246376811594" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Sunglass Light Gray">
+            <color red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -10,24 +10,21 @@ import UIKit
 
 extension UIColor {
     
-    // HEX: 222222
-    // R: 34, G: 34, B: 34
+    // NOTE: All custom colors are declared as Color Set in Assets
+    
     class var sunglassBlack: UIColor {
-        return #colorLiteral(red: 0.1333177686, green: 0.1333433092, blue: 0.1333121657, alpha: 1)
+        return #colorLiteral(red: 0.1333333333, green: 0.1333333333, blue: 0.1333333333, alpha: 1)
     }
-    
-    // HEX: 555555
-    // R: 85, G: 85, B: 85
+
     class var sunglassDarkGrey: UIColor {
-        return #colorLiteral(red: 0.3333011568, green: 0.3333538771, blue: 0.3332896829, alpha: 1)
+        return #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
+    }
+
+    class var sunglassLightGray: UIColor {
+        return #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
     }
     
-    // HEX: DADADA
-    // R: 218, G: 218, B: 218
-    class var sunglassLightGray: UIColor {
-        return #colorLiteral(red: 0.8548173308, green: 0.8549612164, blue: 0.8547983766, alpha: 1)
+    class var sunglassGold: UIColor {
+        return #colorLiteral(red: 0.8016645908, green: 0.73778826, blue: 0.4773098826, alpha: 1)
     }
 }
-
-
-// https://www.flaticon.com/packs/online-marketing-3

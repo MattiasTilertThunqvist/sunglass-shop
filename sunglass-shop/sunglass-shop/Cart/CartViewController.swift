@@ -22,6 +22,14 @@ class CartViewController: UIViewController {
     // MARK: IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkoutButton: LargeButton!
+    
+    
+    // MARK: IBActions
+    
+    @IBAction func checkoutButtonPressed(_ sender: LargeButton) {
+    }
+    
 
     // MARK: Lifecycle
     
@@ -32,7 +40,7 @@ class CartViewController: UIViewController {
     }
     
     private func setup() {
-        
+        checkoutButton.colorScheme = .goldOnBlack
     }
 }
 
@@ -43,6 +51,8 @@ extension CartViewController: UITableViewDataSource {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
         registerCell()
     }
     

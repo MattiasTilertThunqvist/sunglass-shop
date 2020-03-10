@@ -1,19 +1,19 @@
 //
-//  SmallButton.swift
+//  MiniButton.swift
 //  sunglass-shop
 //
-//  Created by Mattias Tilert Thunqvist on 2020-03-03.
+//  Created by Mattias Tilert Thunqvist on 2020-03-10.
 //  Copyright © 2020 Mattias Tilert Thunqvist. All rights reserved.
 //
 
 import UIKit
 
-class SmallButton: UIButton {
+class MiniButton: UIButton {
     
     // MARK: Properties
     
     let inset: CGFloat = 15
-    var buttonHeight: CGFloat = 32
+    var buttonHeight: CGFloat = 20
     
     enum ColorScheme {
         case blackOnTransparent

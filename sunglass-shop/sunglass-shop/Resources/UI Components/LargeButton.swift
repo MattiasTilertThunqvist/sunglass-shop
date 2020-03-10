@@ -13,14 +13,14 @@ class LargeButton: UIButton {
     // MARK: Properties
 
     let inset: CGFloat = 15
-    let buttonHeight: CGFloat = 36
+    let buttonHeight: CGFloat = 50
 
     enum ColorScheme {
         case blackOnTransparent
-        case whiteOnBlack
+        case goldOnBlack
     }
 
-    var colorScheme = ColorScheme.whiteOnBlack {
+    var colorScheme = ColorScheme.goldOnBlack {
         didSet {
             switch colorScheme {
             case .blackOnTransparent:
@@ -28,9 +28,9 @@ class LargeButton: UIButton {
                 setTitleColor(.sunglassBlack, for: .normal)
                 layer.borderWidth = 1
                 layer.borderColor = UIColor.sunglassBlack.cgColor
-            case .whiteOnBlack:
+            case .goldOnBlack:
                 backgroundColor = .sunglassBlack
-                setTitleColor(.white, for: .normal)
+                setTitleColor(.sunglassGold, for: .normal)
             }
         }
     }
@@ -58,13 +58,14 @@ class LargeButton: UIButton {
         let size = super.intrinsicContentSize
         return CGSize(width: size.width + inset * 4.0, height: size.height)
     }
+    
 
     func setup() {
         translatesAutoresizingMaskIntoConstraints = false
         titleLabel?.font = UIFont.sunglassRegularFont(.medium)
         titleLabel?.numberOfLines = 1
         titleLabel?.adjustsFontSizeToFitWidth = false
-        layer.cornerRadius = buttonHeight / 2
+        layer.cornerRadius = 2
 
         let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: buttonHeight)
         addConstraint(heightConstraint)
