@@ -15,6 +15,7 @@ final class StoryboardInstance {
     private static let storesStoryboard = UIStoryboard(name: "Stores", bundle: nil)
     private static let tryProductStoryboard = UIStoryboard(name: "TryProduct", bundle: nil)
     private static let addToCartStoryboard = UIStoryboard(name: "Cart", bundle: nil)
+    private static let checkoutStoryboard = UIStoryboard(name: "Checkout", bundle: nil)
 
     static func homeViewController() -> HomeViewController {
         return homeStoryboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
@@ -34,6 +35,10 @@ final class StoryboardInstance {
     
     static func cartViewController() -> CartViewController {
         return addToCartStoryboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
+    }
+    
+    static func checkoutViewController() -> CheckoutViewController {
+        return checkoutStoryboard.instantiateViewController(identifier: "CheckoutViewController") as! CheckoutViewController
     }
 }
 

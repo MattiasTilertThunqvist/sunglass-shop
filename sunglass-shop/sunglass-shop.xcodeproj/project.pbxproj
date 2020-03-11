@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		22A9D154766EB838DDD038FE /* Pods_sunglass_shopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */; };
 		4E6BA16CCB7F7F34B830F0C1 /* Pods_sunglass_shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */; };
+		8A27F3F22419350100892A95 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A27F3F12419350100892A95 /* Checkout.storyboard */; };
+		8A27F3F42419352100892A95 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27F3F32419352100892A95 /* CheckoutViewController.swift */; };
+		8A27F3F624193E0200892A95 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27F3F524193E0200892A95 /* ContainerView.swift */; };
+		8A27F3F824195CE100892A95 /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27F3F724195CE100892A95 /* LargeTextField.swift */; };
 		8A47BA752417FC97002EA40D /* MiniButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47BA742417FC97002EA40D /* MiniButton.swift */; };
 		8A62D4F3240FD1F90054D059 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4F2240FD1F90054D059 /* LargeButton.swift */; };
 		8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A62D4F7240FDA580054D059 /* Stores.storyboard */; };
@@ -64,6 +68,10 @@
 		16D6B7AA6D069EFC3743DA6D /* Pods-sunglass-shopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A9EDE83699A6A713125166F /* Pods-sunglass-shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shop/Pods-sunglass-shop.debug.xcconfig"; sourceTree = "<group>"; };
 		80ACE3911D5519F58AB05F3F /* Pods-sunglass-shopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopUITests/Pods-sunglass-shopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A27F3F12419350100892A95 /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
+		8A27F3F32419352100892A95 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		8A27F3F524193E0200892A95 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		8A27F3F724195CE100892A95 /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		8A47BA742417FC97002EA40D /* MiniButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniButton.swift; sourceTree = "<group>"; };
 		8A62D4F2240FD1F90054D059 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		8A62D4F7240FDA580054D059 /* Stores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stores.storyboard; sourceTree = "<group>"; };
@@ -147,6 +155,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A27F3F0241934E500892A95 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				8A27F3F12419350100892A95 /* Checkout.storyboard */,
+				8A27F3F32419352100892A95 /* CheckoutViewController.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		8A62D4F4240FD92D0054D059 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +223,7 @@
 				8A62D4F4240FD92D0054D059 /* Stores */,
 				8A62D4F5240FD98D0054D059 /* Try Product */,
 				8A62D4F6240FD9CD0054D059 /* Cart */,
+				8A27F3F0241934E500892A95 /* Checkout */,
 				8A65D9A6240D336F00364FDF /* Models */,
 				8A65D9A7240D337C00364FDF /* Network Manager */,
 				8A65D9A8240D338C00364FDF /* Resources */,
@@ -287,9 +305,11 @@
 				8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */,
 				8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */,
 				8AC5238F240EB45C008222D7 /* BorderView.swift */,
+				8A27F3F524193E0200892A95 /* ContainerView.swift */,
 				8AC52391240EBA0D008222D7 /* SmallButton.swift */,
 				8A62D4F2240FD1F90054D059 /* LargeButton.swift */,
 				8A47BA742417FC97002EA40D /* MiniButton.swift */,
+				8A27F3F724195CE100892A95 /* LargeTextField.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -432,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A27F3F22419350100892A95 /* Checkout.storyboard in Resources */,
 				8AF2BDA02416A0B500EE605C /* CartTableViewCell.xib in Resources */,
 				8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */,
 				8A62D500240FDEA50054D059 /* Cart.storyboard in Resources */,
@@ -535,12 +556,15 @@
 				8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */,
 				8A65D9B8240D75C200364FDF /* UIColor + sunglass.swift in Sources */,
 				8AC5238E240EB19A008222D7 /* LargeTextLabel.swift in Sources */,
+				8A27F3F824195CE100892A95 /* LargeTextField.swift in Sources */,
+				8A27F3F42419352100892A95 /* CheckoutViewController.swift in Sources */,
 				8A65D9B0240D5E3500364FDF /* ProductItem.swift in Sources */,
 				8AF2BD9F2416A0B500EE605C /* CartTableViewCell.swift in Sources */,
 				8A65D9B2240D5EC300364FDF /* ProductList.swift in Sources */,
 				8A62D4F3240FD1F90054D059 /* LargeButton.swift in Sources */,
 				8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */,
 				8AC52390240EB45C008222D7 /* BorderView.swift in Sources */,
+				8A27F3F624193E0200892A95 /* ContainerView.swift in Sources */,
 				8A65D9AD240D526E00364FDF /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
