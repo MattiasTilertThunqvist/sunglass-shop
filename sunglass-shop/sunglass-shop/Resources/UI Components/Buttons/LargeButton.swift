@@ -13,7 +13,7 @@ class LargeButton: UIButton {
     // MARK: Properties
 
     let inset: CGFloat = 15
-    let buttonHeight: CGFloat = 50
+    var buttonHeight: CGFloat = 50
 
     enum ColorScheme {
         case blackOnTransparent
@@ -37,8 +37,9 @@ class LargeButton: UIButton {
 
     // MARK: Init
 
-    public init() {
+    public init(buttonHeight: CGFloat) {
         super.init(frame: .zero)
+        self.buttonHeight = buttonHeight
         setup()
     }
 
@@ -59,6 +60,7 @@ class LargeButton: UIButton {
         return CGSize(width: size.width + inset * 4.0, height: size.height)
     }
     
+    // MARK: View
 
     func setup() {
         translatesAutoresizingMaskIntoConstraints = false

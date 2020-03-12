@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-34-LhB" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="819.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="1161.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-lj-4hy" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="24" width="374" height="211"/>
@@ -63,34 +63,100 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-sG-qml" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="319.5" width="374" height="200"/>
+                                                <rect key="frame" x="16" y="319.5" width="374" height="480"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-XU-ki2" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="32" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-xJ-Qoe" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="90" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PHONE NUMBER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-aO-5It" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="148" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-sR-yT3" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="206" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OPTIONAL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOi-Xe-x2B" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="248" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line2"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CITY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCM-1W-dCK" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="306" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="POSTCODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-df-5IY" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="364" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="postal-code"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="COUNTRY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-cW-6lY" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="422" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="country-name"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="qrh-aO-5It" firstAttribute="top" secondItem="9YK-xJ-Qoe" secondAttribute="bottom" constant="24" id="0ou-UL-TZk"/>
                                                     <constraint firstItem="ch5-XU-ki2" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="1Lo-YT-7EM"/>
+                                                    <constraint firstItem="aGz-df-5IY" firstAttribute="top" secondItem="GCM-1W-dCK" secondAttribute="bottom" constant="24" id="22n-XM-pYG"/>
+                                                    <constraint firstItem="xgf-sR-yT3" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="5ay-gX-ZaN"/>
+                                                    <constraint firstItem="Pmd-cW-6lY" firstAttribute="top" secondItem="aGz-df-5IY" secondAttribute="bottom" constant="24" id="5dD-hj-74F"/>
+                                                    <constraint firstItem="yOi-Xe-x2B" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="AFF-al-shT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pmd-cW-6lY" secondAttribute="trailing" constant="16" id="C1e-0G-tCa"/>
+                                                    <constraint firstItem="aGz-df-5IY" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="EBM-lt-9Zx"/>
                                                     <constraint firstItem="ch5-XU-ki2" firstAttribute="top" secondItem="8rt-sG-qml" secondAttribute="top" constant="32" id="ETr-KP-M5B"/>
-                                                    <constraint firstAttribute="height" constant="200" id="Hp1-ro-0Is"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GCM-1W-dCK" secondAttribute="trailing" constant="16" id="HRy-l8-MRb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xgf-sR-yT3" secondAttribute="trailing" constant="16" id="Jud-4z-RC3"/>
+                                                    <constraint firstItem="9YK-xJ-Qoe" firstAttribute="top" secondItem="ch5-XU-ki2" secondAttribute="bottom" constant="24" id="SuX-Eq-ebo"/>
+                                                    <constraint firstItem="9YK-xJ-Qoe" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="Y8Y-T8-f6V"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qrh-aO-5It" secondAttribute="trailing" constant="16" id="Z6g-gq-Yz9"/>
+                                                    <constraint firstItem="Pmd-cW-6lY" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="ZDN-UU-euc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pmd-cW-6lY" secondAttribute="bottom" constant="24" id="fEL-11-w5J"/>
                                                     <constraint firstAttribute="trailing" secondItem="ch5-XU-ki2" secondAttribute="trailing" constant="16" id="hrh-wA-aTf"/>
+                                                    <constraint firstItem="xgf-sR-yT3" firstAttribute="top" secondItem="qrh-aO-5It" secondAttribute="bottom" constant="24" id="jdQ-gT-crQ"/>
+                                                    <constraint firstItem="GCM-1W-dCK" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="k8f-6n-Qa5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yOi-Xe-x2B" secondAttribute="trailing" constant="16" id="lTq-Sv-N19"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aGz-df-5IY" secondAttribute="trailing" constant="16" id="mYZ-fk-nWI"/>
+                                                    <constraint firstItem="GCM-1W-dCK" firstAttribute="top" secondItem="yOi-Xe-x2B" secondAttribute="bottom" constant="24" id="oEF-5b-Q1B"/>
+                                                    <constraint firstItem="yOi-Xe-x2B" firstAttribute="top" secondItem="xgf-sR-yT3" secondAttribute="bottom" constant="8" id="pIQ-QH-gml"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9YK-xJ-Qoe" secondAttribute="trailing" constant="16" id="q7R-Sv-GkO"/>
+                                                    <constraint firstItem="qrh-aO-5It" firstAttribute="leading" secondItem="8rt-sG-qml" secondAttribute="leading" constant="16" id="ueU-Dk-Qea"/>
                                                     <constraint firstItem="ch5-XU-ki2" firstAttribute="centerX" secondItem="8rt-sG-qml" secondAttribute="centerX" id="uhU-cJ-UFv"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcx-yT-mI8" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="831.5" width="374" height="30"/>
+                                                <state key="normal" title="ORDER NOW"/>
+                                                <connections>
+                                                    <action selector="orderButtonPressed:" destination="CA4-VC-bcu" eventType="touchUpInside" id="YQe-i5-Cei"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="8rt-sG-qml" secondAttribute="bottom" constant="300" id="HT8-As-ZMO"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wcx-yT-mI8" secondAttribute="bottom" constant="300" id="L6h-Lc-Hfq"/>
+                                            <constraint firstItem="Wcx-yT-mI8" firstAttribute="top" secondItem="8rt-sG-qml" secondAttribute="bottom" constant="32" id="LV0-mu-Mru"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="top" secondItem="ezH-34-LhB" secondAttribute="top" constant="24" id="M6d-e5-C03"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="Uhu-pn-7hZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wcx-yT-mI8" secondAttribute="trailing" constant="16" id="Zn6-oH-uVJ"/>
                                             <constraint firstAttribute="trailing" secondItem="ErD-gU-7Lw" secondAttribute="trailing" constant="16" id="abu-HK-MEa"/>
                                             <constraint firstItem="ErD-gU-7Lw" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="act-jX-r51"/>
                                             <constraint firstAttribute="trailing" secondItem="VAk-lj-4hy" secondAttribute="trailing" constant="16" id="aoB-IW-Fck"/>
                                             <constraint firstItem="8rt-sG-qml" firstAttribute="top" secondItem="ErD-gU-7Lw" secondAttribute="bottom" constant="32" id="bsT-pD-g35"/>
                                             <constraint firstItem="ErD-gU-7Lw" firstAttribute="top" secondItem="VAk-lj-4hy" secondAttribute="bottom" constant="32" id="fRH-Z8-mkQ"/>
+                                            <constraint firstItem="Wcx-yT-mI8" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="g3Z-bH-SSS"/>
                                             <constraint firstItem="8rt-sG-qml" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="l4t-Tw-e7r"/>
                                             <constraint firstAttribute="trailing" secondItem="8rt-sG-qml" secondAttribute="trailing" constant="16" id="x9H-6Q-5Wq"/>
                                         </constraints>
@@ -117,7 +183,15 @@
                         <viewLayoutGuide key="safeArea" id="toB-Lr-RIs"/>
                     </view>
                     <connections>
+                        <outlet property="addressTextField" destination="xgf-sR-yT3" id="9KQ-1y-UFU"/>
+                        <outlet property="cityTextField" destination="GCM-1W-dCK" id="LpF-j8-xo8"/>
+                        <outlet property="countyTextField" destination="Pmd-cW-6lY" id="CAr-QR-FEK"/>
+                        <outlet property="emailTextField" destination="9YK-xJ-Qoe" id="LCg-ge-UTU"/>
                         <outlet property="nameTextField" destination="ch5-XU-ki2" id="QUB-96-qpp"/>
+                        <outlet property="optionalAddressTextField" destination="yOi-Xe-x2B" id="gt5-bt-7lG"/>
+                        <outlet property="orderButton" destination="Wcx-yT-mI8" id="gSZ-tB-Tlb"/>
+                        <outlet property="phoneNumberTextField" destination="qrh-aO-5It" id="YCn-jD-RK1"/>
+                        <outlet property="postCodeTextField" destination="aGz-df-5IY" id="OQu-TC-k33"/>
                         <outlet property="productsContainer" destination="VAk-lj-4hy" id="HRR-Jb-Xna"/>
                         <outlet property="tableView" destination="NOy-aH-zBS" id="pbv-hz-KBZ"/>
                         <outlet property="tableViewHeightConstraint" destination="pOG-6J-P8y" id="vSJ-5L-HC8"/>

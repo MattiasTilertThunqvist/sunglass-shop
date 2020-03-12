@@ -24,8 +24,20 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var productsContainer: ContainerView!
     @IBOutlet weak var nameTextField: LargeTextField!
+    @IBOutlet weak var emailTextField: LargeTextField!
+    @IBOutlet weak var phoneNumberTextField: LargeTextField!
+    @IBOutlet weak var addressTextField: LargeTextField!
+    @IBOutlet weak var optionalAddressTextField: LargeTextField!
+    @IBOutlet weak var cityTextField: LargeTextField!
+    @IBOutlet weak var postCodeTextField: LargeTextField!
+    @IBOutlet weak var countyTextField: LargeTextField!
+    @IBOutlet weak var orderButton: LargeButton!
     
     // MARK: IBActions
+    
+    @IBAction func orderButtonPressed(_ sender: LargeButton) {
+        handleOrderButtonPress()
+    }
     
     // MARK: Lifecycle
 
@@ -43,7 +55,21 @@ class CheckoutViewController: UIViewController {
     
     private func setup() {
         nameTextField.setDescriptionLabel(to: "NAME")
+        emailTextField.setDescriptionLabel(to: "EMAIL")
+        phoneNumberTextField.setDescriptionLabel(to: "PHONE NUMBER")
+        addressTextField.setDescriptionLabel(to: "ADDRESS")
+        cityTextField.setDescriptionLabel(to: "CITY")
+        postCodeTextField.setDescriptionLabel(to: "POSTCODE")
+        countyTextField.setDescriptionLabel(to: "COUNTRY")
         
+        orderButton.colorScheme = .goldOnBlack
+    }
+    
+    // MARK: Handlers
+    
+    private func handleOrderButtonPress() {
+        let viewController = StoryboardInstance.ordersViewController()
+        present(viewController, animated: true, completion: nil)
     }
 }
 

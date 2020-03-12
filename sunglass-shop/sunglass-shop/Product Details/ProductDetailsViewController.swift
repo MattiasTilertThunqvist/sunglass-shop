@@ -16,6 +16,9 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: IBOutlets
     
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productTitleLabel: LargeTextLabel!
+    @IBOutlet weak var priceLabel: MediumTextLabel!
     @IBOutlet weak var findInStoreButton: SmallButton!
     @IBOutlet weak var tryItOnButton: SmallButton!
     @IBOutlet weak var addToCartButton: LargeButton!
@@ -48,6 +51,9 @@ class ProductDetailsViewController: UIViewController {
         findInStoreButton.colorScheme = .blackOnTransparent        
         tryItOnButton.colorScheme = .whiteOnBlack
         addToCartButton.colorScheme = .goldOnBlack
+        
+        productTitleLabel.text = "RAYBAN"
+        priceLabel.text = "Price: £69"
     }
     
     // MARK: Handle events

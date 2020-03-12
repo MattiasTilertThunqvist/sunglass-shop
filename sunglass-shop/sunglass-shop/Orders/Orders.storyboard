@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders View Controller-->
+        <scene sceneID="VIZ-ES-V8R">
+            <objects>
+                <viewController storyboardIdentifier="OrdersViewController" id="dh4-cI-34H" customClass="OrdersViewController" customModule="sunglass_shop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u8J-fU-jQn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAk-4a-QFm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYs-Oz-RgP" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="1160"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swN-kv-YuG" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="30.5" width="308" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-t4-7yT" customClass="DismissRoundButton" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="340" y="16" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8IX-vw-dIh"/>
+                                                    <constraint firstAttribute="width" constant="50" id="NCd-Eg-ISF"/>
+                                                </constraints>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" name="Sunglass Dark Grey"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dismissButton:" destination="dh4-cI-34H" eventType="touchUpInside" id="eB6-kT-2uF"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nei-XJ-p28" customClass="BorderView" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="82" width="406" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="DQl-6n-e8j"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDER INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6s-lx-nnV" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="107" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9I-V7-Ph0" userLabel="Order Information Container View" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="151.5" width="374" height="148"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ORDER ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2e-qn-waN" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="32" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ORDER DATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-hn-lPM" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="90" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hDD-hn-lPM" firstAttribute="leading" secondItem="A9I-V7-Ph0" secondAttribute="leading" constant="16" id="7Yg-Mh-wAH"/>
+                                                    <constraint firstItem="o2e-qn-waN" firstAttribute="leading" secondItem="A9I-V7-Ph0" secondAttribute="leading" constant="16" id="9dM-XU-gTI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="o2e-qn-waN" secondAttribute="trailing" constant="16" id="9tb-cF-46q"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hDD-hn-lPM" secondAttribute="bottom" constant="24" id="EuS-lw-FjK"/>
+                                                    <constraint firstItem="o2e-qn-waN" firstAttribute="centerX" secondItem="A9I-V7-Ph0" secondAttribute="centerX" id="Jjv-IL-stg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hDD-hn-lPM" secondAttribute="trailing" constant="16" id="cZw-Rr-VVg"/>
+                                                    <constraint firstItem="o2e-qn-waN" firstAttribute="top" secondItem="A9I-V7-Ph0" secondAttribute="top" constant="32" id="keg-c5-C2u"/>
+                                                    <constraint firstItem="hDD-hn-lPM" firstAttribute="top" secondItem="o2e-qn-waN" secondAttribute="bottom" constant="24" id="nXF-jt-8mQ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-HO-58N" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="323.5" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxJ-Rg-c0g" userLabel="Products Container View" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="368.5" width="374" height="211"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="83r-TN-oRa">
+                                                        <rect key="frame" x="0.0" y="8" width="374" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="fLW-So-xGN"/>
+                                                        </constraints>
+                                                    </tableView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4V-qc-fmY" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="166" width="114.5" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-OD-3Fl" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="166" width="49" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ou3-OD-3Fl" secondAttribute="trailing" constant="16" id="ETY-uk-GiF"/>
+                                                    <constraint firstItem="83r-TN-oRa" firstAttribute="leading" secondItem="ZxJ-Rg-c0g" secondAttribute="leading" id="GP5-cC-DNQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="a4V-qc-fmY" secondAttribute="bottom" constant="24" id="TRR-1m-pZx"/>
+                                                    <constraint firstItem="a4V-qc-fmY" firstAttribute="leading" secondItem="ZxJ-Rg-c0g" secondAttribute="leading" constant="16" id="Xlc-gV-z5f"/>
+                                                    <constraint firstItem="83r-TN-oRa" firstAttribute="top" secondItem="ZxJ-Rg-c0g" secondAttribute="top" constant="8" id="n90-5R-j2Z"/>
+                                                    <constraint firstItem="Ou3-OD-3Fl" firstAttribute="centerY" secondItem="a4V-qc-fmY" secondAttribute="centerY" id="ojY-jN-XwS"/>
+                                                    <constraint firstItem="a4V-qc-fmY" firstAttribute="top" secondItem="83r-TN-oRa" secondAttribute="bottom" constant="8" id="w8s-MC-Gji"/>
+                                                    <constraint firstAttribute="trailing" secondItem="83r-TN-oRa" secondAttribute="trailing" id="xS4-sx-gax"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZk-K1-wU9" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="611.5" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-bp-b73" userLabel="Your Information Container View" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="656" width="374" height="480"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQz-Ik-gCD" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="32" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbe-y9-4aF" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="90" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PHONE NUMBER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhU-f6-4sF" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="148" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCQ-Xc-zrN" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="206" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OPTIONAL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-cM-vjI" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="248" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line2"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CITY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsF-6L-uu9" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="306" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="POSTCODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQI-Aa-Mxt" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="364" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="postal-code"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="COUNTRY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pew-j1-ASj" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="422" width="342" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="country-name"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="rQz-Ik-gCD" firstAttribute="top" secondItem="xOh-bp-b73" secondAttribute="top" constant="32" id="0Kb-2T-maw"/>
+                                                    <constraint firstItem="IsF-6L-uu9" firstAttribute="top" secondItem="GvA-cM-vjI" secondAttribute="bottom" constant="24" id="3FR-hY-7uF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HhU-f6-4sF" secondAttribute="trailing" constant="16" id="7So-Dl-FVY"/>
+                                                    <constraint firstItem="HhU-f6-4sF" firstAttribute="top" secondItem="Tbe-y9-4aF" secondAttribute="bottom" constant="24" id="7n0-GZ-3vN"/>
+                                                    <constraint firstItem="rQz-Ik-gCD" firstAttribute="centerX" secondItem="xOh-bp-b73" secondAttribute="centerX" id="8ib-Mu-BAt"/>
+                                                    <constraint firstItem="HhU-f6-4sF" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="9Eg-ZH-MkP"/>
+                                                    <constraint firstItem="Tbe-y9-4aF" firstAttribute="top" secondItem="rQz-Ik-gCD" secondAttribute="bottom" constant="24" id="AU7-OL-CCA"/>
+                                                    <constraint firstItem="GvA-cM-vjI" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="Acp-Ct-C90"/>
+                                                    <constraint firstItem="Pew-j1-ASj" firstAttribute="top" secondItem="DQI-Aa-Mxt" secondAttribute="bottom" constant="24" id="DwO-sk-cwj"/>
+                                                    <constraint firstItem="Tbe-y9-4aF" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="Ecu-ny-OZc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rQz-Ik-gCD" secondAttribute="trailing" constant="16" id="MBi-IV-f6s"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Tbe-y9-4aF" secondAttribute="trailing" constant="16" id="MMu-PH-wOt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pew-j1-ASj" secondAttribute="bottom" constant="24" id="N3f-aD-y4S"/>
+                                                    <constraint firstItem="Pew-j1-ASj" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="Rw3-GX-7re"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GvA-cM-vjI" secondAttribute="trailing" constant="16" id="XOP-1I-5td"/>
+                                                    <constraint firstItem="WCQ-Xc-zrN" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="ZBH-Z8-y3p"/>
+                                                    <constraint firstItem="DQI-Aa-Mxt" firstAttribute="top" secondItem="IsF-6L-uu9" secondAttribute="bottom" constant="24" id="b9I-KG-aCk"/>
+                                                    <constraint firstItem="IsF-6L-uu9" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="cy6-Lm-qrP"/>
+                                                    <constraint firstItem="GvA-cM-vjI" firstAttribute="top" secondItem="WCQ-Xc-zrN" secondAttribute="bottom" constant="8" id="jxx-4g-Lbq"/>
+                                                    <constraint firstItem="rQz-Ik-gCD" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="kML-bw-FNt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pew-j1-ASj" secondAttribute="trailing" constant="16" id="l9d-RS-Wns"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IsF-6L-uu9" secondAttribute="trailing" constant="16" id="lJZ-rg-PRP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WCQ-Xc-zrN" secondAttribute="trailing" constant="16" id="rX8-5p-Cpz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DQI-Aa-Mxt" secondAttribute="trailing" constant="16" id="t6X-q2-aPm"/>
+                                                    <constraint firstItem="DQI-Aa-Mxt" firstAttribute="leading" secondItem="xOh-bp-b73" secondAttribute="leading" constant="16" id="tQf-hg-Wnb"/>
+                                                    <constraint firstItem="WCQ-Xc-zrN" firstAttribute="top" secondItem="HhU-f6-4sF" secondAttribute="bottom" constant="24" id="vIo-3d-Qhw"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="UZk-K1-wU9" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="39d-dA-TPx"/>
+                                            <constraint firstAttribute="trailing" secondItem="xOh-bp-b73" secondAttribute="trailing" constant="16" id="8ed-Be-ngd"/>
+                                            <constraint firstItem="nei-XJ-p28" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" id="GxX-H6-46a"/>
+                                            <constraint firstItem="lJV-t4-7yT" firstAttribute="top" secondItem="oYs-Oz-RgP" secondAttribute="top" constant="16" id="IVQ-3S-fna"/>
+                                            <constraint firstAttribute="trailing" secondItem="QN8-HO-58N" secondAttribute="trailing" constant="16" id="PGl-jo-hNU"/>
+                                            <constraint firstAttribute="trailing" secondItem="lJV-t4-7yT" secondAttribute="trailing" constant="16" id="TO5-Ve-9W7"/>
+                                            <constraint firstItem="A9I-V7-Ph0" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="TZH-fX-RbS"/>
+                                            <constraint firstAttribute="bottom" secondItem="xOh-bp-b73" secondAttribute="bottom" constant="24" id="UUh-1I-tKa"/>
+                                            <constraint firstItem="nei-XJ-p28" firstAttribute="top" secondItem="lJV-t4-7yT" secondAttribute="bottom" constant="16" id="XWL-w4-Jts"/>
+                                            <constraint firstItem="lJV-t4-7yT" firstAttribute="leading" secondItem="swN-kv-YuG" secondAttribute="trailing" constant="16" id="Xjn-fm-5TZ"/>
+                                            <constraint firstItem="swN-kv-YuG" firstAttribute="centerY" secondItem="lJV-t4-7yT" secondAttribute="centerY" id="YGv-6f-Q1l"/>
+                                            <constraint firstItem="A9I-V7-Ph0" firstAttribute="top" secondItem="K6s-lx-nnV" secondAttribute="bottom" constant="24" id="aff-TL-Fd4"/>
+                                            <constraint firstAttribute="trailing" secondItem="nei-XJ-p28" secondAttribute="trailing" id="b49-FJ-BRq"/>
+                                            <constraint firstItem="UZk-K1-wU9" firstAttribute="top" secondItem="ZxJ-Rg-c0g" secondAttribute="bottom" constant="32" id="d7Y-Cf-naf"/>
+                                            <constraint firstItem="K6s-lx-nnV" firstAttribute="top" secondItem="nei-XJ-p28" secondAttribute="bottom" constant="24" id="e86-hN-htN"/>
+                                            <constraint firstItem="QN8-HO-58N" firstAttribute="top" secondItem="A9I-V7-Ph0" secondAttribute="bottom" constant="24" id="eDF-8d-Sbh"/>
+                                            <constraint firstItem="ZxJ-Rg-c0g" firstAttribute="top" secondItem="QN8-HO-58N" secondAttribute="bottom" constant="24" id="esH-48-xal"/>
+                                            <constraint firstItem="QN8-HO-58N" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="hW8-db-k9u"/>
+                                            <constraint firstItem="xOh-bp-b73" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="hdW-iN-THm"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZxJ-Rg-c0g" secondAttribute="trailing" constant="16" id="qiv-sB-FdI"/>
+                                            <constraint firstItem="swN-kv-YuG" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="qln-DN-gNm"/>
+                                            <constraint firstAttribute="trailing" secondItem="UZk-K1-wU9" secondAttribute="trailing" constant="16" id="rAD-yf-CeX"/>
+                                            <constraint firstAttribute="trailing" secondItem="A9I-V7-Ph0" secondAttribute="trailing" constant="16" id="sxs-JI-aqb"/>
+                                            <constraint firstItem="K6s-lx-nnV" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="tkQ-WF-OBh"/>
+                                            <constraint firstItem="ZxJ-Rg-c0g" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="x3A-bu-B7g"/>
+                                            <constraint firstItem="xOh-bp-b73" firstAttribute="top" secondItem="UZk-K1-wU9" secondAttribute="bottom" constant="24" id="z0T-HI-6nK"/>
+                                            <constraint firstAttribute="trailing" secondItem="K6s-lx-nnV" secondAttribute="trailing" constant="16" id="zcx-M0-ycY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oYs-Oz-RgP" firstAttribute="leading" secondItem="ZAk-4a-QFm" secondAttribute="leading" id="MzA-Dh-xy3"/>
+                                    <constraint firstItem="oYs-Oz-RgP" firstAttribute="width" secondItem="ZAk-4a-QFm" secondAttribute="width" multiplier="0.980676" id="boB-MY-PL1"/>
+                                    <constraint firstAttribute="bottom" secondItem="oYs-Oz-RgP" secondAttribute="bottom" id="dk2-KC-gNE"/>
+                                    <constraint firstAttribute="trailing" secondItem="oYs-Oz-RgP" secondAttribute="trailing" constant="8" id="qKZ-66-5e5"/>
+                                    <constraint firstItem="oYs-Oz-RgP" firstAttribute="top" secondItem="ZAk-4a-QFm" secondAttribute="top" id="vZ0-5F-PTT"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="gyX-Ry-wYO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3gf-2Z-tzS"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jjo-bf-OvT" firstAttribute="trailing" secondItem="ZAk-4a-QFm" secondAttribute="trailing" id="3w5-BU-WgW"/>
+                            <constraint firstItem="ZAk-4a-QFm" firstAttribute="top" secondItem="jjo-bf-OvT" secondAttribute="top" id="VoA-yO-3NV"/>
+                            <constraint firstAttribute="bottom" secondItem="ZAk-4a-QFm" secondAttribute="bottom" id="r1B-J7-Eei"/>
+                            <constraint firstItem="ZAk-4a-QFm" firstAttribute="leading" secondItem="jjo-bf-OvT" secondAttribute="leading" id="vNz-xU-CpC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jjo-bf-OvT"/>
+                    </view>
+                    <connections>
+                        <outlet property="productsContainer" destination="ZxJ-Rg-c0g" id="FIf-jL-fSh"/>
+                        <outlet property="productsTableView" destination="83r-TN-oRa" id="c4A-nm-hkq"/>
+                        <outlet property="productsTableViewHeightConstraint" destination="fLW-So-xGN" id="D6J-7a-D4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YP2-XK-xKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382.60869565217394" y="174.77678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Sunglass Dark Grey">
+            <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

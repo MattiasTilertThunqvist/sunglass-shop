@@ -17,6 +17,11 @@ class HomeViewController: UIViewController {
         ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url"),
         ProductItem(id: "Tre", title: "Gucci", price: 69, description: "Text", imageUrlString: "Text"),
         ProductItem(id: "Fyra", title: "Prada", price: 69, description: "Text", imageUrlString: "Text"),
+        ProductItem(id: "Fem", title: "Lacoste", price: 69, description: "Text", imageUrlString: "Text"),
+        ProductItem(id: "Ett", title: "Rayban", price: 59, description: "Text!", imageUrlString: "url"),
+        ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url"),
+        ProductItem(id: "Tre", title: "Gucci", price: 69, description: "Text", imageUrlString: "Text"),
+        ProductItem(id: "Fyra", title: "Prada", price: 69, description: "Text", imageUrlString: "Text"),
         ProductItem(id: "Fem", title: "Lacoste", price: 69, description: "Text", imageUrlString: "Text")
     ])
     

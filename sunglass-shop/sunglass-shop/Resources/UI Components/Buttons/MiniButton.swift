@@ -60,6 +60,8 @@ class MiniButton: UIButton {
         return CGSize(width: size.width + inset * 4.0, height: size.height)
     }
     
+    // MARK: View
+    
     func setup() {
         translatesAutoresizingMaskIntoConstraints = false
         titleLabel?.font = UIFont.sunglassRegularFont(.medium)

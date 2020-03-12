@@ -64,7 +64,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-21-VnX" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="30"/>
-                                                        <state key="normal" title="TRY IT ON"/>
+                                                        <state key="normal" title="TRY THEM ON"/>
                                                         <connections>
                                                             <action selector="tryItOnButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
                                                         </connections>
@@ -158,6 +158,9 @@
                     <connections>
                         <outlet property="addToCartButton" destination="fJM-Iq-Xlx" id="WVx-PD-c8w"/>
                         <outlet property="findInStoreButton" destination="vOG-Mf-lZi" id="k3P-im-1pV"/>
+                        <outlet property="priceLabel" destination="goh-DE-uMZ" id="4XT-5G-rRm"/>
+                        <outlet property="productImageView" destination="M4h-Sz-jgm" id="rbl-1E-W1k"/>
+                        <outlet property="productTitleLabel" destination="vST-3m-q4b" id="cxw-o4-LoR"/>
                         <outlet property="tryItOnButton" destination="wvZ-21-VnX" id="fzo-jN-btS"/>
                     </connections>
                 </viewController>

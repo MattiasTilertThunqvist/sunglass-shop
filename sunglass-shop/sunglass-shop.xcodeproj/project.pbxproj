@@ -34,8 +34,12 @@
 		8A65D9B0240D5E3500364FDF /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9AF240D5E3500364FDF /* ProductItem.swift */; };
 		8A65D9B2240D5EC300364FDF /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B1240D5EC300364FDF /* ProductList.swift */; };
 		8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */; };
-		8A65D9B8240D75C200364FDF /* UIColor + sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B7240D75C200364FDF /* UIColor + sunglass.swift */; };
-		8A65D9BA240D765D00364FDF /* UIFont + sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */; };
+		8A65D9B8240D75C200364FDF /* UIColor + Sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B7240D75C200364FDF /* UIColor + Sunglass.swift */; };
+		8A65D9BA240D765D00364FDF /* UIFont + Sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B9240D765D00364FDF /* UIFont + Sunglass.swift */; };
+		8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABD5565241A330E0041B143 /* Orders.storyboard */; };
+		8ABD556A241A335E0041B143 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5569241A335E0041B143 /* OrdersViewController.swift */; };
+		8ABD5572241A436B0041B143 /* DismissRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5571241A436B0041B143 /* DismissRoundButton.swift */; };
+		8ABD5574241A45BD0041B143 /* CALayer + Sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5573241A45BD0041B143 /* CALayer + Sunglass.swift */; };
 		8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC52387240E9584008222D7 /* ProductDetails.storyboard */; };
 		8AC5238A240E95D0008222D7 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */; };
 		8AC5238C240E9614008222D7 /* StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238B240E9614008222D7 /* StoryboardInstance.swift */; };
@@ -99,8 +103,12 @@
 		8A65D9AF240D5E3500364FDF /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 		8A65D9B1240D5EC300364FDF /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
-		8A65D9B7240D75C200364FDF /* UIColor + sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + sunglass.swift"; sourceTree = "<group>"; };
-		8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + sunglass.swift"; sourceTree = "<group>"; };
+		8A65D9B7240D75C200364FDF /* UIColor + Sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Sunglass.swift"; sourceTree = "<group>"; };
+		8A65D9B9240D765D00364FDF /* UIFont + Sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Sunglass.swift"; sourceTree = "<group>"; };
+		8ABD5565241A330E0041B143 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		8ABD5569241A335E0041B143 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		8ABD5571241A436B0041B143 /* DismissRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissRoundButton.swift; sourceTree = "<group>"; };
+		8ABD5573241A45BD0041B143 /* CALayer + Sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Sunglass.swift"; sourceTree = "<group>"; };
 		8AC52387240E9584008222D7 /* ProductDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetails.storyboard; sourceTree = "<group>"; };
 		8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		8AC5238B240E9614008222D7 /* StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstance.swift; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 				8A62D4F5240FD98D0054D059 /* Try Product */,
 				8A62D4F6240FD9CD0054D059 /* Cart */,
 				8A27F3F0241934E500892A95 /* Checkout */,
+				8ABD5564241A32E00041B143 /* Orders */,
 				8A65D9A6240D336F00364FDF /* Models */,
 				8A65D9A7240D337C00364FDF /* Network Manager */,
 				8A65D9A8240D338C00364FDF /* Resources */,
@@ -302,14 +311,10 @@
 		8A65D9B3240D6E8600364FDF /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */,
-				8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */,
-				8AC5238F240EB45C008222D7 /* BorderView.swift */,
-				8A27F3F524193E0200892A95 /* ContainerView.swift */,
-				8AC52391240EBA0D008222D7 /* SmallButton.swift */,
-				8A62D4F2240FD1F90054D059 /* LargeButton.swift */,
-				8A47BA742417FC97002EA40D /* MiniButton.swift */,
-				8A27F3F724195CE100892A95 /* LargeTextField.swift */,
+				8ABD556D241A3FEB0041B143 /* Labels */,
+				8ABD556E241A3FF60041B143 /* Views */,
+				8ABD556F241A40090041B143 /* Buttons */,
+				8ABD5570241A400F0041B143 /* TextFields */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -317,8 +322,9 @@
 		8A65D9B6240D758300364FDF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8A65D9B7240D75C200364FDF /* UIColor + sunglass.swift */,
-				8A65D9B9240D765D00364FDF /* UIFont + sunglass.swift */,
+				8A65D9B7240D75C200364FDF /* UIColor + Sunglass.swift */,
+				8A65D9B9240D765D00364FDF /* UIFont + Sunglass.swift */,
+				8ABD5573241A45BD0041B143 /* CALayer + Sunglass.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +336,52 @@
 				8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */,
 			);
 			path = "Product Details";
+			sourceTree = "<group>";
+		};
+		8ABD5564241A32E00041B143 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				8ABD5565241A330E0041B143 /* Orders.storyboard */,
+				8ABD5569241A335E0041B143 /* OrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		8ABD556D241A3FEB0041B143 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D9B4240D6EF700364FDF /* MediumTextLabel.swift */,
+				8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		8ABD556E241A3FF60041B143 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AC5238F240EB45C008222D7 /* BorderView.swift */,
+				8A27F3F524193E0200892A95 /* ContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ABD556F241A40090041B143 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8A62D4F2240FD1F90054D059 /* LargeButton.swift */,
+				8AC52391240EBA0D008222D7 /* SmallButton.swift */,
+				8A47BA742417FC97002EA40D /* MiniButton.swift */,
+				8ABD5571241A436B0041B143 /* DismissRoundButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8ABD5570241A400F0041B143 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				8A27F3F724195CE100892A95 /* LargeTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 		CD911001D499DE261EC64575 /* Pods */ = {
@@ -457,6 +509,7 @@
 				8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */,
 				8A62D500240FDEA50054D059 /* Cart.storyboard in Resources */,
 				8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */,
+				8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */,
 				8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */,
 				8A62D4FC240FDD9F0054D059 /* TryProduct.storyboard in Resources */,
 				8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */,
@@ -546,15 +599,16 @@
 				8A47BA752417FC97002EA40D /* MiniButton.swift in Sources */,
 				8A62D4FE240FDDB50054D059 /* TryProductViewController.swift in Sources */,
 				8A65D97A240D2D3200364FDF /* HomeViewController.swift in Sources */,
+				8ABD5574241A45BD0041B143 /* CALayer + Sunglass.swift in Sources */,
 				8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */,
 				8A62D502240FDEBC0054D059 /* CartViewController.swift in Sources */,
 				8AC52392240EBA0D008222D7 /* SmallButton.swift in Sources */,
 				8AC5238C240E9614008222D7 /* StoryboardInstance.swift in Sources */,
 				8A62D4FA240FDA790054D059 /* StoresOnMapViewController.swift in Sources */,
-				8A65D9BA240D765D00364FDF /* UIFont + sunglass.swift in Sources */,
+				8A65D9BA240D765D00364FDF /* UIFont + Sunglass.swift in Sources */,
 				8AC5238A240E95D0008222D7 /* ProductDetailsViewController.swift in Sources */,
 				8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */,
-				8A65D9B8240D75C200364FDF /* UIColor + sunglass.swift in Sources */,
+				8A65D9B8240D75C200364FDF /* UIColor + Sunglass.swift in Sources */,
 				8AC5238E240EB19A008222D7 /* LargeTextLabel.swift in Sources */,
 				8A27F3F824195CE100892A95 /* LargeTextField.swift in Sources */,
 				8A27F3F42419352100892A95 /* CheckoutViewController.swift in Sources */,
@@ -562,9 +616,11 @@
 				8AF2BD9F2416A0B500EE605C /* CartTableViewCell.swift in Sources */,
 				8A65D9B2240D5EC300364FDF /* ProductList.swift in Sources */,
 				8A62D4F3240FD1F90054D059 /* LargeButton.swift in Sources */,
+				8ABD556A241A335E0041B143 /* OrdersViewController.swift in Sources */,
 				8A65D978240D2D3200364FDF /* SceneDelegate.swift in Sources */,
 				8AC52390240EB45C008222D7 /* BorderView.swift in Sources */,
 				8A27F3F624193E0200892A95 /* ContainerView.swift in Sources */,
+				8ABD5572241A436B0041B143 /* DismissRoundButton.swift in Sources */,
 				8A65D9AD240D526E00364FDF /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
