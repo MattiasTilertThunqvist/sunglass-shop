@@ -9,9 +9,18 @@
 import Foundation
 
 struct ProductItem {
+    
+    enum OfferType {
+        case promo
+        case regular
+    }
+    
     let id: String
     let title: String
     let price: Double
     let description: String
     let imageUrlString: String
+    let offerType: OfferType
+    let promoHeaderTitle: String?
+    let promoImageUrlString: String?
 }

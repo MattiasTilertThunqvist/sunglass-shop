@@ -10,7 +10,7 @@ import UIKit
 
 final class StoryboardInstance {
     
-    private static let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private static let productOverview = UIStoryboard(name: "ProductOverview", bundle: nil)
     private static let productDetailsStoryboard = UIStoryboard(name: "ProductDetails", bundle: nil)
     private static let storesStoryboard = UIStoryboard(name: "Stores", bundle: nil)
     private static let tryProductStoryboard = UIStoryboard(name: "TryProduct", bundle: nil)
@@ -18,8 +18,8 @@ final class StoryboardInstance {
     private static let checkoutStoryboard = UIStoryboard(name: "Checkout", bundle: nil)
     private static let ordersStoryboard = UIStoryboard(name: "Orders", bundle: nil)
 
-    static func homeViewController() -> HomeViewController {
-        return homeStoryboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+    static func productOverviewViewController() -> ProductOverviewViewController {
+        return productOverview.instantiateViewController(identifier: "ProductOverviewViewController") as! ProductOverviewViewController
     }
     
     static func productDetailsViewController() -> ProductDetailsViewController {

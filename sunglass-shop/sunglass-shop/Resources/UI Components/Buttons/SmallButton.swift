@@ -17,6 +17,7 @@ class SmallButton: UIButton {
     
     enum ColorScheme {
         case blackOnTransparent
+        case whiteOnTransparent
         case whiteOnBlack
     }
     
@@ -28,6 +29,11 @@ class SmallButton: UIButton {
                 setTitleColor(.sunglassBlack, for: .normal)
                 layer.borderWidth = 1
                 layer.borderColor = UIColor.sunglassBlack.cgColor
+            case .whiteOnTransparent:
+                backgroundColor = .clear
+                setTitleColor(.white, for: .normal)
+                layer.borderWidth = 1
+                layer.borderColor = UIColor.white.cgColor
             case .whiteOnBlack:
                 backgroundColor = .sunglassBlack
                 setTitleColor(.white, for: .normal)

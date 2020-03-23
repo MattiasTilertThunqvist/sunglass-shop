@@ -1,5 +1,5 @@
 //
-//  HomeCollectionViewCell.swift
+//  ProductOverviewCollectionViewCell.swift
 //  sunglass-shop
 //
 //  Created by Mattias Tilert Thunqvist on 2020-03-02.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
+class ProductOverviewCollectionViewCell: UICollectionViewCell {
     
     // MARK: Properties
     
-    static let cellIdentifier = "HomeCollectionViewCell"
+    static let cellIdentifier = "ProductOverviewCollectionViewCell"
     
     // MARK: IBOulets
     
@@ -31,7 +31,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
     }
     
-    // MARK: Helpers
+    // MARK: Accessers
     
     func setImage(to image: UIImage) {
         imageView.image = image

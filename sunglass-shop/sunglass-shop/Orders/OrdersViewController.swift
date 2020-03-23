@@ -13,10 +13,6 @@ class OrdersViewController: UIViewController {
     // MARK: Propterties
     
     private let cellIdentifier = CartTableViewCell.cellIdentifier
-    private let cart = ProductList(items: [
-        ProductItem(id: "Ett", title: "Rayban", price: 59, description: "Text!", imageUrlString: "url"),
-        ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url")
-    ])
     
     // MARK: IBOutlets
     
@@ -66,7 +62,7 @@ extension OrdersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cart.items.count
+        return Cart.shared.countItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

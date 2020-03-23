@@ -8,28 +8,16 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ProductOverviewViewController: UIViewController {
     
     // MARK: Properties
-    
-    private let productList = ProductList(items: [
-        ProductItem(id: "Ett", title: "Rayban", price: 59, description: "Text!", imageUrlString: "url"),
-        ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url"),
-        ProductItem(id: "Tre", title: "Gucci", price: 69, description: "Text", imageUrlString: "Text"),
-        ProductItem(id: "Fyra", title: "Prada", price: 69, description: "Text", imageUrlString: "Text"),
-        ProductItem(id: "Fem", title: "Lacoste", price: 69, description: "Text", imageUrlString: "Text"),
-        ProductItem(id: "Ett", title: "Rayban", price: 59, description: "Text!", imageUrlString: "url"),
-        ProductItem(id: "Två", title: "Persol", price: 159, description: "Text!", imageUrlString: "url"),
-        ProductItem(id: "Tre", title: "Gucci", price: 69, description: "Text", imageUrlString: "Text"),
-        ProductItem(id: "Fyra", title: "Prada", price: 69, description: "Text", imageUrlString: "Text"),
-        ProductItem(id: "Fem", title: "Lacoste", price: 69, description: "Text", imageUrlString: "Text")
-    ])
-    
-    private let cellIdentifier = HomeCollectionViewCell.cellIdentifier
+        
+    private let promoCellIdentifier = PromoCollectionViewCell.cellIdentifier
+    private let productOverviewCellIdentifier = ProductOverviewCollectionViewCell.cellIdentifier
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: Lifecycle
 
@@ -44,7 +32,7 @@ class HomeViewController: UIViewController {
         
         let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
         navigationItem.leftBarButtonItem = storesButton
-        
+    
         let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleCartButtonPress))
         navigationItem.rightBarButtonItem = cartButton
     }
@@ -64,55 +52,71 @@ class HomeViewController: UIViewController {
 
 // MARK: UICollectionView
 
-extension HomeViewController {
+extension ProductOverviewViewController {
     
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        registerCell()
+        registerCells()
     }
     
-    private func registerCell() {
-        let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: cellIdentifier)
+    private func registerCells() {
+        let promoCellNib = UINib(nibName: promoCellIdentifier, bundle: nil)
+        collectionView.register(promoCellNib, forCellWithReuseIdentifier: promoCellIdentifier)
+        
+        let productOverviewCellNib = UINib(nibName: productOverviewCellIdentifier, bundle: nil)
+        collectionView.register(productOverviewCellNib, forCellWithReuseIdentifier: productOverviewCellIdentifier)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedProductItem = productList.items[indexPath.row]
+        let selectedProductItem = ProductList.shared.itemAtIndex(indexPath.row)
         let viewController = StoryboardInstance.productDetailsViewController()
         viewController.productItem = selectedProductItem
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension ProductOverviewViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productList.items.count
+        return ProductList.shared.countItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let productItem = productList.items[indexPath.row]
+        let productItem = ProductList.shared.itemAtIndex(indexPath.row)
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! HomeCollectionViewCell
-        cell.setTitle(to: productItem.title)
-        cell.setPrice(to: "£\(productItem.price)")
-        return cell
+        switch productItem.offerType {
+        case .promo:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: promoCellIdentifier, for: indexPath) as! PromoCollectionViewCell
+            cell.setPromoTitle(to: productItem.promoHeaderTitle ?? productItem.title)
+            return cell
+        case .regular:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productOverviewCellIdentifier, for: indexPath) as! ProductOverviewCollectionViewCell
+            cell.setTitle(to: productItem.title)
+            cell.setPrice(to: "£\(productItem.price)")
+            return cell
+        }
     }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension ProductOverviewViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+        let offerType = ProductList.shared.itemAtIndex(indexPath.row).offerType
         let collectionViewWidth = collectionView.frame.width
 
-        if UIDevice().userInterfaceIdiom == .pad {
-            let cellSize = collectionViewWidth / 3
-            return CGSize(width: cellSize, height: cellSize)
-        } else {
-            let cellSize = collectionViewWidth / 2
-            return CGSize(width: cellSize, height: cellSize)
+
+        switch offerType {
+        case .promo:
+            return CGSize(width: collectionViewWidth, height: collectionViewWidth)
+        case .regular:
+            if UIDevice().userInterfaceIdiom == .pad {
+                let cellSize = collectionViewWidth / 3
+                return CGSize(width: cellSize, height: cellSize)
+            } else {
+                let cellSize = collectionViewWidth / 2
+                return CGSize(width: cellSize, height: cellSize)
+            }
         }
     }
 }

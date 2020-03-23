@@ -14,8 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = .sunglassBlack
-        
+        navigationBarAppearace.barTintColor = .sunglassBlack
+        navigationBarAppearace.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navigationBarAppearace.tintColor = .white
+        navigationBarAppearace.isTranslucent = false
+        navigationBarAppearace.barStyle = .black
         return true
     }
 

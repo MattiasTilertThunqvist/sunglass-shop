@@ -14,6 +14,7 @@ extension UIFont {
         case small = 12
         case medium = 14
         case large = 16
+        case extraLarge = 22
     }
     
     class func sunglassRegularFont(_ textSize: textSize) -> UIFont {
