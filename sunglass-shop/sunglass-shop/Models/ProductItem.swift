@@ -23,4 +23,5 @@ struct ProductItem {
     let offerType: OfferType
     let promoHeaderTitle: String?
     let promoImageUrlString: String?
+    let rank: Int
 }

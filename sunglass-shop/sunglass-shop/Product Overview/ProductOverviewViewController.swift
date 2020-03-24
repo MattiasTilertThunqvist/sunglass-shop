@@ -25,6 +25,7 @@ class ProductOverviewViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupCollectionView()
+        getProducts()
     }
 
     private func setup() {
@@ -36,6 +37,11 @@ class ProductOverviewViewController: UIViewController {
         let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleCartButtonPress))
         navigationItem.rightBarButtonItem = cartButton
     }
+    
+    private func getProducts() {
+        NetworkManager.shared.getProducts()
+    }
+    
     
     // MARK: Handlers
     
