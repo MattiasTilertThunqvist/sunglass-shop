@@ -7,7 +7,7 @@ target 'sunglass-shop' do
 
   # Pods for sunglass-shop
   pod 'Firebase/Analytics'
-  pod 'Firebase/Firestore', '6.2.0' 
+  pod 'Firebase/Firestore', '6.10.0' 
 
   target 'sunglass-shopTests' do
     inherit! :search_paths
