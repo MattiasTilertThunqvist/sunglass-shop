@@ -8,15 +8,16 @@
 
 import Foundation
 
-struct ProductItem {
+struct ProductItem: Codable {
     
-    enum OfferType {
+    enum OfferType: String, Codable {
         case promo
         case regular
     }
     
     let id: String
-    let title: String
+    let brand: String
+    let model: String
     let price: Double
     let description: String
     let imageUrlString: String

@@ -39,7 +39,16 @@ class ProductOverviewViewController: UIViewController {
     }
     
     private func getProducts() {
-        NetworkManager.shared.getProducts()
+        NetworkManager.shared.getProducts { (error) in
+            if let error = error {
+                // TODO: Handle error
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     
@@ -94,11 +103,11 @@ extension ProductOverviewViewController: UICollectionViewDataSource {
         switch productItem.offerType {
         case .promo:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: promoCellIdentifier, for: indexPath) as! PromoCollectionViewCell
-            cell.setPromoTitle(to: productItem.promoHeaderTitle ?? productItem.title)
+            cell.setPromoTitle(to: productItem.promoHeaderTitle ?? productItem.model)
             return cell
         case .regular:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productOverviewCellIdentifier, for: indexPath) as! ProductOverviewCollectionViewCell
-            cell.setTitle(to: productItem.title)
+            cell.setTitle(to: productItem.brand)
             cell.setPrice(to: "£\(productItem.price)")
             return cell
         }

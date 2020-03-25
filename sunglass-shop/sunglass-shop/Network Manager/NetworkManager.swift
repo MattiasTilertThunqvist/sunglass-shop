@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class NetworkManager {
     
@@ -23,17 +24,32 @@ class NetworkManager {
     
     // MARK: Networking
     
-    func getProducts() {
+    func getProducts(completion: @escaping (_ error: Error?) -> ()) {
         productsRef.getDocuments { (querySnapshot, error) in
             if let error = error {
-                // Handle error
-                print()
+                print("Error querying productItems from Firestore: \(error)")
+                completion(error)
             }
             
-            for document in querySnapshot!.documents {
-                print(document)
+            let result = Result {
+                try querySnapshot?.documents.compactMap {
+                    try $0.data(as: ProductItem.self)
+                }
             }
-        
+            
+            switch result {
+            case .success(let productItems):
+                if let productItems = productItems {
+                    ProductList.shared.addItems(productItems)
+                    completion(nil)
+                } else {
+                    print("Documents does not exist")
+                    // TODO: Handle error
+                }
+            case .failure(let error):
+                print("Error decoding productItem: \(error)")
+                completion(error)
+            }
         }
     }
 }

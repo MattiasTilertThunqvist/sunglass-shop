@@ -17,17 +17,7 @@ class ProductList {
     
     // MARK: Init
     
-    private init() {
-        self.items = [
-            ProductItem(id: "12dd34", title: "Rayban", price: 59, description: "Text", imageUrlString: "url", offerType: .promo, promoHeaderTitle: "The perfect sidekick for sunny occasions", promoImageUrlString: nil, rank: 1),
-            ProductItem(id: "12dd345", title: "Persol", price: 3359, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 2),
-            ProductItem(id: "12dd346", title: "Gucci", price: 59, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 3),
-            ProductItem(id: "12dd347", title: "Prada", price: 159, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 4),
-            ProductItem(id: "12dd348", title: "Brallor", price: 59, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 5),
-            ProductItem(id: "12dd349", title: "Rayban", price: 59, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 6),
-            ProductItem(id: "12dd3410", title: "Rayban", price: 59, description: "Text", imageUrlString: "url", offerType: .regular, promoHeaderTitle: nil, promoImageUrlString: nil, rank: 7)
-        ]
-    }
+    private init() {}
     
     // MARK: Accessors
     
@@ -37,5 +27,20 @@ class ProductList {
     
     func itemAtIndex(_ index: Int) -> ProductItem {
         return items[index]
+    }
+    
+    func getAllItems() -> [ProductItem] {
+        return items
+    }
+    
+    func addItems(_ productItems: [ProductItem]) {
+        sortItemsByRank()
+        self.items = productItems
+    }
+    
+    // MARK: Support
+    
+    private func sortItemsByRank() {
+        items.sort { $0.rank > $1.rank }
     }
 }
