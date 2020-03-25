@@ -16,40 +16,50 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUp-Ej-a3E" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="8" y="135" width="184" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUp-Ej-a3E" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="8" y="113.5" width="184" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGe-xj-GLc" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="8" y="163.5" width="184" height="20.5"/>
+                        <rect key="frame" x="8" y="171.5" width="184" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-C6-pfO">
-                        <rect key="frame" x="16" y="16" width="168" height="111"/>
+                        <rect key="frame" x="8" y="8" width="184" height="97.5"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPd-iV-z4A" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="8" y="142.5" width="184" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="RUp-Ej-a3E" firstAttribute="top" secondItem="iIb-C6-pfO" secondAttribute="bottom" constant="8" id="76U-pZ-Lcd"/>
-                <constraint firstItem="KGe-xj-GLc" firstAttribute="top" secondItem="RUp-Ej-a3E" secondAttribute="bottom" constant="8" id="8mj-GD-t4S"/>
+                <constraint firstItem="KGe-xj-GLc" firstAttribute="top" secondItem="oPd-iV-z4A" secondAttribute="bottom" constant="8" id="8mj-GD-t4S"/>
+                <constraint firstItem="oPd-iV-z4A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Aq5-WX-cbC"/>
+                <constraint firstItem="oPd-iV-z4A" firstAttribute="top" secondItem="RUp-Ej-a3E" secondAttribute="bottom" constant="8" id="Ci5-YP-8jR"/>
                 <constraint firstItem="KGe-xj-GLc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="E79-xT-djS"/>
                 <constraint firstAttribute="trailing" secondItem="KGe-xj-GLc" secondAttribute="trailing" constant="8" id="ObV-gm-zxS"/>
-                <constraint firstItem="iIb-C6-pfO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="W8Z-GT-pvA"/>
-                <constraint firstAttribute="bottom" secondItem="KGe-xj-GLc" secondAttribute="bottom" constant="16" id="YRZ-dd-qeH"/>
-                <constraint firstItem="iIb-C6-pfO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="mZ0-Ha-A0o"/>
-                <constraint firstAttribute="trailing" secondItem="iIb-C6-pfO" secondAttribute="trailing" constant="16" id="pdq-TQ-5SZ"/>
+                <constraint firstItem="iIb-C6-pfO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="W8Z-GT-pvA"/>
+                <constraint firstAttribute="bottom" secondItem="KGe-xj-GLc" secondAttribute="bottom" constant="8" id="YRZ-dd-qeH"/>
+                <constraint firstAttribute="trailing" secondItem="oPd-iV-z4A" secondAttribute="trailing" constant="8" id="feD-Ae-ujS"/>
+                <constraint firstItem="iIb-C6-pfO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="mZ0-Ha-A0o"/>
+                <constraint firstAttribute="trailing" secondItem="iIb-C6-pfO" secondAttribute="trailing" constant="8" id="pdq-TQ-5SZ"/>
                 <constraint firstAttribute="trailing" secondItem="RUp-Ej-a3E" secondAttribute="trailing" constant="8" id="sDn-si-WBR"/>
                 <constraint firstItem="RUp-Ej-a3E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wgJ-Gd-Fgs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="brandLabel" destination="RUp-Ej-a3E" id="dUA-5y-pyh"/>
                 <outlet property="imageView" destination="iIb-C6-pfO" id="Zfp-pd-Wqo"/>
+                <outlet property="modelLabel" destination="oPd-iV-z4A" id="irO-9J-PR2"/>
                 <outlet property="priceLabel" destination="KGe-xj-GLc" id="9bm-1z-17W"/>
-                <outlet property="titleLabel" destination="RUp-Ej-a3E" id="dUA-5y-pyh"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </collectionViewCell>

@@ -17,7 +17,8 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
     // MARK: IBOulets
     
     @IBOutlet weak private var imageView: UIImageView!
-    @IBOutlet weak private var titleLabel: MediumTextLabel!
+    @IBOutlet weak private var brandLabel: MediumTextLabel!
+    @IBOutlet weak private var modelLabel: MediumTextLabel!
     @IBOutlet weak private var priceLabel: MediumTextLabel!
     
     // MARK: Lifecycle
@@ -28,7 +29,9 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
     }
     
     private func setup() {
-        
+        brandLabel.numberOfLines = 1
+        modelLabel.numberOfLines = 1
+        priceLabel.numberOfLines = 1
     }
     
     // MARK: Accessers
@@ -37,8 +40,12 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
         imageView.image = image
     }
     
-    func setTitle(to text: String) {
-        titleLabel.text = text.uppercased()
+    func setBrand(to text: String) {
+        brandLabel.text = text.uppercased()
+    }
+    
+    func setModel(to text: String) {
+        modelLabel.text = text.uppercased()
     }
     
     func setPrice(to text: String) {

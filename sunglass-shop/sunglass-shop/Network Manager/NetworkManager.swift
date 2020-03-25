@@ -9,14 +9,15 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 class NetworkManager {
     
     // MARK: Properties
     
     static let shared = NetworkManager()
+    static let storage = Storage.storage()
     private let productsRef = Firestore.firestore().collection("products")
-    
     
     // MARK: Init
     

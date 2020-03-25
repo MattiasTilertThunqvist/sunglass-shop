@@ -107,7 +107,8 @@ extension ProductOverviewViewController: UICollectionViewDataSource {
             return cell
         case .regular:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productOverviewCellIdentifier, for: indexPath) as! ProductOverviewCollectionViewCell
-            cell.setTitle(to: productItem.brand)
+            cell.setBrand(to: productItem.brand)
+            cell.setModel(to: productItem.model)
             cell.setPrice(to: "£\(productItem.price)")
             return cell
         }

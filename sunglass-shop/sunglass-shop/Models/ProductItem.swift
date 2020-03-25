@@ -26,3 +26,4 @@ struct ProductItem: Codable {
     let promoImageUrlString: String?
     let rank: Int
 }
+
