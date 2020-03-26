@@ -42,6 +42,7 @@
 		8A65D9BA240D765D00364FDF /* UIFont + Sunglass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9B9240D765D00364FDF /* UIFont + Sunglass.swift */; };
 		8A699D60241FB01900CBBFF7 /* PromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */; };
 		8A699D61241FB01900CBBFF7 /* PromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */; };
+		8ABA19ED242CC16D009F91F4 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA19EC242CC16D009F91F4 /* CustomImageView.swift */; };
 		8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABD5565241A330E0041B143 /* Orders.storyboard */; };
 		8ABD556A241A335E0041B143 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5569241A335E0041B143 /* OrdersViewController.swift */; };
 		8ABD5572241A436B0041B143 /* DismissRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5571241A436B0041B143 /* DismissRoundButton.swift */; };
@@ -117,6 +118,7 @@
 		8A65D9B9240D765D00364FDF /* UIFont + Sunglass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Sunglass.swift"; sourceTree = "<group>"; };
 		8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoCollectionViewCell.xib; sourceTree = "<group>"; };
+		8ABA19EC242CC16D009F91F4 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		8ABD5565241A330E0041B143 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		8ABD5569241A335E0041B143 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		8ABD5571241A436B0041B143 /* DismissRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissRoundButton.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			children = (
 				8AC5238F240EB45C008222D7 /* BorderView.swift */,
 				8A27F3F524193E0200892A95 /* ContainerView.swift */,
+				8ABA19EC242CC16D009F91F4 /* CustomImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				8A65D97A240D2D3200364FDF /* ProductOverviewViewController.swift in Sources */,
 				8A65657C2428EEF800B4E8F6 /* Cart.swift in Sources */,
 				8A699D60241FB01900CBBFF7 /* PromoCollectionViewCell.swift in Sources */,
+				8ABA19ED242CC16D009F91F4 /* CustomImageView.swift in Sources */,
 				8ABD5574241A45BD0041B143 /* CALayer + Sunglass.swift in Sources */,
 				8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */,
 				8A62D502240FDEBC0054D059 /* CartViewController.swift in Sources */,

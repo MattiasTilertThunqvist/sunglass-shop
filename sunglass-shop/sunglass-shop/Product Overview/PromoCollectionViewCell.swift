@@ -16,7 +16,7 @@ class PromoCollectionViewCell: UICollectionViewCell {
     
     // MARK: IBOutlets
     
-    @IBOutlet private weak var backgroundImageView: UIImageView!
+    @IBOutlet private weak var backgroundImageView: CustomImageView!
     @IBOutlet private weak var titleLabel: LargeTextLabel!
     @IBOutlet weak var exploreButton: SmallButton!
     
@@ -39,8 +39,7 @@ class PromoCollectionViewCell: UICollectionViewCell {
         titleLabel.text = text.uppercased()
     }
     
-    func setBackgroundImage(to image: UIImage) {
-        backgroundImageView.image = image
+    func setBackgroundImage(to urlString: urlString) {
+        backgroundImageView.setImage(from: urlString)
     }
-
 }

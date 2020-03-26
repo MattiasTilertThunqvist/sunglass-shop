@@ -103,10 +103,12 @@ extension ProductOverviewViewController: UICollectionViewDataSource {
         switch productItem.offerType {
         case .promo:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: promoCellIdentifier, for: indexPath) as! PromoCollectionViewCell
+            cell.setBackgroundImage(to: productItem.promoImageUrlString ?? productItem.imageUrlString)
             cell.setPromoTitle(to: productItem.promoHeaderTitle ?? productItem.model)
             return cell
         case .regular:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productOverviewCellIdentifier, for: indexPath) as! ProductOverviewCollectionViewCell
+            cell.setImage(from: productItem.imageUrlString)
             cell.setBrand(to: productItem.brand)
             cell.setModel(to: productItem.model)
             cell.setPrice(to: "£\(productItem.price)")

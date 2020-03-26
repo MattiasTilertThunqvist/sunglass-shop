@@ -16,7 +16,7 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
     
     // MARK: IBOulets
     
-    @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var imageView: CustomImageView!
     @IBOutlet weak private var brandLabel: MediumTextLabel!
     @IBOutlet weak private var modelLabel: MediumTextLabel!
     @IBOutlet weak private var priceLabel: MediumTextLabel!
@@ -36,8 +36,8 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
     
     // MARK: Accessers
     
-    func setImage(to image: UIImage) {
-        imageView.image = image
+    func setImage(from urlString: urlString) {
+        imageView.setImage(from: urlString)
     }
     
     func setBrand(to text: String) {
