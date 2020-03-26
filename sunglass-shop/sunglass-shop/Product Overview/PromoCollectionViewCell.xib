@@ -20,25 +20,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The perfect sidekick for sunny occasions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtl-Ww-Szd" customClass="ExtraLargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="32" y="40" width="336" height="20.5"/>
+                        <rect key="frame" x="32" y="32" width="336" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZV-1e-iTK" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
-                        <rect key="frame" x="167" y="76.5" width="66" height="30"/>
+                        <rect key="frame" x="167" y="338" width="66" height="30"/>
                         <state key="normal" title="EXPLORE"/>
                     </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="YZV-1e-iTK" secondAttribute="bottom" constant="32" id="2zu-2H-HSB"/>
                 <constraint firstAttribute="trailing" secondItem="sFP-me-yPq" secondAttribute="trailing" id="34t-k9-V5b"/>
-                <constraint firstItem="xtl-Ww-Szd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="40" id="5Pn-4j-Ixv"/>
+                <constraint firstItem="xtl-Ww-Szd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="32" id="38p-4A-dsb"/>
                 <constraint firstItem="sFP-me-yPq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OJt-jt-Bae"/>
                 <constraint firstAttribute="bottom" secondItem="sFP-me-yPq" secondAttribute="bottom" id="Zfg-SL-S4Y"/>
                 <constraint firstItem="sFP-me-yPq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ou0-Dt-Pgd"/>
                 <constraint firstItem="xtl-Ww-Szd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="t48-9c-CMA"/>
-                <constraint firstItem="YZV-1e-iTK" firstAttribute="top" secondItem="xtl-Ww-Szd" secondAttribute="bottom" constant="16" id="tjx-4U-g0o"/>
                 <constraint firstItem="YZV-1e-iTK" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="vc1-oD-Huk"/>
                 <constraint firstAttribute="trailing" secondItem="xtl-Ww-Szd" secondAttribute="trailing" constant="32" id="xDa-N8-wWP"/>
             </constraints>
