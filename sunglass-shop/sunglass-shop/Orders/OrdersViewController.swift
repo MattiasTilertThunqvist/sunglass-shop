@@ -16,13 +16,13 @@ class OrdersViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var productsContainer: ContainerView!
-    @IBOutlet weak var productsTableView: UITableView!
-    @IBOutlet weak var productsTableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var productsContainer: ContainerView!
+    @IBOutlet weak private var productsTableView: UITableView!
+    @IBOutlet weak private var productsTableViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: IBActions
     
-    @IBAction func dismissButton(_ sender: UIButton) {
+    @IBAction private func dismissButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     

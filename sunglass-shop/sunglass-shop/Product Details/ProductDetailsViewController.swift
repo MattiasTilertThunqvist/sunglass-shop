@@ -16,12 +16,12 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var productImageView: CustomImageView!
-    @IBOutlet weak var productTitleLabel: LargeTextLabel!
-    @IBOutlet weak var priceLabel: MediumTextLabel!
-    @IBOutlet weak var findInStoreButton: SmallButton!
-    @IBOutlet weak var tryItOnButton: SmallButton!
-    @IBOutlet weak var addToCartButton: LargeButton!
+    @IBOutlet weak private var productImageView: CustomImageView!
+    @IBOutlet weak private var productTitleLabel: LargeTextLabel!
+    @IBOutlet weak private var priceLabel: MediumTextLabel!
+    @IBOutlet weak private var findInStoreButton: SmallButton!
+    @IBOutlet weak private var tryItOnButton: SmallButton!
+    @IBOutlet weak private var addToCartButton: LargeButton!
     
     // MARK: IBActions
     
@@ -42,7 +42,6 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-
     }
     
     private func setup() {

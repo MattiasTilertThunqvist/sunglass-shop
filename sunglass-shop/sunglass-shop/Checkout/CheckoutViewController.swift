@@ -16,22 +16,22 @@ class CheckoutViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var productsContainer: ContainerView!
-    @IBOutlet weak var nameTextField: LargeTextField!
-    @IBOutlet weak var emailTextField: LargeTextField!
-    @IBOutlet weak var phoneNumberTextField: LargeTextField!
-    @IBOutlet weak var addressTextField: LargeTextField!
-    @IBOutlet weak var optionalAddressTextField: LargeTextField!
-    @IBOutlet weak var cityTextField: LargeTextField!
-    @IBOutlet weak var postCodeTextField: LargeTextField!
-    @IBOutlet weak var countyTextField: LargeTextField!
-    @IBOutlet weak var orderButton: LargeButton!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var productsContainer: ContainerView!
+    @IBOutlet weak private var nameTextField: LargeTextField!
+    @IBOutlet weak private var emailTextField: LargeTextField!
+    @IBOutlet weak private var phoneNumberTextField: LargeTextField!
+    @IBOutlet weak private var addressTextField: LargeTextField!
+    @IBOutlet weak private var optionalAddressTextField: LargeTextField!
+    @IBOutlet weak private var cityTextField: LargeTextField!
+    @IBOutlet weak private var postCodeTextField: LargeTextField!
+    @IBOutlet weak private var countyTextField: LargeTextField!
+    @IBOutlet weak private var orderButton: LargeButton!
     
     // MARK: IBActions
     
-    @IBAction func orderButtonPressed(_ sender: LargeButton) {
+    @IBAction private func orderButtonPressed(_ sender: LargeButton) {
         handleOrderButtonPress()
     }
     

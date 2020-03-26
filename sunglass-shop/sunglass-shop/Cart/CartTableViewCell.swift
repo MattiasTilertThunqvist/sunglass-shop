@@ -16,9 +16,9 @@ class CartTableViewCell: UITableViewCell {
     
     // MARK: IBoutlets
     
-    @IBOutlet weak var removeButton: MiniButton!
-    @IBOutlet weak var addButton: MiniButton!
-    @IBOutlet weak var quantityLabel: MediumTextLabel!
+    @IBOutlet weak private var removeButton: MiniButton!
+    @IBOutlet weak private var addButton: MiniButton!
+    @IBOutlet weak private var quantityLabel: MediumTextLabel!
     
     // MARK:IBActions
     

@@ -16,13 +16,13 @@ class CartViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var checkoutButton: LargeButton!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var checkoutButton: LargeButton!
     
     
     // MARK: IBActions
     
-    @IBAction func checkoutButtonPressed(_ sender: LargeButton) {
+    @IBAction private func checkoutButtonPressed(_ sender: LargeButton) {
         handleCheckoutButtonPress()
     }
     
