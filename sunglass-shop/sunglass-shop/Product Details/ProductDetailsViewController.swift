@@ -16,7 +16,7 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productImageView: CustomImageView!
     @IBOutlet weak var productTitleLabel: LargeTextLabel!
     @IBOutlet weak var priceLabel: MediumTextLabel!
     @IBOutlet weak var findInStoreButton: SmallButton!
@@ -25,15 +25,15 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction func findInStoreButtonPressed(_ sender: SmallButton) {
+    @IBAction func didTapFindInStoreButton(_ sender: SmallButton) {
         handleFindInStoreButtonPress()
     }
     
-    @IBAction func tryItOnButtonPressed(_ sender: SmallButton) {
+    @IBAction func didTapTryItOnButton(_ sender: SmallButton) {
         handleTryItOnButtonPress()
     }
     
-    @IBAction func addToCartButtonPressed(_ sender: LargeButton) {
+    @IBAction func didTapAddToCartButton(_ sender: LargeButton) {
         handleAddToCartButtonPress()
     }
     

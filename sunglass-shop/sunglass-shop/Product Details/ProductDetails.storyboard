@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3Z-ri-KsI" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="974"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="M4h-Sz-jgm">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="M4h-Sz-jgm" customClass="CustomImageView" customModule="sunglass_shop" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="24" width="382" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="SM4-WJ-5s3"/>
@@ -59,14 +59,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                         <state key="normal" title="FIND IN STORE"/>
                                                         <connections>
-                                                            <action selector="findInStoreButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
+                                                            <action selector="didTapFindInStoreButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-21-VnX" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="30"/>
                                                         <state key="normal" title="TRY THEM ON"/>
                                                         <connections>
-                                                            <action selector="tryItOnButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
+                                                            <action selector="didTapTryItOnButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -139,7 +139,7 @@
                                 <rect key="frame" x="16" y="808" width="382" height="30"/>
                                 <state key="normal" title="ADD TO CART"/>
                                 <connections>
-                                    <action selector="addToCartButtonPressed:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="W9p-zN-JeI"/>
+                                    <action selector="didTapAddToCartButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="W9p-zN-JeI"/>
                                 </connections>
                             </button>
                         </subviews>

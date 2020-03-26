@@ -41,7 +41,8 @@ class ProductOverviewViewController: UIViewController {
     private func getProducts() {
         NetworkManager.shared.getProducts { (error) in
             if let error = error {
-                // TODO: Handle error
+                let alert = UIAlertController(title: "Couldn't load products", message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
                 return
             }
             
@@ -138,6 +139,3 @@ extension ProductOverviewViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
-
-
-

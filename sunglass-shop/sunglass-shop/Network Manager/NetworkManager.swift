@@ -25,11 +25,11 @@ class NetworkManager {
     
     // MARK: Networking
     
-    func getProducts(completion: @escaping (_ error: Error?) -> ()) {
+    func getProducts(then handler: @escaping (Error?) -> ()) {
         productsRef.getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error querying productItems from Firestore: \(error)")
-                completion(error)
+                handler(error)
             }
             
             let result = Result {
@@ -42,14 +42,14 @@ class NetworkManager {
             case .success(let productItems):
                 if let productItems = productItems {
                     ProductList.shared.addItems(productItems)
-                    completion(nil)
+                    handler(nil)
                 } else {
                     print("Documents does not exist")
-                    // TODO: Handle error
+                    handler(NetworkError.noDocument)
                 }
             case .failure(let error):
                 print("Error decoding productItem: \(error)")
-                completion(error)
+                handler(error)
             }
         }
     }

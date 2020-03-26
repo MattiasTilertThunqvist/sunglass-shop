@@ -34,13 +34,13 @@ class ProductList {
     }
     
     func addItems(_ productItems: [ProductItem]) {
-        sortItemsByRank()
         self.items = productItems
+        sortItemsByRank()
     }
     
     // MARK: Support
     
     private func sortItemsByRank() {
-        items.sort { $0.rank > $1.rank }
+        items.sort { $0.rank < $1.rank }
     }
 }
