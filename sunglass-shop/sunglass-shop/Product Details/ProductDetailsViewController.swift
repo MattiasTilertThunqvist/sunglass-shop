@@ -13,6 +13,7 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
     
     var productItem: ProductItem!
+    private var quantity: Int = 1 
     
     // MARK: IBOutlets
     
@@ -21,19 +22,20 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak private var priceLabel: MediumTextLabel!
     @IBOutlet weak private var findInStoreButton: SmallButton!
     @IBOutlet weak private var tryItOnButton: SmallButton!
+    @IBOutlet weak private var productDescriptionLabel: MediumTextLabel!
     @IBOutlet weak private var addToCartButton: LargeButton!
     
     // MARK: IBActions
     
-    @IBAction func didTapFindInStoreButton(_ sender: SmallButton) {
+    @IBAction private func didTapFindInStoreButton(_ sender: SmallButton) {
         handleFindInStoreButtonPress()
     }
     
-    @IBAction func didTapTryItOnButton(_ sender: SmallButton) {
+    @IBAction private func didTapTryItOnButton(_ sender: SmallButton) {
         handleTryItOnButtonPress()
     }
     
-    @IBAction func didTapAddToCartButton(_ sender: LargeButton) {
+    @IBAction private func didTapAddToCartButton(_ sender: LargeButton) {
         handleAddToCartButtonPress()
     }
     
@@ -51,8 +53,10 @@ class ProductDetailsViewController: UIViewController {
         tryItOnButton.colorScheme = .whiteOnBlack
         addToCartButton.colorScheme = .goldOnBlack
         
-        productTitleLabel.text = "RAYBAN"
-        priceLabel.text = "Price: £69"
+        productImageView.setImage(from: productItem.imageUrlString)
+        productTitleLabel.text = "\(productItem.brand) \(productItem.model)"
+        priceLabel.text = "Price: £\(productItem.price)"
+        productDescriptionLabel.text = productItem.description
     }
     
     // MARK: Handle events
@@ -74,6 +78,6 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func handleAddToCartButtonPress() {
-        
+        Cart.shared.addProduct(with: productItem, quantity)
     }
 }

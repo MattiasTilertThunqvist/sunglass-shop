@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Ray-Ban-sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-C6-pfO" customClass="CustomImageView" customModule="sunglass_shop" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-C6-pfO" customClass="CustomImageView" customModule="sunglass_shop" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="184" height="97.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPd-iV-z4A" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
@@ -64,7 +64,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="Ray-Ban-sunglasses" width="320" height="186.5"/>
-    </resources>
 </document>

@@ -31,7 +31,6 @@
 		8A65D97D240D2D3200364FDF /* ProductOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D97B240D2D3200364FDF /* ProductOverview.storyboard */; };
 		8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D97E240D2D3600364FDF /* Assets.xcassets */; };
 		8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D980240D2D3600364FDF /* LaunchScreen.storyboard */; };
-		8A65D98D240D2D3600364FDF /* sunglass_shopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D98C240D2D3600364FDF /* sunglass_shopTests.swift */; };
 		8A65D998240D2D3600364FDF /* sunglass_shopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D997240D2D3600364FDF /* sunglass_shopUITests.swift */; };
 		8A65D9AD240D526E00364FDF /* ProductOverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D9AB240D526E00364FDF /* ProductOverviewCollectionViewCell.swift */; };
 		8A65D9AE240D526E00364FDF /* ProductOverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A65D9AC240D526E00364FDF /* ProductOverviewCollectionViewCell.xib */; };
@@ -105,7 +104,6 @@
 		8A65D981240D2D3600364FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A65D983240D2D3600364FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A65D988240D2D3600364FDF /* sunglass-shopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sunglass-shopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A65D98C240D2D3600364FDF /* sunglass_shopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sunglass_shopTests.swift; sourceTree = "<group>"; };
 		8A65D98E240D2D3600364FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A65D993240D2D3600364FDF /* sunglass-shopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sunglass-shopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65D997240D2D3600364FDF /* sunglass_shopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sunglass_shopUITests.swift; sourceTree = "<group>"; };
@@ -211,8 +209,8 @@
 			children = (
 				8A62D4FF240FDEA50054D059 /* Cart.storyboard */,
 				8A62D501240FDEBC0054D059 /* CartViewController.swift */,
-				8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */,
 				8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */,
+				8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -260,8 +258,9 @@
 		8A65D98B240D2D3600364FDF /* sunglass-shopTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A65D98C240D2D3600364FDF /* sunglass_shopTests.swift */,
-				8A65D98E240D2D3600364FDF /* Info.plist */,
+				8AB4F45D242E4116005ECE0E /* Cases */,
+				8AB4F45E242E411C005ECE0E /* Data */,
+				8AB4F45F242E4123005ECE0E /* Supporting Files */,
 			);
 			path = "sunglass-shopTests";
 			sourceTree = "<group>";
@@ -358,6 +357,28 @@
 				8AC52389240E95D0008222D7 /* ProductDetailsViewController.swift */,
 			);
 			path = "Product Details";
+			sourceTree = "<group>";
+		};
+		8AB4F45D242E4116005ECE0E /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		8AB4F45E242E411C005ECE0E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8AB4F45F242E4123005ECE0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D98E240D2D3600364FDF /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8ABD5564241A32E00041B143 /* Orders */ = {
@@ -496,6 +517,7 @@
 					};
 					8A65D987240D2D3600364FDF = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1140;
 						TestTargetID = 8A65D971240D2D3200364FDF;
 					};
 					8A65D992240D2D3600364FDF = {
@@ -694,7 +716,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A65D98D240D2D3600364FDF /* sunglass_shopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,9 +922,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "sunglass-shopTests/Info.plist";
+				INFOPLIST_FILE = "sunglass-shopTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -912,6 +934,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tilert.sunglass-shopTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sunglass-shop.app/sunglass-shop";
@@ -924,9 +947,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "sunglass-shopTests/Info.plist";
+				INFOPLIST_FILE = "sunglass-shopTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

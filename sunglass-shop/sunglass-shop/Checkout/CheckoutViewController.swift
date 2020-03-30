@@ -57,7 +57,6 @@ class CheckoutViewController: UIViewController {
         cityTextField.setDescriptionLabel(to: "CITY")
         postCodeTextField.setDescriptionLabel(to: "POSTCODE")
         countyTextField.setDescriptionLabel(to: "COUNTRY")
-        
         orderButton.colorScheme = .goldOnBlack
     }
     
@@ -90,7 +89,6 @@ extension CheckoutViewController {
 extension CheckoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return Cart.shared.countItems()
     }
     

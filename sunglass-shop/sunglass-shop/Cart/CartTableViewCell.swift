@@ -14,10 +14,15 @@ class CartTableViewCell: UITableViewCell {
     
     static let cellIdentifier = "CartTableViewCell"
     
-    // MARK: IBoutlets
+    // MARK: IBOutlets
     
-    @IBOutlet weak private var removeButton: MiniButton!
-    @IBOutlet weak private var addButton: MiniButton!
+    @IBOutlet weak private var productImageView: CustomImageView!
+    @IBOutlet weak private var brandLabel: MediumTextLabel!
+    @IBOutlet weak private var modelLabel: MediumTextLabel!
+    @IBOutlet weak private var priceLabel: MediumTextLabel!
+    @IBOutlet weak private var removeButton: UIButton!
+    @IBOutlet weak private var decreaseButton: MiniButton!
+    @IBOutlet weak private var increase: MiniButton!
     @IBOutlet weak private var quantityLabel: MediumTextLabel!
     
     // MARK:IBActions
@@ -29,18 +34,30 @@ class CartTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setup()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     private func setup() {
-        removeButton.colorScheme = .blackOnTransparent
-        addButton.colorScheme = .blackOnTransparent
+        decreaseButton.colorScheme = .blackOnTransparent
+        increase.colorScheme = .blackOnTransparent
     }
     
+    // MARK: Accessors
     
+    func setProductImage(to urlString: urlString) {
+        productImageView.setImage(from: urlString)
+    }
+    
+    func setBrandLabel(to text: String) {
+        brandLabel.text = text
+    }
+    
+    func setModelLabel(to text: String) {
+        modelLabel.text = text
+    }
+    
+    func setPriceAndQuantity(pricePerItem: Double, _ quantitiy: Int) {
+        let totalPrice = pricePerItem * Double(quantitiy)
+        priceLabel.text = "\(quantitiy) x \(totalPrice)"
+        quantityLabel.text = "\(quantitiy)"
+    }
 }
 
