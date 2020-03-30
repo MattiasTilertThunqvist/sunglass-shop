@@ -78,6 +78,6 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func handleAddToCartButtonPress() {
-        Cart.shared.addProduct(with: productItem, quantity)
+        Cart.shared.add(productItem)
     }
 }

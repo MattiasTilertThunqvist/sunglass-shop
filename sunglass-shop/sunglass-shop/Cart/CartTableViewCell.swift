@@ -13,6 +13,8 @@ class CartTableViewCell: UITableViewCell {
     // MARK: Properties
     
     static let cellIdentifier = "CartTableViewCell"
+    var productItemId: String!
+    weak var cartTableViewCellDelegate: CartTableViewCellDelegate!
     
     // MARK: IBOutlets
     
@@ -27,6 +29,17 @@ class CartTableViewCell: UITableViewCell {
     
     // MARK:IBActions
     
+    @IBAction private func didTapRemoveButton(_ sender: UIButton) {
+        cartTableViewCellDelegate.cartTableViewCell(removeProductWith: productItemId)
+    }
+    
+    @IBAction private func didTapIncreaseButton(_ sender: MiniButton) {
+        cartTableViewCellDelegate.cartTableViewCell(.increaseQuantity, for: productItemId)
+    }
+    
+    @IBAction private func didTapDecreaseButton(_ sender: MiniButton) {
+        cartTableViewCellDelegate.cartTableViewCell(.decreaseQuantity, for: productItemId)
+    }
     
     // MARK: Lifecycle
 
@@ -56,8 +69,16 @@ class CartTableViewCell: UITableViewCell {
     
     func setPriceAndQuantity(pricePerItem: Double, _ quantitiy: Int) {
         let totalPrice = pricePerItem * Double(quantitiy)
-        priceLabel.text = "\(quantitiy) x \(totalPrice)"
+        priceLabel.text = "\(quantitiy) x £\(totalPrice)"
         quantityLabel.text = "\(quantitiy)"
     }
 }
 
+enum ChangeQuantity {
+    case increaseQuantity, decreaseQuantity
+}
+
+protocol CartTableViewCellDelegate: AnyObject{
+    func cartTableViewCell(_ changeQuantity: ChangeQuantity, for productItemId: String)
+    func cartTableViewCell(removeProductWith productItemId: String)
+}

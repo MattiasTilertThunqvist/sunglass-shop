@@ -72,7 +72,6 @@ class CartViewController: UIViewController {
 // MARK: TableView
 
 extension CartViewController: UITableViewDataSource {
-    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -81,7 +80,7 @@ extension CartViewController: UITableViewDataSource {
         registerCell()
         tableView.tableFooterView = UIView()
     }
-    
+
     private func registerCell() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
@@ -95,6 +94,8 @@ extension CartViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CartTableViewCell
         let (productItem, quantity) = Cart.shared.getItem(withIndex: indexPath.row)
         
+        cell.cartTableViewCellDelegate = self
+        cell.productItemId = productItem.id
         cell.setProductImage(to: productItem.imageUrlString)
         cell.setBrandLabel(to: productItem.brand)
         cell.setModelLabel(to: productItem.model)
@@ -107,4 +108,16 @@ extension CartViewController: UITableViewDelegate {
     
 }
 
-
+extension CartViewController: CartTableViewCellDelegate {
+    
+    func cartTableViewCell(_ changeQuantity: ChangeQuantity, for productItemId: String) {
+        let productItem = ProductList.shared.getItem(with: productItemId)
+        Cart.shared.changeQuantity(for: productItem, changeQuantity)
+        tableView.reloadData()
+        setTotalPrice()
+    }
+    
+    func cartTableViewCell(removeProductWith productItemId: String) {
+        print("Remove \(productItemId)")
+    }
+}
