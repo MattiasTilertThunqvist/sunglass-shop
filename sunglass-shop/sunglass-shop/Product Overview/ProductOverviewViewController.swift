@@ -112,7 +112,7 @@ extension ProductOverviewViewController: UICollectionViewDataSource {
             cell.setImage(from: productItem.imageUrlString)
             cell.setBrand(to: productItem.brand)
             cell.setModel(to: productItem.model)
-            cell.setPrice(to: "£\(productItem.price)")
+            cell.setPrice(to: productItem.price)
             return cell
         }
     }

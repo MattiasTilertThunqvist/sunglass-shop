@@ -55,7 +55,7 @@ class ProductDetailsViewController: UIViewController {
         
         productImageView.setImage(from: productItem.imageUrlString)
         productTitleLabel.text = "\(productItem.brand) \(productItem.model)"
-        priceLabel.text = "Price: £\(productItem.price)"
+        priceLabel.text = String(format: "Price: £%.f", productItem.price)
         productDescriptionLabel.text = productItem.description
     }
     

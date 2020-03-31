@@ -52,7 +52,7 @@ class CartViewController: UIViewController {
     // MARK: Helpers
     
     private func setTotalPrice() {
-        totalPriceLabel.text = "£\(Cart.shared.getTotalPrice())"
+        self.totalPriceLabel.text = String(format: "£%.f", Cart.shared.getTotalPrice())
     }
     
     private func setCartAsEmpy() {

@@ -71,7 +71,7 @@ class Cart {
     
     func getTotalPrice() -> Double {
         var totalPrice: Double = 0
-        items.forEach({ totalPrice += $0.productItem.price })
+        items.forEach({ totalPrice += $0.productItem.price * Double($0.quantity) })
         return totalPrice
     }
 }

@@ -69,7 +69,10 @@ class CartTableViewCell: UITableViewCell {
     
     func setPriceAndQuantity(pricePerItem: Double, _ quantitiy: Int) {
         let totalPrice = pricePerItem * Double(quantitiy)
-        priceLabel.text = "\(quantitiy) x £\(totalPrice)"
+        priceLabel.text = String(format: "\(quantitiy) x £%.f", totalPrice)
+
+//        "\(quantitiy) x £\(totalPrice)"
+        
         quantityLabel.text = "\(quantitiy)"
     }
 }

@@ -48,7 +48,7 @@ class ProductOverviewCollectionViewCell: UICollectionViewCell {
         modelLabel.text = text.uppercased()
     }
     
-    func setPrice(to text: String) {
-        priceLabel.text = text
+    func setPrice(to price: Double) {
+        priceLabel.text = String(format: "£%.f", price)
     }
 }
