@@ -62,8 +62,7 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Handle events
     
     @objc private func handleGoToCartButtonPress() {
-        let viewController = StoryboardInstance.cartViewController()
-        
+        let viewController = StoryboardInstance.checkoutViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     

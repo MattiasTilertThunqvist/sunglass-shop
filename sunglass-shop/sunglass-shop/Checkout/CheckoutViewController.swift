@@ -16,8 +16,11 @@ class CheckoutViewController: UIViewController {
     
     // MARK: IBOutlets
     
+    @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var totalPriceLabel: LargeTextLabel!
     @IBOutlet weak private var productsContainer: ContainerView!
     @IBOutlet weak private var nameTextField: LargeTextField!
     @IBOutlet weak private var emailTextField: LargeTextField!
@@ -30,6 +33,38 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak private var orderButton: LargeButton!
     
     // MARK: IBActions
+    
+    @IBAction func firstnamePrimaryActionTriggered(_ sender: LargeTextField) {
+        emailTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func emailPrimaryActionTriggered(_ sender: LargeTextField) {
+        phoneNumberTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func phoneNumberPrimaryActionTriggered(_ sender: LargeTextField) {
+        addressTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func addressPrimaryActionTriggered(_ sender: LargeTextField) {
+        optionalAddressTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func optionalAddressPrimaryActionTriggered(_ sender: LargeTextField) {
+        cityTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func cityPrimaryActionTriggered(_ sender: LargeTextField) {
+        postCodeTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func postcodePrimaryActionTriggered(_ sender: LargeTextField) {
+        countyTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func countryPrimaryActionTriggered(_ sender: LargeTextField) {
+        countyTextField.resignFirstResponder()
+    }
     
     @IBAction private func orderButtonPressed(_ sender: LargeButton) {
         handleOrderButtonPress()
@@ -50,6 +85,15 @@ class CheckoutViewController: UIViewController {
     }
     
     private func setup() {
+        title = "CHECKOUT"
+        
+        if Cart.shared.countItems() == 0 {
+            displayCartAsEmpy()
+            return
+        } else {
+            setTotalPrice()
+        }
+        
         nameTextField.setDescriptionLabel(to: "NAME")
         emailTextField.setDescriptionLabel(to: "EMAIL")
         phoneNumberTextField.setDescriptionLabel(to: "PHONE NUMBER")
@@ -58,6 +102,9 @@ class CheckoutViewController: UIViewController {
         postCodeTextField.setDescriptionLabel(to: "POSTCODE")
         countyTextField.setDescriptionLabel(to: "COUNTRY")
         orderButton.colorScheme = .goldOnBlack
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: Handlers
@@ -65,6 +112,35 @@ class CheckoutViewController: UIViewController {
     private func handleOrderButtonPress() {
         let viewController = StoryboardInstance.ordersViewController()
         present(viewController, animated: true, completion: nil)
+    }
+    
+    // MARK: Helpers
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardFrame = keyboardSize.cgRectValue
+        
+        scrollView.contentInset.bottom = keyboardFrame.height
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollView.contentInset.bottom = 0
+    }
+    
+    private func setTotalPrice() {
+        self.totalPriceLabel.text = String(format: "£%.f", Cart.shared.getTotalPrice())
+    }
+    
+    private func displayCartAsEmpy() {
+        contentView.isHidden = true
+        
+        let emptyCartlabel = LargeTextLabel()
+        emptyCartlabel.numberOfLines = 10
+        emptyCartlabel.textAlignment = .center
+        emptyCartlabel.text = "Cart is empty. Please return to product page and add items."
+        emptyCartlabel.frame = view.frame
+        view.addSubview(emptyCartlabel)
     }
 }
 
@@ -94,11 +170,31 @@ extension CheckoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.cellIdentifier, for: indexPath) as! CartTableViewCell
-        // Set productItem id
+        let (productItem, quantity) = Cart.shared.getItem(withIndex: indexPath.row)
+        cell.productItemId = productItem.id
+        cell.cartTableViewCellDelegate = self
+        cell.setProductImage(to: productItem.imageUrlString)
+        cell.setModelLabel(to: productItem.model)
+        cell.setBrandLabel(to: productItem.brand)
+        cell.setPriceAndQuantity(pricePerItem: productItem.price, quantity)
         return cell
     }
 }
 
 extension CheckoutViewController: UITableViewDelegate {
      
+}
+
+extension CheckoutViewController: CartTableViewCellDelegate {
+    
+    func cartTableViewCell(_ editQuantity: EditQuantity, _ productItemId: productItemId) {
+        let productItem = ProductList.shared.getItem(with: productItemId)
+        Cart.shared.changeQuantity(for: productItem, editQuantity)
+        tableView.reloadData()
+        setTotalPrice()
+        
+        if Cart.shared.isEmpty() {
+            displayCartAsEmpy()
+        }
+    }
 }

@@ -33,8 +33,8 @@ class ProductList {
         return items
     }
     
-    func getItem(with productId: productId) -> ProductItem {
-        return items.first(where: { $0.id == productId })!
+    func getItem(with productItemId: productItemId) -> ProductItem {
+        return items.first(where: { $0.id == productItemId })!
     }
     
     func addItems(_ productItems: [ProductItem]) {

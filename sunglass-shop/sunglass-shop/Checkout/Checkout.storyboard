@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AV5-uc-NrQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="AV5-uc-NrQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-34-LhB" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="1161.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="893.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-lj-4hy" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="24" width="374" height="211"/>
+                                                <rect key="frame" x="16" y="24" width="374" height="227"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NOy-aH-zBS">
                                                         <rect key="frame" x="0.0" y="8" width="374" height="150"/>
@@ -32,13 +32,13 @@
                                                         </constraints>
                                                     </tableView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XC-cc-QD0" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="166" width="114.5" height="21"/>
+                                                        <rect key="frame" x="16" y="182" width="114.5" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kML-lf-Zuq" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                                        <rect key="frame" x="309" y="166" width="49" height="21"/>
+                                                        <rect key="frame" x="309" y="182" width="49" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                                 <constraints>
                                                     <constraint firstItem="NOy-aH-zBS" firstAttribute="leading" secondItem="VAk-lj-4hy" secondAttribute="leading" id="88t-Li-rWu"/>
                                                     <constraint firstAttribute="trailing" secondItem="NOy-aH-zBS" secondAttribute="trailing" id="NQu-sU-RPV"/>
-                                                    <constraint firstItem="5XC-cc-QD0" firstAttribute="top" secondItem="NOy-aH-zBS" secondAttribute="bottom" constant="8" id="SVd-Gx-09c"/>
+                                                    <constraint firstItem="5XC-cc-QD0" firstAttribute="top" secondItem="NOy-aH-zBS" secondAttribute="bottom" constant="24" id="SVd-Gx-09c"/>
                                                     <constraint firstAttribute="trailing" secondItem="kML-lf-Zuq" secondAttribute="trailing" constant="16" id="YIt-4C-iQq"/>
                                                     <constraint firstItem="5XC-cc-QD0" firstAttribute="leading" secondItem="VAk-lj-4hy" secondAttribute="leading" constant="16" id="r1m-yQ-aA3"/>
                                                     <constraint firstItem="kML-lf-Zuq" firstAttribute="centerY" secondItem="5XC-cc-QD0" secondAttribute="centerY" id="xXA-AI-nfc"/>
@@ -57,53 +57,77 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-gU-7Lw" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="267" width="374" height="20.5"/>
+                                                <rect key="frame" x="16" y="283" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-sG-qml" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="319.5" width="374" height="480"/>
+                                                <rect key="frame" x="16" y="335.5" width="374" height="480"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-XU-ki2" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="32" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                                        <connections>
+                                                            <action selector="firstnamePrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="pea-rX-kPw"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-xJ-Qoe" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="90" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                        <connections>
+                                                            <action selector="emailPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="aSh-C6-8Or"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PHONE NUMBER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-aO-5It" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="148" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                                        <connections>
+                                                            <action selector="phoneNumberPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="xGF-yd-KYG"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-sR-yT3" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="206" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
+                                                        <connections>
+                                                            <action selector="addressPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="fyB-I7-PEz"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OPTIONAL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOi-Xe-x2B" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="248" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line2"/>
+                                                        <connections>
+                                                            <action selector="optionalAddressPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="ZfR-qR-bRf"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CITY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCM-1W-dCK" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="306" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
+                                                        <connections>
+                                                            <action selector="cityPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="IJr-fA-uV4"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="POSTCODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-df-5IY" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="364" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="postal-code"/>
+                                                        <connections>
+                                                            <action selector="postcodePrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="mSr-1t-Qf5"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="COUNTRY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-cW-6lY" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="422" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="country-name"/>
+                                                        <connections>
+                                                            <action selector="countryPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="Tfp-Db-a6J"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,7 +161,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcx-yT-mI8" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="831.5" width="374" height="30"/>
+                                                <rect key="frame" x="16" y="847.5" width="374" height="30"/>
                                                 <state key="normal" title="ORDER NOW"/>
                                                 <connections>
                                                     <action selector="orderButtonPressed:" destination="CA4-VC-bcu" eventType="touchUpInside" id="YQe-i5-Cei"/>
@@ -146,7 +170,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Wcx-yT-mI8" secondAttribute="bottom" constant="300" id="L6h-Lc-Hfq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wcx-yT-mI8" secondAttribute="bottom" constant="16" id="L6h-Lc-Hfq"/>
                                             <constraint firstItem="Wcx-yT-mI8" firstAttribute="top" secondItem="8rt-sG-qml" secondAttribute="bottom" constant="32" id="LV0-mu-Mru"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="top" secondItem="ezH-34-LhB" secondAttribute="top" constant="24" id="M6d-e5-C03"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="Uhu-pn-7hZ"/>
@@ -175,7 +199,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="toB-Lr-RIs" firstAttribute="bottom" secondItem="AV5-uc-NrQ" secondAttribute="bottom" id="005-U0-96S"/>
+                            <constraint firstAttribute="bottom" secondItem="AV5-uc-NrQ" secondAttribute="bottom" id="005-U0-96S"/>
                             <constraint firstItem="toB-Lr-RIs" firstAttribute="trailing" secondItem="AV5-uc-NrQ" secondAttribute="trailing" id="4V5-RT-Zjx"/>
                             <constraint firstItem="AV5-uc-NrQ" firstAttribute="leading" secondItem="toB-Lr-RIs" secondAttribute="leading" id="UcK-SY-Sa7"/>
                             <constraint firstItem="AV5-uc-NrQ" firstAttribute="top" secondItem="toB-Lr-RIs" secondAttribute="top" id="ZrM-lp-J3s"/>
@@ -185,6 +209,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="xgf-sR-yT3" id="9KQ-1y-UFU"/>
                         <outlet property="cityTextField" destination="GCM-1W-dCK" id="LpF-j8-xo8"/>
+                        <outlet property="contentView" destination="ezH-34-LhB" id="XDy-Ng-egD"/>
                         <outlet property="countyTextField" destination="Pmd-cW-6lY" id="CAr-QR-FEK"/>
                         <outlet property="emailTextField" destination="9YK-xJ-Qoe" id="LCg-ge-UTU"/>
                         <outlet property="nameTextField" destination="ch5-XU-ki2" id="QUB-96-qpp"/>
@@ -193,8 +218,10 @@
                         <outlet property="phoneNumberTextField" destination="qrh-aO-5It" id="YCn-jD-RK1"/>
                         <outlet property="postCodeTextField" destination="aGz-df-5IY" id="OQu-TC-k33"/>
                         <outlet property="productsContainer" destination="VAk-lj-4hy" id="HRR-Jb-Xna"/>
+                        <outlet property="scrollView" destination="AV5-uc-NrQ" id="mWc-0J-7l2"/>
                         <outlet property="tableView" destination="NOy-aH-zBS" id="pbv-hz-KBZ"/>
                         <outlet property="tableViewHeightConstraint" destination="pOG-6J-P8y" id="vSJ-5L-HC8"/>
+                        <outlet property="totalPriceLabel" destination="kML-lf-Zuq" id="Ge7-fJ-Mfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWs-v6-ZKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

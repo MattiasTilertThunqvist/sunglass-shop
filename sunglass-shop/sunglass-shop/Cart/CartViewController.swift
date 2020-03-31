@@ -36,12 +36,15 @@ class CartViewController: UIViewController {
     }
     
     private func setup() {
-        checkoutButton.colorScheme = .goldOnBlack
-        setTotalPrice()
+        title = "YOUR CART"
         
         if Cart.shared.countItems() == 0 {
-            setCartAsEmpy()
+            displayCartAsEmpy()
+            return
         }
+        
+        checkoutButton.colorScheme = .goldOnBlack
+        setTotalPrice()
     }
     
     private func handleCheckoutButtonPress() {
@@ -55,11 +58,11 @@ class CartViewController: UIViewController {
         self.totalPriceLabel.text = String(format: "£%.f", Cart.shared.getTotalPrice())
     }
     
-    private func setCartAsEmpy() {
+    private func displayCartAsEmpy() {
         let emptyCartlabel = LargeTextLabel()
         emptyCartlabel.numberOfLines = 10
         emptyCartlabel.textAlignment = .center
-        emptyCartlabel.text = "Cart is empty. Please return to product page and att items."
+        emptyCartlabel.text = "Cart is empty. Please return to product page and add items."
         emptyCartlabel.frame = view.frame
         view.addSubview(emptyCartlabel)
         
@@ -110,14 +113,14 @@ extension CartViewController: UITableViewDelegate {
 
 extension CartViewController: CartTableViewCellDelegate {
     
-    func cartTableViewCell(_ changeQuantity: ChangeQuantity, for productItemId: String) {
+    func cartTableViewCell(_ editQuantity: EditQuantity, _ productItemId: String) {
         let productItem = ProductList.shared.getItem(with: productItemId)
-        Cart.shared.changeQuantity(for: productItem, changeQuantity)
+        Cart.shared.changeQuantity(for: productItem, editQuantity)
         tableView.reloadData()
         setTotalPrice()
-    }
-    
-    func cartTableViewCell(removeProductWith productItemId: String) {
-        print("Remove \(productItemId)")
+        
+        if Cart.shared.isEmpty() {
+            displayCartAsEmpy()
+        }
     }
 }

@@ -61,7 +61,7 @@ class ProductOverviewViewController: UIViewController {
     }
     
     @objc private func handleCartButtonPress() {
-        let viewController = StoryboardInstance.cartViewController()
+        let viewController = StoryboardInstance.checkoutViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

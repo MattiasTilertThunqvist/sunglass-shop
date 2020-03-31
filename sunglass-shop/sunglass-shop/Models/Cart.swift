@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias productId = String
+typealias productItemId = String
 typealias quantity = Int
 
 class Cart {
@@ -42,8 +42,8 @@ class Cart {
         items.append(cartItem)
     }
     
-    func changeQuantity(for productItem: ProductItem, _ changeQuantity: ChangeQuantity) {
-        switch changeQuantity {
+    func changeQuantity(for productItem: ProductItem, _ editQuantity: EditQuantity) {
+        switch editQuantity {
         case .increaseQuantity:
             add(productItem)
         case .decreaseQuantity:
@@ -53,12 +53,14 @@ class Cart {
                     items[index].quantity -= 1
                 }
             }
+        case .remove:
+            remove(productItem)
         }
     }
     
-//    func remove(_ productItem: ProductItem) {
-//
-//    }
+    func remove(_ productItem: ProductItem) {
+        items.removeAll(where: { $0.productItem.id == productItem.id })
+    }
     
     func getItem(withIndex index: Int) -> (ProductItem, quantity) {
         let item = items[index]
@@ -67,6 +69,10 @@ class Cart {
     
     func countItems() -> Int {
         return items.count
+    }
+    
+    func isEmpty() -> Bool {
+        return items.isEmpty
     }
     
     func getTotalPrice() -> Double {
