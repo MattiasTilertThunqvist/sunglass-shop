@@ -68,9 +68,10 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-XU-ki2" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="32" width="342" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
                                                         <connections>
-                                                            <action selector="firstnamePrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="pea-rX-kPw"/>
+                                                            <action selector="nameDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="hBW-xA-z15"/>
+                                                            <action selector="namePrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="pea-rX-kPw"/>
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-xJ-Qoe" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
@@ -78,6 +79,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                                         <connections>
+                                                            <action selector="emailDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="SKg-Jl-GXk"/>
                                                             <action selector="emailPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="aSh-C6-8Or"/>
                                                         </connections>
                                                     </textField>
@@ -86,6 +88,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                                         <connections>
+                                                            <action selector="phoneNumberDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="WNZ-g3-Cdb"/>
                                                             <action selector="phoneNumberPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="xGF-yd-KYG"/>
                                                         </connections>
                                                     </textField>
@@ -94,6 +97,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
                                                         <connections>
+                                                            <action selector="addressDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="pTy-6r-tZL"/>
                                                             <action selector="addressPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="fyB-I7-PEz"/>
                                                         </connections>
                                                     </textField>
@@ -110,6 +114,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
                                                         <connections>
+                                                            <action selector="cityDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="oiX-Ud-MQX"/>
                                                             <action selector="cityPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="IJr-fA-uV4"/>
                                                         </connections>
                                                     </textField>
@@ -118,6 +123,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="postal-code"/>
                                                         <connections>
+                                                            <action selector="postcodeDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="3Uh-Yk-U5K"/>
                                                             <action selector="postcodePrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="mSr-1t-Qf5"/>
                                                         </connections>
                                                     </textField>
@@ -126,6 +132,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="country-name"/>
                                                         <connections>
+                                                            <action selector="countryDidEndEditing:" destination="CA4-VC-bcu" eventType="editingDidEnd" id="MhX-ZZ-cbl"/>
                                                             <action selector="countryPrimaryActionTriggered:" destination="CA4-VC-bcu" eventType="primaryActionTriggered" id="Tfp-Db-a6J"/>
                                                         </connections>
                                                     </textField>

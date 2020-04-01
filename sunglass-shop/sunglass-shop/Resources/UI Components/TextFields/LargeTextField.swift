@@ -25,6 +25,16 @@ class LargeTextField: UITextField {
         label.frame.origin.x = inset
         return label
     }()
+    
+    var inputIsValid: Bool = true {
+        willSet {
+            if newValue {
+                backgroundColor = .white
+            } else {
+                backgroundColor = .sunglassRed
+            }
+        }
+    }
 
     // MARK: Init
     
@@ -52,9 +62,9 @@ class LargeTextField: UITextField {
     
     private func setup() {
         delegate = self
-        textColor = UIColor.sunglassDarkGrey
-        tintColor = UIColor.sunglassDarkGrey
-        font = UIFont.sunglassRegularFont(.medium)
+        textColor = .sunglassDarkGrey
+        tintColor = .sunglassDarkGrey
+        font = .sunglassRegularFont(.medium)
         
         let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: textFieldHeight)
         addConstraint(heightConstraint)

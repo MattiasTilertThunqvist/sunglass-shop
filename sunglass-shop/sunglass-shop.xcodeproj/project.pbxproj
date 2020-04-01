@@ -53,6 +53,8 @@
 		8AC52390240EB45C008222D7 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238F240EB45C008222D7 /* BorderView.swift */; };
 		8AC52392240EBA0D008222D7 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC52391240EBA0D008222D7 /* SmallButton.swift */; };
 		8AD8988D2434909600E7305A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AD8988C2434909500E7305A /* GoogleService-Info.plist */; };
+		8AD8988F2434CC0F00E7305A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8988E2434CC0F00E7305A /* User.swift */; };
+		8AD898912434CDED00E7305A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD898902434CDED00E7305A /* Order.swift */; };
 		8AF2BD9F2416A0B500EE605C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */; };
 		8AF2BDA02416A0B500EE605C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */; };
 		B7107D5520BC786FDB0817DB /* Pods_sunglass_shopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */; };
@@ -130,6 +132,8 @@
 		8AC5238F240EB45C008222D7 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		8AC52391240EBA0D008222D7 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
 		8AD8988C2434909500E7305A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "sunglass-shop/Supporting Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8AD8988E2434CC0F00E7305A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AD898902434CDED00E7305A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopTests/Pods-sunglass-shopTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				8A65D9B1240D5EC300364FDF /* ProductList.swift */,
 				8A65657B2428EEF800B4E8F6 /* Cart.swift */,
 				8A65D9AF240D5E3500364FDF /* ProductItem.swift */,
+				8AD8988E2434CC0F00E7305A /* User.swift */,
+				8AD898902434CDED00E7305A /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -685,6 +691,7 @@
 				8A65D97A240D2D3200364FDF /* ProductOverviewViewController.swift in Sources */,
 				8A65657C2428EEF800B4E8F6 /* Cart.swift in Sources */,
 				8A699D60241FB01900CBBFF7 /* PromoCollectionViewCell.swift in Sources */,
+				8AD898912434CDED00E7305A /* Order.swift in Sources */,
 				8ABA19ED242CC16D009F91F4 /* CustomImageView.swift in Sources */,
 				8ABD5574241A45BD0041B143 /* CALayer + Sunglass.swift in Sources */,
 				8A65D9B5240D6EF700364FDF /* MediumTextLabel.swift in Sources */,
@@ -711,6 +718,7 @@
 				8ABD5572241A436B0041B143 /* DismissRoundButton.swift in Sources */,
 				8A65D9AD240D526E00364FDF /* ProductOverviewCollectionViewCell.swift in Sources */,
 				8A65657E2429020D00B4E8F6 /* ExtraLargeTextLabel.swift in Sources */,
+				8AD8988F2434CC0F00E7305A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

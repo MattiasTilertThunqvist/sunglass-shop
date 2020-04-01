@@ -13,16 +13,11 @@ typealias quantity = Int
 
 class Cart {
     
-    struct CartItem {
-        var productItem: ProductItem
-        var quantity: quantity
-    }
-    
     // MARK: Properties
     
     static let shared = Cart()
     
-    private var items: [CartItem] = []
+    private var items: [(productItem: ProductItem, quantity: quantity)] = []
     
     // MARK: Init
     
@@ -38,7 +33,7 @@ class Cart {
         }
         
         let defaultQuantity = 1
-        let cartItem = CartItem(productItem: productItem, quantity: defaultQuantity)
+        let cartItem = (productItem: productItem, quantity: defaultQuantity)
         items.append(cartItem)
     }
     
@@ -65,6 +60,10 @@ class Cart {
     func getItem(withIndex index: Int) -> (ProductItem, quantity) {
         let item = items[index]
         return (item.productItem, item.quantity)
+    }
+    
+    func getItems() -> [(productItem: ProductItem, quantity: quantity)] {
+        return items
     }
     
     func countItems() -> Int {

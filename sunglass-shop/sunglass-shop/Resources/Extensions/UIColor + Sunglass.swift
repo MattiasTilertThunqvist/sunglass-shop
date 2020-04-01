@@ -27,4 +27,8 @@ extension UIColor {
     class var sunglassGold: UIColor {
         return #colorLiteral(red: 0.8016645908, green: 0.73778826, blue: 0.4773098826, alpha: 1)
     }
+    
+    class var sunglassRed: UIColor {
+        return #colorLiteral(red: 0.9215686275, green: 0.3647058824, blue: 0.4274509804, alpha: 1)
+    }
 }
