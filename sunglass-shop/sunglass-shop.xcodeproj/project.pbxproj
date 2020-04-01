@@ -10,7 +10,6 @@
 		22A9D154766EB838DDD038FE /* Pods_sunglass_shopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B84BCD564846AEF8FFFAAB /* Pods_sunglass_shopUITests.framework */; };
 		4E6BA16CCB7F7F34B830F0C1 /* Pods_sunglass_shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF52BF9ED9C6D19280DD8234 /* Pods_sunglass_shop.framework */; };
 		8A0305AB242A860C008DD621 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0305AA242A860C008DD621 /* NetworkManager.swift */; };
-		8A0305AD242A8D45008DD621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A0305AC242A8D45008DD621 /* GoogleService-Info.plist */; };
 		8A27F3F22419350100892A95 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A27F3F12419350100892A95 /* Checkout.storyboard */; };
 		8A27F3F42419352100892A95 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27F3F32419352100892A95 /* CheckoutViewController.swift */; };
 		8A27F3F624193E0200892A95 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27F3F524193E0200892A95 /* ContainerView.swift */; };
@@ -53,6 +52,7 @@
 		8AC5238E240EB19A008222D7 /* LargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */; };
 		8AC52390240EB45C008222D7 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5238F240EB45C008222D7 /* BorderView.swift */; };
 		8AC52392240EBA0D008222D7 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC52391240EBA0D008222D7 /* SmallButton.swift */; };
+		8AD8988D2434909600E7305A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AD8988C2434909500E7305A /* GoogleService-Info.plist */; };
 		8AF2BD9F2416A0B500EE605C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */; };
 		8AF2BDA02416A0B500EE605C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */; };
 		B7107D5520BC786FDB0817DB /* Pods_sunglass_shopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3114DF82F0E3544CFB35CCB /* Pods_sunglass_shopTests.framework */; };
@@ -129,6 +129,7 @@
 		8AC5238D240EB19A008222D7 /* LargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextLabel.swift; sourceTree = "<group>"; };
 		8AC5238F240EB45C008222D7 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		8AC52391240EBA0D008222D7 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
+		8AD8988C2434909500E7305A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "sunglass-shop/Supporting Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		8DFCAC478C6DE47F435DE201 /* Pods-sunglass-shopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sunglass-shopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sunglass-shopTests/Pods-sunglass-shopTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		8A65D969240D2D3200364FDF = {
 			isa = PBXGroup;
 			children = (
+				8AD8988C2434909500E7305A /* GoogleService-Info.plist */,
 				8A65D974240D2D3200364FDF /* sunglass-shop */,
 				8A65D98B240D2D3600364FDF /* sunglass-shopTests */,
 				8A65D996240D2D3600364FDF /* sunglass-shopUITests */,
@@ -551,7 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0305AD242A8D45008DD621 /* GoogleService-Info.plist in Resources */,
+				8AD8988D2434909600E7305A /* GoogleService-Info.plist in Resources */,
 				8A27F3F22419350100892A95 /* Checkout.storyboard in Resources */,
 				8AF2BDA02416A0B500EE605C /* CartTableViewCell.xib in Resources */,
 				8AC52388240E9584008222D7 /* ProductDetails.storyboard in Resources */,
