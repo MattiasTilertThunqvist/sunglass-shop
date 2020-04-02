@@ -104,6 +104,11 @@ class CheckoutTextfieldsViewController: UIViewController {
         setup()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        calculatePreferredSize()
+    }
+    
     private func setup() {
         nameTextField.setDescriptionLabel(to: "NAME")
         emailTextField.setDescriptionLabel(to: "EMAIL")
@@ -112,6 +117,12 @@ class CheckoutTextfieldsViewController: UIViewController {
         cityTextField.setDescriptionLabel(to: "CITY")
         postCodeTextField.setDescriptionLabel(to: "POSTCODE")
         countyTextField.setDescriptionLabel(to: "COUNTRY")
+    }
+    
+    private func calculatePreferredSize() {
+        let targetSize = CGSize(width: view.bounds.width,
+                                height: UIView.layoutFittingCompressedSize.height)
+        preferredContentSize = view.systemLayoutSizeFitting(targetSize) 
     }
     
     func getUser() -> User? {

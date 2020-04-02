@@ -22,14 +22,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak private var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var totalPriceLabel: LargeTextLabel!
     @IBOutlet weak private var productsContainer: ContainerView!
-    @IBOutlet weak private var nameTextField: LargeTextField!
-    @IBOutlet weak private var emailTextField: LargeTextField!
-    @IBOutlet weak private var phoneNumberTextField: LargeTextField!
-    @IBOutlet weak private var addressTextField: LargeTextField!
-    @IBOutlet weak private var optionalAddressTextField: LargeTextField!
-    @IBOutlet weak private var cityTextField: LargeTextField!
-    @IBOutlet weak private var postCodeTextField: LargeTextField!
-    @IBOutlet weak private var countyTextField: LargeTextField!
+    @IBOutlet weak private var textfieldsContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var orderButton: LargeButton!
     
     private var checkoutTextfieldsViewController: CheckoutTextfieldsViewController?
@@ -54,6 +47,14 @@ class CheckoutViewController: UIViewController {
         productsContainer.sizeToFit()
     }
     
+    override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
+        super.preferredContentSizeDidChange(forChildContentContainer: container)
+        
+        if let checkoutTextfieldsViewController = container as? CheckoutTextfieldsViewController {
+            textfieldsContainerHeightConstraint.constant = checkoutTextfieldsViewController.preferredContentSize.height
+        }
+    }
+    
     private func setup() {
         title = "CHECKOUT"
         
@@ -64,8 +65,6 @@ class CheckoutViewController: UIViewController {
             setTotalPrice()
             orderButton.colorScheme = .goldOnBlack
         }
-        
-        setupTextFields()
         
         guard let checkoutTextfieldsViewController = children.first as? CheckoutTextfieldsViewController else {
             fatalError("Storyboard is missing CheckoutTextfieldsViewController")
@@ -171,145 +170,5 @@ extension CheckoutViewController: CartTableViewCellDelegate {
         if Cart.shared.isEmpty() {
             displayCartAsEmpy()
         }
-    }
-}
-
-
-// MARK: Manage textfields
-
-extension CheckoutViewController {
-    
-    // MARK: IBActions
-    
-    @IBAction private func namePrimaryActionTriggered(_ sender: LargeTextField) {
-        emailTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func nameDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Proper validation
-        let isValid = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        nameTextField.inputIsValid = isValid
-    }
-    
-    @IBAction private func emailPrimaryActionTriggered(_ sender: LargeTextField) {
-        phoneNumberTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func emailDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        emailTextField.inputIsValid = isValid
-    }
-    
-    @IBAction private func phoneNumberPrimaryActionTriggered(_ sender: LargeTextField) {
-        addressTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func phoneNumberDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = phoneNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        phoneNumberTextField.inputIsValid = isValid
-    }
-        
-    @IBAction private func addressPrimaryActionTriggered(_ sender: LargeTextField) {
-        optionalAddressTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func addressDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = addressTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        addressTextField.inputIsValid = isValid
-    }
-
-    @IBAction private func optionalAddressPrimaryActionTriggered(_ sender: LargeTextField) {
-        cityTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func cityPrimaryActionTriggered(_ sender: LargeTextField) {
-        postCodeTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func cityDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = cityTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        cityTextField.inputIsValid = isValid
-    }
-    
-    @IBAction private func postcodePrimaryActionTriggered(_ sender: LargeTextField) {
-        countyTextField.becomeFirstResponder()
-    }
-    
-    @IBAction private func postcodeDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = postCodeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        postCodeTextField.inputIsValid = isValid
-    }
-    
-    @IBAction private func countryPrimaryActionTriggered(_ sender: LargeTextField) {
-        countyTextField.resignFirstResponder()
-    }
-    
-    @IBAction private func countryDidEndEditing(_ sender: LargeTextField) {
-        // MARK: TODO: Implement proper validation
-        let isValid = countyTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        countyTextField.inputIsValid = isValid
-    }
-    
-    private func setupTextFields() {
-        nameTextField.setDescriptionLabel(to: "NAME")
-        emailTextField.setDescriptionLabel(to: "EMAIL")
-        phoneNumberTextField.setDescriptionLabel(to: "PHONE NUMBER")
-        addressTextField.setDescriptionLabel(to: "ADDRESS")
-        cityTextField.setDescriptionLabel(to: "CITY")
-        postCodeTextField.setDescriptionLabel(to: "POSTCODE")
-        countyTextField.setDescriptionLabel(to: "COUNTRY")
-    }
-    
-    func getUser() -> User? {
-        guard let name = nameTextField.text, name != "" else {
-            nameTextField.inputIsValid = false
-            nameTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        guard let email = emailTextField.text, email != "" else {
-            emailTextField.inputIsValid = false
-            emailTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        guard let phoneNumber = phoneNumberTextField.text, phoneNumber != "" else {
-            phoneNumberTextField.inputIsValid = false
-            phoneNumberTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        guard let address = addressTextField.text, address != "" else {
-            addressTextField.inputIsValid = false
-            addressTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        let optional = optionalAddressTextField.text
-        
-        guard let city = cityTextField.text, city != "" else {
-            cityTextField.inputIsValid = false
-            cityTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        guard let postCode = postCodeTextField.text, postCode != "" else {
-            postCodeTextField.inputIsValid = false
-            postCodeTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        guard let country = countyTextField.text, country != "" else {
-            countyTextField.inputIsValid = false
-            countyTextField.becomeFirstResponder()
-            return nil
-        }
-        
-        return User(name, email, phoneNumber, address, optional, city, postCode, country)
     }
 }
