@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-34-LhB" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="893.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="1475.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-lj-4hy" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="24" width="374" height="227"/>
@@ -168,19 +168,29 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcx-yT-mI8" customClass="LargeButton" customModule="sunglass_shop" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="847.5" width="374" height="30"/>
+                                                <rect key="frame" x="16" y="1429.5" width="374" height="30"/>
                                                 <state key="normal" title="ORDER NOW"/>
                                                 <connections>
                                                     <action selector="orderButtonPressed:" destination="CA4-VC-bcu" eventType="touchUpInside" id="YQe-i5-Cei"/>
                                                 </connections>
                                             </button>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7r-wb-gig" customClass="ContainerView" customModule="sunglass_shop" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="847.5" width="374" height="550"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="550" id="ilS-sm-bsK"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="tT3-nI-MFJ" kind="embed" id="WzB-fg-bz1"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="g7r-wb-gig" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="A61-ca-LSK"/>
                                             <constraint firstAttribute="bottom" secondItem="Wcx-yT-mI8" secondAttribute="bottom" constant="16" id="L6h-Lc-Hfq"/>
-                                            <constraint firstItem="Wcx-yT-mI8" firstAttribute="top" secondItem="8rt-sG-qml" secondAttribute="bottom" constant="32" id="LV0-mu-Mru"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="top" secondItem="ezH-34-LhB" secondAttribute="top" constant="24" id="M6d-e5-C03"/>
                                             <constraint firstItem="VAk-lj-4hy" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="Uhu-pn-7hZ"/>
+                                            <constraint firstItem="g7r-wb-gig" firstAttribute="top" secondItem="8rt-sG-qml" secondAttribute="bottom" constant="32" id="XHz-ri-J2A"/>
                                             <constraint firstAttribute="trailing" secondItem="Wcx-yT-mI8" secondAttribute="trailing" constant="16" id="Zn6-oH-uVJ"/>
                                             <constraint firstAttribute="trailing" secondItem="ErD-gU-7Lw" secondAttribute="trailing" constant="16" id="abu-HK-MEa"/>
                                             <constraint firstItem="ErD-gU-7Lw" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="act-jX-r51"/>
@@ -189,6 +199,8 @@
                                             <constraint firstItem="ErD-gU-7Lw" firstAttribute="top" secondItem="VAk-lj-4hy" secondAttribute="bottom" constant="32" id="fRH-Z8-mkQ"/>
                                             <constraint firstItem="Wcx-yT-mI8" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="g3Z-bH-SSS"/>
                                             <constraint firstItem="8rt-sG-qml" firstAttribute="leading" secondItem="ezH-34-LhB" secondAttribute="leading" constant="16" id="l4t-Tw-e7r"/>
+                                            <constraint firstAttribute="trailing" secondItem="g7r-wb-gig" secondAttribute="trailing" constant="16" id="lln-S9-4aw"/>
+                                            <constraint firstItem="Wcx-yT-mI8" firstAttribute="top" secondItem="g7r-wb-gig" secondAttribute="bottom" constant="32" id="tRX-6e-BQv"/>
                                             <constraint firstAttribute="trailing" secondItem="8rt-sG-qml" secondAttribute="trailing" constant="16" id="x9H-6Q-5Wq"/>
                                         </constraints>
                                     </view>
@@ -234,6 +246,130 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWs-v6-ZKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.072463768116" y="174.77678571428569"/>
+        </scene>
+        <!--Checkout Textfields View Controller-->
+        <scene sceneID="1dY-CU-an3">
+            <objects>
+                <viewController restorationIdentifier="CheckoutTextfieldsViewController" id="tT3-nI-MFJ" customClass="CheckoutTextfieldsViewController" customModule="sunglass_shop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ll-4X-BEH">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-pg-A2u" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
+                                <connections>
+                                    <action selector="nameDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="IX2-xV-rzp"/>
+                                    <action selector="namePrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="CFU-uZ-Pgy"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-GE-Twj" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="74" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <connections>
+                                    <action selector="emailDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="YVO-6o-Jfd"/>
+                                    <action selector="emailPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="j8q-0E-y2J"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PHONE NUMBER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sc7-6c-JZ1" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                <connections>
+                                    <action selector="phoneNumberDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="AaE-fw-bA7"/>
+                                    <action selector="phoneNumberPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="BUv-Md-4qm"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvd-rW-kLc" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="190" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
+                                <connections>
+                                    <action selector="addressDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="U1t-LK-b9l"/>
+                                    <action selector="addressPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="OdV-Hs-GkY"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OPTIONAL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENr-BH-3jd" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="232" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line2"/>
+                                <connections>
+                                    <action selector="optionalAddressPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="fox-2k-6UO"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CITY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeP-Ax-APJ" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="290" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
+                                <connections>
+                                    <action selector="cityDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="WUi-hW-KwN"/>
+                                    <action selector="cityPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="4ed-I8-2P8"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="POSTCODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-o8-K7N" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="348" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="postal-code"/>
+                                <connections>
+                                    <action selector="postcodeDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="0gm-jH-ATb"/>
+                                    <action selector="postcodePrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="OJE-wR-H64"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="COUNTRY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-3J-yNZ" customClass="LargeTextField" customModule="sunglass_shop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="406" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="country-name"/>
+                                <connections>
+                                    <action selector="countryDidEndEditing:" destination="tT3-nI-MFJ" eventType="editingDidEnd" id="Hqp-fU-yjS"/>
+                                    <action selector="countryPrimaryActionTriggered:" destination="tT3-nI-MFJ" eventType="primaryActionTriggered" id="bjZ-0m-g3j"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b5y-GE-Twj" firstAttribute="top" secondItem="qp1-pg-A2u" secondAttribute="bottom" constant="24" id="2kO-7I-Fq8"/>
+                            <constraint firstItem="cvd-rW-kLc" firstAttribute="top" secondItem="Sc7-6c-JZ1" secondAttribute="bottom" constant="24" id="5JB-nF-uDa"/>
+                            <constraint firstItem="ENr-BH-3jd" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="6G7-nC-6Gb"/>
+                            <constraint firstAttribute="trailing" secondItem="ENr-BH-3jd" secondAttribute="trailing" constant="16" id="8uM-hu-F5S"/>
+                            <constraint firstItem="qp1-pg-A2u" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="C3W-Bp-AJ9"/>
+                            <constraint firstItem="3fZ-3J-yNZ" firstAttribute="top" secondItem="UrD-o8-K7N" secondAttribute="bottom" constant="24" id="FZT-27-A6E"/>
+                            <constraint firstItem="Sc7-6c-JZ1" firstAttribute="top" secondItem="b5y-GE-Twj" secondAttribute="bottom" constant="24" id="GYU-Oj-jJQ"/>
+                            <constraint firstItem="3fZ-3J-yNZ" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="Gm1-iF-QiD"/>
+                            <constraint firstAttribute="trailing" secondItem="cvd-rW-kLc" secondAttribute="trailing" constant="16" id="MKh-SN-GAO"/>
+                            <constraint firstItem="SeP-Ax-APJ" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="NJY-YD-fVV"/>
+                            <constraint firstItem="cvd-rW-kLc" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="PUp-N1-GTP"/>
+                            <constraint firstItem="UrD-o8-K7N" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="QSy-ey-NjJ"/>
+                            <constraint firstItem="Sc7-6c-JZ1" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="RcO-69-5v2"/>
+                            <constraint firstItem="qp1-pg-A2u" firstAttribute="top" secondItem="6ll-4X-BEH" secondAttribute="top" constant="16" id="Rx4-Xl-Sew"/>
+                            <constraint firstItem="SeP-Ax-APJ" firstAttribute="top" secondItem="ENr-BH-3jd" secondAttribute="bottom" constant="24" id="SfS-rB-05K"/>
+                            <constraint firstItem="UrD-o8-K7N" firstAttribute="top" secondItem="SeP-Ax-APJ" secondAttribute="bottom" constant="24" id="Sl7-cp-wjd"/>
+                            <constraint firstAttribute="trailing" secondItem="UrD-o8-K7N" secondAttribute="trailing" constant="16" id="gNH-fe-QEX"/>
+                            <constraint firstAttribute="trailing" secondItem="3fZ-3J-yNZ" secondAttribute="trailing" constant="16" id="jxh-KI-J5F"/>
+                            <constraint firstAttribute="trailing" secondItem="b5y-GE-Twj" secondAttribute="trailing" constant="16" id="l4t-kT-GLd"/>
+                            <constraint firstAttribute="trailing" secondItem="SeP-Ax-APJ" secondAttribute="trailing" constant="16" id="loa-oo-uFb"/>
+                            <constraint firstAttribute="trailing" secondItem="Sc7-6c-JZ1" secondAttribute="trailing" constant="16" id="nAP-6M-151"/>
+                            <constraint firstItem="ENr-BH-3jd" firstAttribute="top" secondItem="cvd-rW-kLc" secondAttribute="bottom" constant="8" id="x0C-My-Xn6"/>
+                            <constraint firstItem="b5y-GE-Twj" firstAttribute="leading" secondItem="6ll-4X-BEH" secondAttribute="leading" constant="16" id="xxG-f8-Mc5"/>
+                            <constraint firstAttribute="trailing" secondItem="qp1-pg-A2u" secondAttribute="trailing" constant="16" id="yQU-Rg-TWn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3p6-ZX-VoI"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="cvd-rW-kLc" id="JAw-0e-bjF"/>
+                        <outlet property="cityTextField" destination="SeP-Ax-APJ" id="JZr-M9-AfV"/>
+                        <outlet property="countyTextField" destination="3fZ-3J-yNZ" id="bZN-AO-sJA"/>
+                        <outlet property="emailTextField" destination="b5y-GE-Twj" id="cRb-yJ-XV0"/>
+                        <outlet property="nameTextField" destination="qp1-pg-A2u" id="i8I-ex-reb"/>
+                        <outlet property="optionalAddressTextField" destination="ENr-BH-3jd" id="3iA-QH-daw"/>
+                        <outlet property="phoneNumberTextField" destination="Sc7-6c-JZ1" id="Nd2-Sx-YfQ"/>
+                        <outlet property="postCodeTextField" destination="UrD-o8-K7N" id="ce5-28-Ygf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r67-Rp-KWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="175"/>
         </scene>
     </scenes>
 </document>
