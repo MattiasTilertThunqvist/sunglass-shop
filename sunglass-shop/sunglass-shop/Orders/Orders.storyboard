@@ -202,7 +202,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="UZk-K1-wU9" firstAttribute="leading" secondItem="oYs-Oz-RgP" secondAttribute="leading" constant="16" id="39d-dA-TPx"/>
                                             <constraint firstAttribute="trailing" secondItem="xOh-bp-b73" secondAttribute="trailing" constant="16" id="8ed-Be-ngd"/>
@@ -238,7 +237,7 @@
                                     <constraint firstItem="oYs-Oz-RgP" firstAttribute="leading" secondItem="ZAk-4a-QFm" secondAttribute="leading" id="MzA-Dh-xy3"/>
                                     <constraint firstItem="oYs-Oz-RgP" firstAttribute="width" secondItem="ZAk-4a-QFm" secondAttribute="width" multiplier="0.980676" id="boB-MY-PL1"/>
                                     <constraint firstAttribute="bottom" secondItem="oYs-Oz-RgP" secondAttribute="bottom" id="dk2-KC-gNE"/>
-                                    <constraint firstAttribute="trailing" secondItem="oYs-Oz-RgP" secondAttribute="trailing" constant="8" id="qKZ-66-5e5"/>
+                                    <constraint firstAttribute="trailing" secondItem="oYs-Oz-RgP" secondAttribute="trailing" id="qKZ-66-5e5"/>
                                     <constraint firstItem="oYs-Oz-RgP" firstAttribute="top" secondItem="ZAk-4a-QFm" secondAttribute="top" id="vZ0-5F-PTT"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="gyX-Ry-wYO"/>

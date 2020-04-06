@@ -100,7 +100,7 @@
                                 <constraints>
                                     <constraint firstItem="ezH-34-LhB" firstAttribute="top" secondItem="AV5-uc-NrQ" secondAttribute="top" id="7Wx-TC-Ihv"/>
                                     <constraint firstItem="ezH-34-LhB" firstAttribute="leading" secondItem="AV5-uc-NrQ" secondAttribute="leading" id="QwK-OI-wfo"/>
-                                    <constraint firstAttribute="trailing" secondItem="ezH-34-LhB" secondAttribute="trailing" constant="8" id="gE9-GQ-u5Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="ezH-34-LhB" secondAttribute="trailing" id="gE9-GQ-u5Z"/>
                                     <constraint firstAttribute="bottom" secondItem="ezH-34-LhB" secondAttribute="bottom" id="ppf-di-iIJ"/>
                                     <constraint firstItem="ezH-34-LhB" firstAttribute="width" secondItem="AV5-uc-NrQ" secondAttribute="width" multiplier="0.980676" id="wll-Vc-B3f"/>
                                 </constraints>
