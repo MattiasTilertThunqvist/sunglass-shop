@@ -18,6 +18,7 @@ class OrdersViewController: UIViewController {
     
     // MARK: IBOutlets
     
+    @IBOutlet weak private var orderInfoContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var productsContainer: ContainerView!
     @IBOutlet weak private var productsTableView: UITableView!
     @IBOutlet weak private var productsTableViewHeightConstraint: NSLayoutConstraint!
@@ -39,6 +40,14 @@ class OrdersViewController: UIViewController {
         super.updateViewConstraints()
         productsTableViewHeightConstraint.constant = productsTableView.contentSize.height
         productsContainer.sizeToFit()
+    }
+    
+    override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
+        super.preferredContentSizeDidChange(forChildContentContainer: container)
+        
+        if let orderInfoContainer = container as? OrderInfoViewController {
+            orderInfoContainerHeightConstraint.constant = orderInfoContainer.preferredContentSize.height
+        }
     }
 }
 
