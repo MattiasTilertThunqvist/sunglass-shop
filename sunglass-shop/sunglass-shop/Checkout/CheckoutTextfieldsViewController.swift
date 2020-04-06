@@ -170,6 +170,7 @@ class CheckoutTextfieldsViewController: UIViewController {
             return nil
         }
         
-        return User(name, email, phoneNumber, address, optional, city, postCode, country)
+        let userId = UUID().uuidString
+        return User(userId, name, email, phoneNumber, address, optional, city, postCode, country)
     }
 }

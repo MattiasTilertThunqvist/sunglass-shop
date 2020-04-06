@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
+    let id: String
     let name: String
     let email: String
     let phoneNumber: String
@@ -17,8 +18,11 @@ struct User {
     let city: String
     let postCode: String
     let country: String
+    typealias orderId = String
+    var order: [orderId] = []
     
-    init(_ name: String, _ email: String, _ phoneNumber: String, _ address: String, _ optional: String?, _ city: String, _ postCode: String, _ country: String) {
+    init(_ id: String, _ name: String, _ email: String, _ phoneNumber: String, _ address: String, _ optional: String?, _ city: String, _ postCode: String, _ country: String) {
+        self.id = id
         self.name = name
         self.email = email
         self.phoneNumber = phoneNumber

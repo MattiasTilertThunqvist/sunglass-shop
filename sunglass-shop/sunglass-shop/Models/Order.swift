@@ -9,11 +9,11 @@
 import Foundation
 
 struct Order {
+    let id: String
     let items: [(productItem: ProductItem, quantity: quantity)]
-    let user: User
     
-    init(_ items: [(productItem: ProductItem, quantity: quantity)], _ user: User) {
+    init(_ items: [(productItem: ProductItem, quantity: quantity)]) {
+        self.id = UUID().uuidString
         self.items = items
-        self.user = user
     }
 }

@@ -13,6 +13,7 @@ class OrdersViewController: UIViewController {
     // MARK: Propterties
     
     var order: Order?
+    var user: User?
     private let cellIdentifier = CartTableViewCell.cellIdentifier
     
     // MARK: IBOutlets

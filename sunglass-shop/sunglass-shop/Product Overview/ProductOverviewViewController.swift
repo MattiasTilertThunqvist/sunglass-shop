@@ -34,8 +34,9 @@ class ProductOverviewViewController: UIViewController {
         let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
         navigationItem.leftBarButtonItem = storesButton
     
+        let ordersButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleOrdersButtonPress))
         let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleCartButtonPress))
-        navigationItem.rightBarButtonItem = cartButton
+        navigationItem.rightBarButtonItems = [cartButton, ordersButton]
     }
     
     private func getProducts() {
@@ -58,6 +59,11 @@ class ProductOverviewViewController: UIViewController {
     @objc private func handleStoresButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func handleOrdersButtonPress() {
+        let viewController = StoryboardInstance.ordersViewController()
+        present(viewController, animated: true, completion: nil)
     }
     
     @objc private func handleCartButtonPress() {
