@@ -16,7 +16,7 @@ extension NetworkError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noDocument:
-            return "Couldn't load products"
+            return "Couldn't load document"
         }
     }
 }

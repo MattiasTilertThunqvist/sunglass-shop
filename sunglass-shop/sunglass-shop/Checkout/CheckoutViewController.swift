@@ -79,21 +79,20 @@ class CheckoutViewController: UIViewController {
     // MARK: Handlers
     
     private func handleOrderButtonPress() {
-        let newOrder = Order(Cart.shared.getItems())
-        guard var user = checkoutTextfieldsViewController?.getUser() else { return }
-        user.order.append(newOrder.id)
+        let newOrder = Order(nil, nil, Cart.shared.getItems())
+        guard let user = checkoutTextfieldsViewController?.getUser() else { return }
         
         NetworkManager.shared.placeNewOrder(newOrder, user) { (error) in
             if let error = error {
                 let alert = UIAlertController(title: "Couldn't place order", message: error.localizedDescription, preferredStyle: .alert)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                let viewController = StoryboardInstance.ordersViewController()
+                viewController.user = user
+                viewController.order = newOrder
+                self.present(viewController, animated: true, completion: nil)
             }
         }
-        
-        let viewController = StoryboardInstance.ordersViewController()
-        viewController.user = user
-        viewController.order = newOrder
-        present(viewController, animated: true, completion: nil)
     }
     
     // MARK: Helpers

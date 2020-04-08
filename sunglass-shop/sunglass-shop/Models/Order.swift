@@ -8,12 +8,21 @@
 
 import Foundation
 
-struct Order {
+class Order {
+    
+    // MARK: Properties
+    
     let id: String
+    let date: Date
     let items: [(productItem: ProductItem, quantity: quantity)]
     
-    init(_ items: [(productItem: ProductItem, quantity: quantity)]) {
-        self.id = UUID().uuidString
+    // MARK: Init
+    
+    init(_ id: String?, _ date: Date?, _ items: [(productItem: ProductItem, quantity: quantity)]) {
+        self.id = id ?? UUID().uuidString
+        self.date = date ?? Date()
         self.items = items
     }
 }
+
+

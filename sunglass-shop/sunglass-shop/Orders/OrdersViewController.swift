@@ -10,14 +10,16 @@ import UIKit
 
 class OrdersViewController: UIViewController {
     
-    // MARK: Propterties
+    // MARK: Properties
     
-    var order: Order?
+    var orders: [Order]?
     var user: User?
     private let cellIdentifier = CartTableViewCell.cellIdentifier
+    private var orderInfoViewController: OrderInfoViewController?
     
     // MARK: IBOutlets
     
+    @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var orderInfoContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var productsContainer: ContainerView!
     @IBOutlet weak private var productsTableView: UITableView!
@@ -34,6 +36,7 @@ class OrdersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setup()
     }
     
     override func viewWillLayoutSubviews() {
@@ -47,6 +50,44 @@ class OrdersViewController: UIViewController {
         
         if let orderInfoContainer = container as? OrderInfoViewController {
             orderInfoContainerHeightConstraint.constant = orderInfoContainer.preferredContentSize.height
+        }
+    }
+    
+    private func setup() {
+        contentView.isHidden = true // Hidden by default
+        
+        if let orderInfoViewController = children.first as? OrderInfoViewController {
+            self.orderInfoViewController = orderInfoViewController
+        } else {
+            fatalError("Check storyboard for missing OrderInfoViewController")
+        }
+        
+        if user == nil {
+            getUser()
+        }
+        
+        getOrders()
+    }
+    
+    private func getUser() {
+        NetworkManager.shared.getUser { (user, error) in
+            // TODO: If there's another error then display it
+            
+            guard let user = user else { return }
+            
+            DispatchQueue.main.async {
+                self.user = user
+                self.orderInfoViewController?.user = user
+                self.contentView.isHidden = false
+            }
+        }
+    }
+    
+    private func getOrders() {
+        NetworkManager.shared.getOrders() { (orders, error) in
+            // TODO: If there's another error then display it.
+            
+            self.orders = orders
         }
     }
 }

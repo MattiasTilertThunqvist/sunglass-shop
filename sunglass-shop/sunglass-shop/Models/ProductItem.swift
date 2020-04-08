@@ -10,10 +10,14 @@ import Foundation
 
 struct ProductItem: Codable {
     
+    // MARK: Custom typw
+    
     enum OfferType: String, Codable {
         case promo
         case regular
     }
+    
+    // MARK: Properties
     
     let id: String
     let brand: String

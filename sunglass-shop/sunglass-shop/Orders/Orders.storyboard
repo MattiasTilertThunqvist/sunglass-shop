@@ -152,6 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="jjo-bf-OvT"/>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="oYs-Oz-RgP" id="yHF-pi-gVY"/>
                         <outlet property="orderInfoContainerHeightConstraint" destination="NhE-SU-JMp" id="aY6-Vp-8gl"/>
                         <outlet property="productsContainer" destination="ZxJ-Rg-c0g" id="FIf-jL-fSh"/>
                         <outlet property="productsTableView" destination="83r-TN-oRa" id="c4A-nm-hkq"/>
