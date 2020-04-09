@@ -42,6 +42,8 @@
 		8A699D60241FB01900CBBFF7 /* PromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */; };
 		8A699D61241FB01900CBBFF7 /* PromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */; };
 		8A82864D243B89380028CB3F /* OrderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82864C243B89380028CB3F /* OrderInfoViewController.swift */; };
+		8AB0314F243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0314D243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.swift */; };
+		8AB03150243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB0314E243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib */; };
 		8ABA19ED242CC16D009F91F4 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA19EC242CC16D009F91F4 /* CustomImageView.swift */; };
 		8ABA19EF242D2865009F91F4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA19EE242D2865009F91F4 /* NetworkError.swift */; };
 		8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABD5565241A330E0041B143 /* Orders.storyboard */; };
@@ -123,6 +125,8 @@
 		8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoCollectionViewCell.xib; sourceTree = "<group>"; };
 		8A82864C243B89380028CB3F /* OrderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoViewController.swift; sourceTree = "<group>"; };
+		8AB0314D243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsHeaderFooterView.swift; sourceTree = "<group>"; };
+		8AB0314E243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailsHeaderFooterView.xib; sourceTree = "<group>"; };
 		8ABA19EC242CC16D009F91F4 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		8ABA19EE242D2865009F91F4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		8ABD5565241A330E0041B143 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
@@ -219,8 +223,7 @@
 			children = (
 				8A62D4FF240FDEA50054D059 /* Cart.storyboard */,
 				8A62D501240FDEBC0054D059 /* CartViewController.swift */,
-				8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */,
-				8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */,
+				8AB03152243F142500BCD3BA /* Cart Table View Cell */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -290,10 +293,8 @@
 			children = (
 				8A65D979240D2D3200364FDF /* ProductOverviewViewController.swift */,
 				8A65D97B240D2D3200364FDF /* ProductOverview.storyboard */,
-				8A65D9AB240D526E00364FDF /* ProductOverviewCollectionViewCell.swift */,
-				8A65D9AC240D526E00364FDF /* ProductOverviewCollectionViewCell.xib */,
-				8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */,
-				8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */,
+				8AB03154243F144800BCD3BA /* Product Overview Collection View Cell */,
+				8AB03153243F143600BCD3BA /* Promo Collection View Cell */,
 			);
 			path = "Product Overview";
 			sourceTree = "<group>";
@@ -372,6 +373,42 @@
 			path = "Product Details";
 			sourceTree = "<group>";
 		};
+		8AB03151243F140500BCD3BA /* Order Details Header Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AB0314D243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.swift */,
+				8AB0314E243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib */,
+			);
+			path = "Order Details Header Table View Cell";
+			sourceTree = "<group>";
+		};
+		8AB03152243F142500BCD3BA /* Cart Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AF2BD9E2416A0B500EE605C /* CartTableViewCell.xib */,
+				8AF2BD9D2416A0B500EE605C /* CartTableViewCell.swift */,
+			);
+			path = "Cart Table View Cell";
+			sourceTree = "<group>";
+		};
+		8AB03153243F143600BCD3BA /* Promo Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A699D5E241FB01900CBBFF7 /* PromoCollectionViewCell.swift */,
+				8A699D5F241FB01900CBBFF7 /* PromoCollectionViewCell.xib */,
+			);
+			path = "Promo Collection View Cell";
+			sourceTree = "<group>";
+		};
+		8AB03154243F144800BCD3BA /* Product Overview Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A65D9AB240D526E00364FDF /* ProductOverviewCollectionViewCell.swift */,
+				8A65D9AC240D526E00364FDF /* ProductOverviewCollectionViewCell.xib */,
+			);
+			name = "Product Overview Collection View Cell";
+			sourceTree = "<group>";
+		};
 		8AB4F45D242E4116005ECE0E /* Cases */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +437,7 @@
 				8ABD5565241A330E0041B143 /* Orders.storyboard */,
 				8ABD5569241A335E0041B143 /* OrdersViewController.swift */,
 				8A82864C243B89380028CB3F /* OrderInfoViewController.swift */,
+				8AB03151243F140500BCD3BA /* Order Details Header Table View Cell */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -573,6 +611,7 @@
 				8A65D982240D2D3600364FDF /* LaunchScreen.storyboard in Resources */,
 				8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */,
 				8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */,
+				8AB03150243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib in Resources */,
 				8A62D4FC240FDD9F0054D059 /* TryProduct.storyboard in Resources */,
 				8A699D61241FB01900CBBFF7 /* PromoCollectionViewCell.xib in Resources */,
 				8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */,
@@ -725,6 +764,7 @@
 				8A82864D243B89380028CB3F /* OrderInfoViewController.swift in Sources */,
 				8ABD5572241A436B0041B143 /* DismissRoundButton.swift in Sources */,
 				8A65D9AD240D526E00364FDF /* ProductOverviewCollectionViewCell.swift in Sources */,
+				8AB0314F243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.swift in Sources */,
 				8A65657E2429020D00B4E8F6 /* ExtraLargeTextLabel.swift in Sources */,
 				8AD8988F2434CC0F00E7305A /* User.swift in Sources */,
 			);

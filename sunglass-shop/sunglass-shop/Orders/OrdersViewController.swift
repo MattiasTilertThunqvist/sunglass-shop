@@ -13,13 +13,13 @@ class OrdersViewController: UIViewController {
     // MARK: Properties
     
     var orders: [Order] = []
+    private let headerIdentifier = OrderDetailsHeaderFooterView.identifier
     private let cellIdentifier = CartTableViewCell.cellIdentifier
     private var orderInfoViewController: OrderInfoViewController?
     
     // MARK: IBOutlets
     
     @IBOutlet weak private var tableView: UITableView!
-    @IBOutlet weak private var productsTableView: UITableView!
     
     // MARK: IBActions
     
@@ -55,20 +55,38 @@ class OrdersViewController: UIViewController {
 extension OrdersViewController {
     
     private func setupTableView() {
-        productsTableView.delegate = self
-        productsTableView.dataSource = self
-        productsTableView.rowHeight = UITableView.automaticDimension
-        productsTableView.estimatedRowHeight = 120
-        registerNib()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 115
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
+        
+        registerNibs()
     }
     
-    private func registerNib() {
+    private func registerNibs() {
+        let headerNib = UINib(nibName: headerIdentifier, bundle: nil)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: headerIdentifier)
+        
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
-        productsTableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
 }
 
 extension OrdersViewController: UITableViewDataSource {
+    
+    // MARK: Header
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerIdentifier) as! OrderDetailsHeaderFooterView
+        return headerView
+    }
+
+    
+    // MARK: Cell
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return orders.count
