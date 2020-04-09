@@ -61,6 +61,8 @@ extension OrdersViewController {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 115
         
+        tableView.sectionFooterHeight = 32
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
         
@@ -82,9 +84,21 @@ extension OrdersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerIdentifier) as! OrderDetailsHeaderFooterView
+        let order = orders[section]
+        
+        headerView.setOrderId(to: order.id)
+        headerView.setOrderDateLabel(to: order.date)
+        headerView.setGrandTotalLabel(to: order.totalOrderValue())
         return headerView
     }
-
+    
+    // MARK: Footer
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.9520429969, green: 0.9570162892, blue: 0.9611352086, alpha: 1)
+        return view
+    }
     
     // MARK: Cell
     

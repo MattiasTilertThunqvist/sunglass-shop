@@ -23,6 +23,14 @@ class Order {
         self.date = date ?? Date()
         self.items = items
     }
+    
+    // Helpers
+    
+    func totalOrderValue() -> Double {
+        var totalValue: Double = 0
+        items.forEach({ totalValue += $0.productItem.price * Double($0.quantity) })
+        return totalValue
+    }
 }
 
 

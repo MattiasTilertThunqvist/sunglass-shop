@@ -27,10 +27,12 @@ class OrderDetailsHeaderFooterView: UITableViewHeaderFooterView {
     }
     
     func setOrderDateLabel(to date: Date) {
-        orderDateLabel.text = "\(date)"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        orderDateLabel.text = dateFormatter.string(from: date)
     }
     
-    func setGrandTotalLabel(to text: String) {
-        grandTotalLabel.text = text
+    func setGrandTotalLabel(to value: Double) {
+        grandTotalLabel.text = String(format: "£%.f", value)
     }
 }
