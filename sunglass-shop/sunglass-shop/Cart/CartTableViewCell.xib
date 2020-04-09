@@ -125,6 +125,7 @@
             <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
             <connections>
                 <outlet property="brandLabel" destination="oz2-72-Eta" id="O8C-aE-b8a"/>
+                <outlet property="changeQuantityStackView" destination="xwg-lt-3cC" id="cJd-nI-TrB"/>
                 <outlet property="decreaseButton" destination="CXT-6Y-4cP" id="oAP-gF-r2p"/>
                 <outlet property="increase" destination="yow-TW-eDG" id="giz-MG-buI"/>
                 <outlet property="modelLabel" destination="tka-xU-9Za" id="hVd-K3-PnE"/>

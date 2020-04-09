@@ -12,18 +12,14 @@ class OrdersViewController: UIViewController {
     
     // MARK: Properties
     
-    var orders: [Order]?
-    var user: User?
+    var orders: [Order] = []
     private let cellIdentifier = CartTableViewCell.cellIdentifier
     private var orderInfoViewController: OrderInfoViewController?
     
     // MARK: IBOutlets
     
-    @IBOutlet weak private var contentView: UIView!
-    @IBOutlet weak private var orderInfoContainerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak private var productsContainer: ContainerView!
+    @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var productsTableView: UITableView!
-    @IBOutlet weak private var productsTableViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: IBActions
     
@@ -39,55 +35,17 @@ class OrdersViewController: UIViewController {
         setup()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.updateViewConstraints()
-        productsTableViewHeightConstraint.constant = productsTableView.contentSize.height
-        productsContainer.sizeToFit()
-    }
-    
-    override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
-        super.preferredContentSizeDidChange(forChildContentContainer: container)
-        
-        if let orderInfoContainer = container as? OrderInfoViewController {
-            orderInfoContainerHeightConstraint.constant = orderInfoContainer.preferredContentSize.height
-        }
-    }
-    
     private func setup() {
-        contentView.isHidden = true // Hidden by default
-        
-        if let orderInfoViewController = children.first as? OrderInfoViewController {
-            self.orderInfoViewController = orderInfoViewController
-        } else {
-            fatalError("Check storyboard for missing OrderInfoViewController")
-        }
-        
-        if user == nil {
-            getUser()
-        }
-        
         getOrders()
     }
-    
-    private func getUser() {
-        NetworkManager.shared.getUser { (user, error) in
-            // TODO: If there's another error then display it
-            
-            guard let user = user else { return }
-            
-            DispatchQueue.main.async {
-                self.user = user
-                self.orderInfoViewController?.user = user
-                self.contentView.isHidden = false
-            }
-        }
-    }
-    
+        
     private func getOrders() {
         NetworkManager.shared.getOrders() { (orders, error) in
             // TODO: If there's another error then display it.
-            
-            self.orders = orders
+            self.orders = orders ?? []
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -112,13 +70,24 @@ extension OrdersViewController {
 
 extension OrdersViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return orders.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return Cart.shared.countItems()
+        return orders[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.cellIdentifier, for: indexPath) as! CartTableViewCell
+        let (productItem, quantity) = orders[indexPath.section].items[indexPath.row]
+        
+        cell.setProductImage(to: productItem.imageUrlString)
+        cell.setBrandLabel(to: productItem.brand)
+        cell.setModelLabel(to: productItem.brand)
+        cell.setPriceAndQuantity(pricePerItem: productItem.price, quantity)
+        cell.removeButtonIsHidden = true
+        cell.changeQuantityButtonsIsHidden = true
         return cell
     }
 }

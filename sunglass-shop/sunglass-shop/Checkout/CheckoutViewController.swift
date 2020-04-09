@@ -88,8 +88,6 @@ class CheckoutViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             } else {
                 let viewController = StoryboardInstance.ordersViewController()
-                viewController.user = user
-                viewController.order = newOrder
                 self.present(viewController, animated: true, completion: nil)
             }
         }

@@ -23,6 +23,7 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak private var modelLabel: MediumTextLabel!
     @IBOutlet weak private var priceLabel: MediumTextLabel!
     @IBOutlet weak private var removeButton: UIButton!
+    @IBOutlet weak private var changeQuantityStackView: UIStackView!
     @IBOutlet weak private var decreaseButton: MiniButton!
     @IBOutlet weak private var increase: MiniButton!
     @IBOutlet weak private var quantityLabel: MediumTextLabel!
@@ -71,6 +72,18 @@ class CartTableViewCell: UITableViewCell {
         let totalPrice = pricePerItem * Double(quantitiy)
         priceLabel.text = String(format: "\(quantitiy) x £%.f", totalPrice)
         quantityLabel.text = "\(quantitiy)"
+    }
+    
+    var removeButtonIsHidden = false {
+        willSet {
+            removeButton.isHidden = newValue
+        }
+    }
+    
+    var changeQuantityButtonsIsHidden = false {
+        willSet {
+            changeQuantityStackView.isHidden = newValue
+        }
     }
 }
 
