@@ -16,14 +16,20 @@ class OrderDetailsHeaderFooterView: UITableViewHeaderFooterView {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak private var orderIdLabel: LargeTextLabel!
-    @IBOutlet weak private var orderDateLabel: LargeTextLabel!
+    @IBOutlet weak private var orderIdLabel: MediumTextLabel!
+    @IBOutlet weak private var orderDateLabel: MediumTextLabel!
     @IBOutlet weak private var grandTotalLabel: LargeTextLabel!
+    @IBOutlet weak private var totalNrProductsLabel: MediumTextLabel!
     
     // MARK: Accessors
     
     func setOrderId(to text: String) {
-        orderIdLabel.text = text
+        orderIdLabel.text = "Nº: \(text)".uppercased()
+    }
+    
+    func setTotalNrOfproduct(to value: Int) {
+        let ending = value == 1 ? "PRODUCT" : "PRODUCTS"
+        totalNrProductsLabel.text = "TOTAL: \(value) \(ending)".uppercased()
     }
     
     func setOrderDateLabel(to date: Date) {

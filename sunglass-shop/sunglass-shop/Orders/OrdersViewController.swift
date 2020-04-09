@@ -116,7 +116,7 @@ extension OrdersViewController: UITableViewDataSource {
         
         cell.setProductImage(to: productItem.imageUrlString)
         cell.setBrandLabel(to: productItem.brand)
-        cell.setModelLabel(to: productItem.brand)
+        cell.setModelLabel(to: productItem.model)
         cell.setPriceAndQuantity(pricePerItem: productItem.price, quantity)
         cell.removeButtonIsHidden = true
         cell.changeQuantityButtonsIsHidden = true

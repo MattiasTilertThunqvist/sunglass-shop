@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,69 +17,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="409" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emc-JI-n5V" userLabel="Order Id Stack View">
-                        <rect key="frame" x="16" y="16" width="377" height="20.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order id " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpN-67-9mB" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="238" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345678234567" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTj-qd-95w" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="238" y="0.0" width="139" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cr-vk-Mqh" userLabel="Order Date Stack View">
-                        <rect key="frame" x="16" y="44.5" width="377" height="20.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCJ-g8-JnH" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="279.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020-04-06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-gd-jNg" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="279.5" y="0.0" width="97.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkB-uJ-BZu" userLabel="Order Date Stack View">
-                        <rect key="frame" x="16" y="73" width="377" height="25"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Grand total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chu-QO-PLY" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="307.5" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£123456" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92X-Nl-fys" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                <rect key="frame" x="307.5" y="0.0" width="69.5" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020-04-06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-gd-jNg" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="295.5" y="16" width="97.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£123456" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92X-Nl-fys" customClass="ExtraLargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="69.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="№ 12345678234567" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTj-qd-95w" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="16" y="73.5" width="341" height="24.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL: 1 PRODUCT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7h-0L-BKc" customClass="MediumTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="16" y="44.5" width="377" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="co9-US-Rcs">
+                        <rect key="frame" x="373" y="80" width="20" height="16.5"/>
+                        <color key="tintColor" name="Sunglass Black"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="aiu-1k-SVZ"/>
+                            <constraint firstAttribute="height" constant="20" id="irO-kA-VOR"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Emc-JI-n5V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="02t-ZB-9Vb"/>
-                    <constraint firstItem="1cr-vk-Mqh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5j1-gJ-LsN"/>
-                    <constraint firstItem="Emc-JI-n5V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Coj-el-Wwi"/>
-                    <constraint firstItem="hkB-uJ-BZu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dsd-6S-t77"/>
-                    <constraint firstAttribute="trailing" secondItem="Emc-JI-n5V" secondAttribute="trailing" constant="16" id="POr-B4-K5w"/>
-                    <constraint firstAttribute="trailing" secondItem="1cr-vk-Mqh" secondAttribute="trailing" constant="16" id="YHa-ck-Uc4"/>
-                    <constraint firstAttribute="bottom" secondItem="hkB-uJ-BZu" secondAttribute="bottom" constant="16" id="ZJF-2S-1Qh"/>
-                    <constraint firstItem="hkB-uJ-BZu" firstAttribute="top" secondItem="1cr-vk-Mqh" secondAttribute="bottom" constant="8" id="ZOK-QK-auI"/>
-                    <constraint firstAttribute="trailing" secondItem="hkB-uJ-BZu" secondAttribute="trailing" constant="16" id="eDf-3O-myU"/>
-                    <constraint firstItem="1cr-vk-Mqh" firstAttribute="top" secondItem="Emc-JI-n5V" secondAttribute="bottom" constant="8" id="x4a-KE-cjS"/>
+                    <constraint firstItem="h7h-0L-BKc" firstAttribute="top" secondItem="92X-Nl-fys" secondAttribute="bottom" constant="8" id="5lC-58-wuJ"/>
+                    <constraint firstAttribute="bottom" secondItem="nTj-qd-95w" secondAttribute="bottom" constant="16" id="7YL-gi-Tkp"/>
+                    <constraint firstItem="cOd-gd-jNg" firstAttribute="centerY" secondItem="92X-Nl-fys" secondAttribute="centerY" id="8xA-iW-CZj"/>
+                    <constraint firstAttribute="trailing" secondItem="cOd-gd-jNg" secondAttribute="trailing" constant="16" id="S92-4u-Q0v"/>
+                    <constraint firstItem="92X-Nl-fys" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="VOf-1C-4SM"/>
+                    <constraint firstItem="92X-Nl-fys" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Z9l-kr-pS6"/>
+                    <constraint firstAttribute="bottom" secondItem="co9-US-Rcs" secondAttribute="bottom" constant="16" id="bH4-5G-ZcD"/>
+                    <constraint firstAttribute="trailing" secondItem="co9-US-Rcs" secondAttribute="trailing" constant="16" id="bhF-x1-JTr"/>
+                    <constraint firstItem="nTj-qd-95w" firstAttribute="top" secondItem="h7h-0L-BKc" secondAttribute="bottom" constant="8" id="ibu-PQ-gEl"/>
+                    <constraint firstItem="co9-US-Rcs" firstAttribute="leading" secondItem="nTj-qd-95w" secondAttribute="trailing" constant="16" id="jJA-Tk-Tac"/>
+                    <constraint firstItem="nTj-qd-95w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kIL-AE-ejG"/>
+                    <constraint firstItem="h7h-0L-BKc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pf1-kp-Bhn"/>
+                    <constraint firstAttribute="trailing" secondItem="h7h-0L-BKc" secondAttribute="trailing" constant="16" id="xev-pL-4j0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -86,8 +71,15 @@
                 <outlet property="grandTotalLabel" destination="92X-Nl-fys" id="C3d-7u-r1f"/>
                 <outlet property="orderDateLabel" destination="cOd-gd-jNg" id="Efx-hs-5af"/>
                 <outlet property="orderIdLabel" destination="nTj-qd-95w" id="1pc-9M-kqP"/>
+                <outlet property="totalNrProductsLabel" destination="h7h-0L-BKc" id="XE7-Is-qhN"/>
             </connections>
             <point key="canvasLocation" x="205.07246376811597" y="159.375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <namedColor name="Sunglass Black">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
