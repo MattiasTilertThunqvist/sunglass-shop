@@ -37,6 +37,7 @@ class DismissRoundButton: UIButton {
     func setup() {
         layer.borderWidth = 1
         layer.borderColor = UIColor.sunglassDarkGrey.cgColor
+        imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = buttonSize.height / 2
