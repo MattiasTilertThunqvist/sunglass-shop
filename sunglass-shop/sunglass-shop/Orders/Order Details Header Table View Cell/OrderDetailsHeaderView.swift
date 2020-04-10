@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderDetailsHeaderFooterView: UITableViewHeaderFooterView {
+class OrderDetailsHeaderView: UITableViewHeaderFooterView {
     
     // MARK: Properties
     
