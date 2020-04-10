@@ -19,7 +19,6 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     static let storage = Storage.storage()
-    private let cache = NSCache<NSString, AnyObject>()
     private let productsRef = Firestore.firestore().collection("products")
     private let userRef = Firestore.firestore().collection("users")
     
@@ -101,22 +100,12 @@ class NetworkManager {
             dispatchGroup.leave()
         }
         
-        dispatchGroup.notify(queue: .main) {
-            if anyError == nil {
-                self.cache.setObject(user, forKey: mockedUserID as NSString)
-                self.cache.setObject(order, forKey: order.id as NSString)
-            }
-            
+        dispatchGroup.notify(queue: .main) {            
             handler(anyError)
         }
     }
     
     func getUser(handler: @escaping (User?, Error?) -> ()) {
-        // Load user from cache
-//        if let userFromCache = cache.object(forKey: mockedUserID as NSString) as? User {
-//            handler(userFromCache, nil)
-//            return
-//        }
         
         // Load user from Firestore
         userRef.document(mockedUserID).getDocument { (documentSnapshot, error) in
@@ -150,18 +139,6 @@ class NetworkManager {
     }
     
     func getOrders(handler: @escaping ([Order]?, Error?) -> ()) {
-//        var orders: [Order] = []
-
-        // Load from cache
-//        for orderId in user.orders {
-//            if let orderFromCache = cache.object(forKey: orderId as NSString) as? Order{
-//                orders.append(orderFromCache)
-//            }
-//        }
-//
-//        if !orders.isEmpty {
-//            handler(nil)
-//        }
         
         // Load from Firestore
         userRef.document(mockedUserID).collection("orderHistory").getDocuments { (querySnapshot, error) in
