@@ -14,7 +14,7 @@ class OrdersViewController: UIViewController {
     
     var orders: [Order] = []
     private let headerIdentifier = OrderDetailsHeaderFooterView.identifier
-    private let cellIdentifier = CartTableViewCell.cellIdentifier
+    private let cellIdentifier = ProductDetailTableViewCell.cellIdentifier
     private var orderInfoViewController: OrderInfoViewController?
     
     // MARK: IBOutlets
@@ -118,7 +118,7 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.cellIdentifier, for: indexPath) as! CartTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.cellIdentifier, for: indexPath) as! ProductDetailTableViewCell
         let (productItem, quantity) = orders[indexPath.section].items[indexPath.row]
         
         cell.setProductImage(to: productItem.imageUrlString)

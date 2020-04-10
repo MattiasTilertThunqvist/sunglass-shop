@@ -12,7 +12,7 @@ class CheckoutViewController: UIViewController {
     
     // MARK: Properties
     
-    private let cellIdentifier = CartTableViewCell.cellIdentifier
+    private let cellIdentifier = ProductDetailTableViewCell.cellIdentifier
     
     // MARK: IBOutlets
     
@@ -141,17 +141,17 @@ extension CheckoutViewController {
     }
 }
 
-extension CheckoutViewController: UITableViewDataSource {
+extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cart.shared.countItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.cellIdentifier, for: indexPath) as! CartTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.cellIdentifier, for: indexPath) as! ProductDetailTableViewCell
         let (productItem, quantity) = Cart.shared.getItem(withIndex: indexPath.row)
         cell.productItemId = productItem.id
-        cell.cartTableViewCellDelegate = self
+        cell.productDetailTableViewCellDelegate = self
         cell.setProductImage(to: productItem.imageUrlString)
         cell.setModelLabel(to: productItem.model)
         cell.setBrandLabel(to: productItem.brand)
@@ -160,13 +160,9 @@ extension CheckoutViewController: UITableViewDataSource {
     }
 }
 
-extension CheckoutViewController: UITableViewDelegate {
-     
-}
-
-extension CheckoutViewController: CartTableViewCellDelegate {
+extension CheckoutViewController: ProductDetailTableViewCellDelegate {
     
-    func cartTableViewCell(_ editQuantity: EditQuantity, _ productItemId: productItemId) {
+    func productDetailTableViewCell(_ editQuantity: EditQuantity, _ productItemId: productItemId) {
         let productItem = ProductList.shared.getItem(with: productItemId)
         Cart.shared.changeQuantity(for: productItem, editQuantity)
         tableView.reloadData()

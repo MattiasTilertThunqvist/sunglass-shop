@@ -1,5 +1,5 @@
 //
-//  CartTableViewCell.swift
+//  ProductDetailTableViewCell.swift
 //  sunglass-shop
 //
 //  Created by Mattias Tilert Thunqvist on 2020-03-09.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CartTableViewCell: UITableViewCell {
+class ProductDetailTableViewCell: UITableViewCell {
     
     // MARK: Properties
     
-    static let cellIdentifier = "CartTableViewCell"
+    static let cellIdentifier = "ProductDetailTableViewCell"
     var productItemId: String!
-    weak var cartTableViewCellDelegate: CartTableViewCellDelegate!
+    weak var productDetailTableViewCellDelegate: ProductDetailTableViewCellDelegate!
     
     // MARK: IBOutlets
     
@@ -31,15 +31,15 @@ class CartTableViewCell: UITableViewCell {
     // MARK:IBActions
     
     @IBAction private func didTapRemoveButton(_ sender: UIButton) {
-        cartTableViewCellDelegate.cartTableViewCell(.remove, productItemId)
+        productDetailTableViewCellDelegate.productDetailTableViewCell(.remove, productItemId)
     }
     
     @IBAction private func didTapIncreaseButton(_ sender: MiniButton) {
-        cartTableViewCellDelegate.cartTableViewCell(.increaseQuantity, productItemId)
+        productDetailTableViewCellDelegate.productDetailTableViewCell(.increaseQuantity, productItemId)
     }
     
     @IBAction private func didTapDecreaseButton(_ sender: MiniButton) {
-        cartTableViewCellDelegate.cartTableViewCell(.decreaseQuantity, productItemId)
+        productDetailTableViewCellDelegate.productDetailTableViewCell(.decreaseQuantity, productItemId)
     }
     
     // MARK: Lifecycle
@@ -91,6 +91,6 @@ enum EditQuantity {
     case increaseQuantity, decreaseQuantity, remove
 }
 
-protocol CartTableViewCellDelegate: AnyObject{
-    func cartTableViewCell(_ editQuantity: EditQuantity, _ productItemId: productItemId)
+protocol ProductDetailTableViewCellDelegate: AnyObject{
+    func productDetailTableViewCell(_ editQuantity: EditQuantity, _ productItemId: productItemId)
 }
