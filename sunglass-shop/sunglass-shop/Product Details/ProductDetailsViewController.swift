@@ -47,7 +47,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     private func setup() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-cart"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
         
         findInStoreButton.colorScheme = .blackOnTransparent        
         tryItOnButton.colorScheme = .whiteOnBlack

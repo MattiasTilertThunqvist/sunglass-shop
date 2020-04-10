@@ -34,8 +34,8 @@ class ProductOverviewViewController: UIViewController {
         let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
         navigationItem.leftBarButtonItem = storesButton
     
-        let ordersButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleOrdersButtonPress))
-        let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-bag"), style: .plain, target: self, action: #selector(handleCartButtonPress))
+        let ordersButton = UIBarButtonItem(image: #imageLiteral(resourceName: "orders"), style: .plain, target: self, action: #selector(handleOrdersButtonPress))
+        let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-cart"), style: .plain, target: self, action: #selector(handleCartButtonPress))
         navigationItem.rightBarButtonItems = [cartButton, ordersButton]
     }
     
