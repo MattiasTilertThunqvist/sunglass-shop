@@ -57,7 +57,7 @@ extension OrdersViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 115
         
@@ -78,7 +78,7 @@ extension OrdersViewController {
     }
 }
 
-extension OrdersViewController: UITableViewDataSource {
+extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Header
 
@@ -130,8 +130,3 @@ extension OrdersViewController: UITableViewDataSource {
         return cell
     }
 }
-
-extension OrdersViewController: UITableViewDelegate {
-     
-}
-

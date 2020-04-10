@@ -199,6 +199,7 @@ class NetworkManager {
                 orders.append(order)
             }
             
+            orders.sort(by: { $0.date > $1.date })
             handler(orders, nil)
         }
     }
