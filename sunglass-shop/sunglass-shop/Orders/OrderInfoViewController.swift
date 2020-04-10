@@ -12,7 +12,7 @@ class OrderInfoViewController: UIViewController {
     
     // MARK: Properties
     
-    var user: User?
+    private var user: User?
     
     // MARK: IBOutlets
     
@@ -25,10 +25,36 @@ class OrderInfoViewController: UIViewController {
     @IBOutlet private weak var postCodeLabel: LargeTextLabel!
     @IBOutlet private weak var countryLabel: LargeTextLabel!
     
+    // MARK: IBActions
+    
+    @IBAction func didTapDismissButton(_ sender: DismissRoundButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        view.isHidden = true
+    }
+    
+    private func setup() {
+        NetworkManager.shared.getUser { (user, error) in
+            if let error = error {
+                let alert = UIAlertController(title: "No user found", message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.user = user
+                self.setUserContent()
+                self.view.isHidden = false
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +62,7 @@ class OrderInfoViewController: UIViewController {
         calculatePreferredSize()
     }
     
-    private func setupUserContent() {
+    private func setUserContent() {
         guard let user = user else { return }
         
         self.nameLabel.text = user.name
