@@ -49,7 +49,7 @@ class ProductDetailsViewController: UIViewController {
     private func setup() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-cart"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
         
-        findInStoreButton.colorScheme = .blackOnTransparent        
+        findInStoreButton.colorScheme = .blackOnTransparent
         tryItOnButton.colorScheme = .whiteOnBlack
         addToCartButton.colorScheme = .goldOnBlack
         
@@ -63,16 +63,19 @@ class ProductDetailsViewController: UIViewController {
     
     @objc private func handleGoToCartButtonPress() {
         let viewController = StoryboardInstance.checkoutViewController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func handleFindInStoreButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func handleTryItOnButtonPress() {
         let viewController = StoryboardInstance.tryProductViewController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

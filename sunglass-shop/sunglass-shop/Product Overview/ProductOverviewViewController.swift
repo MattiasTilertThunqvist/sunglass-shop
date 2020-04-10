@@ -33,7 +33,7 @@ class ProductOverviewViewController: UIViewController {
         
         let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
         navigationItem.leftBarButtonItem = storesButton
-    
+        
         let ordersButton = UIBarButtonItem(image: #imageLiteral(resourceName: "orders"), style: .plain, target: self, action: #selector(handleOrdersButtonPress))
         let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-cart"), style: .plain, target: self, action: #selector(handleCartButtonPress))
         navigationItem.rightBarButtonItems = [cartButton, ordersButton]
@@ -58,6 +58,7 @@ class ProductOverviewViewController: UIViewController {
     
     @objc private func handleStoresButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -68,6 +69,7 @@ class ProductOverviewViewController: UIViewController {
     
     @objc private func handleCartButtonPress() {
         let viewController = StoryboardInstance.checkoutViewController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -94,6 +96,7 @@ extension ProductOverviewViewController {
         let selectedProductItem = ProductList.shared.itemAtIndex(indexPath.row)
         let viewController = StoryboardInstance.productDetailsViewController()
         viewController.productItem = selectedProductItem
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
