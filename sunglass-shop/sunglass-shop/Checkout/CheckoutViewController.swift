@@ -95,7 +95,7 @@ class CheckoutViewController: UIViewController {
     
     // MARK: Helpers
     
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc private func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else { return }
         guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardFrame = keyboardSize.cgRectValue
@@ -103,7 +103,7 @@ class CheckoutViewController: UIViewController {
         scrollView.contentInset.bottom = keyboardFrame.height
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc private func keyboardWillHide(notification: NSNotification) {
         scrollView.contentInset.bottom = 0
     }
     

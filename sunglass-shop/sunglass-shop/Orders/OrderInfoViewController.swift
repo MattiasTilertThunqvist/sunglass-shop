@@ -12,16 +12,10 @@ class OrderInfoViewController: UIViewController {
     
     // MARK: Properties
     
-    var user: User? {
-        didSet {
-            setupUserContent()
-        }
-    }
+    var user: User?
     
     // MARK: IBOutlets
     
-    @IBOutlet private weak var orderIdLabel: LargeTextLabel!
-    @IBOutlet private weak var orderDateLabel: LargeTextLabel!
     @IBOutlet private weak var nameLabel: LargeTextLabel!
     @IBOutlet private weak var emailLabel: LargeTextLabel!
     @IBOutlet private weak var phoneNumberLabel: LargeTextLabel!
@@ -35,18 +29,11 @@ class OrderInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         calculatePreferredSize()
-    }
-    
-    private func setup() {
-        self.orderIdLabel.text = ""
-        self.orderDateLabel.text = ""
-        
     }
     
     private func setupUserContent() {

@@ -76,47 +76,13 @@
         <!--Order Info View Controller-->
         <scene sceneID="D2E-32-9vT">
             <objects>
-                <viewController id="Qts-RK-xN2" customClass="OrderInfoViewController" customModule="sunglass_shop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderInfoViewController" id="Qts-RK-xN2" customClass="OrderInfoViewController" customModule="sunglass_shop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y29-Q2-iwr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-RT-jnR">
-                                <rect key="frame" x="16" y="16" width="382" height="20.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order id " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ5-Tk-3n9" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="243" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345678234567" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa6-O6-M79" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                        <rect key="frame" x="243" y="0.0" width="139" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGJ-RU-801">
-                                <rect key="frame" x="16" y="44.5" width="382" height="20.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-b2-b2k" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="284.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020-04-06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-VM-y2M" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
-                                        <rect key="frame" x="284.5" y="0.0" width="97.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugX-cP-2Vx">
-                                <rect key="frame" x="16" y="73" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="76" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT6-Um-3on" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="201" height="20.5"/>
@@ -133,7 +99,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-6P-39P">
-                                <rect key="frame" x="16" y="101.5" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="104.5" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18f-Ka-hNu" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="237.5" height="20.5"/>
@@ -150,7 +116,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-sO-U1d">
-                                <rect key="frame" x="16" y="130" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="133" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnP-vt-Eat" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="272" height="20.5"/>
@@ -167,7 +133,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W6z-aj-rEa">
-                                <rect key="frame" x="16" y="158.5" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="161.5" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWE-oT-Lr4" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="277.5" height="20.5"/>
@@ -184,7 +150,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6PA-jy-3i9">
-                                <rect key="frame" x="16" y="187" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="190" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Optional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfZ-YK-xCq" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="274.5" height="20.5"/>
@@ -201,7 +167,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2QN-oi-cKz">
-                                <rect key="frame" x="16" y="215.5" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="218.5" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-fz-f90" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="20.5"/>
@@ -218,7 +184,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="838-Yz-MkZ">
-                                <rect key="frame" x="16" y="244" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="247" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lU-E1-L3X" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="309.5" height="20.5"/>
@@ -235,7 +201,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oMK-vH-CN6">
-                                <rect key="frame" x="16" y="272.5" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="275.5" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-Yc-CaB" customClass="LargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250.5" height="20.5"/>
@@ -255,13 +221,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6PA-jy-3i9" firstAttribute="top" secondItem="W6z-aj-rEa" secondAttribute="bottom" constant="8" id="06h-hY-zp3"/>
-                            <constraint firstAttribute="trailing" secondItem="J0j-RT-jnR" secondAttribute="trailing" constant="16" id="0FW-yw-5mv"/>
                             <constraint firstAttribute="trailing" secondItem="W6z-aj-rEa" secondAttribute="trailing" constant="16" id="402-l2-sel"/>
                             <constraint firstItem="Yqo-6P-39P" firstAttribute="top" secondItem="ugX-cP-2Vx" secondAttribute="bottom" constant="8" id="5oL-BT-xC1"/>
                             <constraint firstAttribute="trailing" secondItem="ugX-cP-2Vx" secondAttribute="trailing" constant="16" id="5zO-aH-MLG"/>
                             <constraint firstItem="W6z-aj-rEa" firstAttribute="top" secondItem="SU6-sO-U1d" secondAttribute="bottom" constant="8" id="6Pq-w7-OPV"/>
                             <constraint firstItem="838-Yz-MkZ" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="6bg-SM-l8u"/>
-                            <constraint firstItem="zGJ-RU-801" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="7RG-LY-H6z"/>
                             <constraint firstItem="2QN-oi-cKz" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="Bfc-hs-sTC"/>
                             <constraint firstAttribute="trailing" secondItem="Yqo-6P-39P" secondAttribute="trailing" constant="16" id="E98-f1-prm"/>
                             <constraint firstItem="oMK-vH-CN6" firstAttribute="top" secondItem="838-Yz-MkZ" secondAttribute="bottom" constant="8" id="Ghq-GV-HgZ"/>
@@ -272,15 +236,11 @@
                             <constraint firstItem="SU6-sO-U1d" firstAttribute="top" secondItem="Yqo-6P-39P" secondAttribute="bottom" constant="8" id="Rv4-N4-g2H"/>
                             <constraint firstItem="SU6-sO-U1d" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="Sgn-fh-h1w"/>
                             <constraint firstItem="oMK-vH-CN6" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="TXp-3s-6f8"/>
-                            <constraint firstAttribute="trailing" secondItem="zGJ-RU-801" secondAttribute="trailing" constant="16" id="W3W-r5-6bd"/>
-                            <constraint firstItem="J0j-RT-jnR" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="Wtr-c3-mq6"/>
                             <constraint firstAttribute="trailing" secondItem="oMK-vH-CN6" secondAttribute="trailing" constant="16" id="di8-1M-2AW"/>
-                            <constraint firstItem="zGJ-RU-801" firstAttribute="top" secondItem="J0j-RT-jnR" secondAttribute="bottom" constant="8" id="dvh-ms-LnY"/>
                             <constraint firstAttribute="trailing" secondItem="6PA-jy-3i9" secondAttribute="trailing" constant="16" id="e9q-LP-wsW"/>
-                            <constraint firstItem="J0j-RT-jnR" firstAttribute="top" secondItem="y29-Q2-iwr" secondAttribute="top" constant="16" id="hDa-YC-8tq"/>
                             <constraint firstItem="Yqo-6P-39P" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="hXV-PA-DGv"/>
                             <constraint firstItem="ugX-cP-2Vx" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="onp-Sm-bQ8"/>
-                            <constraint firstItem="ugX-cP-2Vx" firstAttribute="top" secondItem="zGJ-RU-801" secondAttribute="bottom" constant="8" id="qYC-c9-Ex9"/>
+                            <constraint firstItem="ugX-cP-2Vx" firstAttribute="top" secondItem="Xga-i6-WyX" secondAttribute="top" constant="32" id="pIa-fb-UAh"/>
                             <constraint firstItem="6PA-jy-3i9" firstAttribute="leading" secondItem="y29-Q2-iwr" secondAttribute="leading" constant="16" id="r6F-Gn-pGb"/>
                             <constraint firstAttribute="trailing" secondItem="SU6-sO-U1d" secondAttribute="trailing" constant="16" id="xFX-mA-uOT"/>
                             <constraint firstAttribute="trailing" secondItem="838-Yz-MkZ" secondAttribute="trailing" constant="16" id="yVm-dJ-raD"/>
@@ -294,8 +254,6 @@
                         <outlet property="emailLabel" destination="Egb-J4-OgE" id="ZXx-1T-OHj"/>
                         <outlet property="nameLabel" destination="Vge-ps-Epk" id="vTq-iB-0oz"/>
                         <outlet property="optionalLabel" destination="Xjh-q3-YfH" id="ETs-jU-dVk"/>
-                        <outlet property="orderDateLabel" destination="Axd-VM-y2M" id="DNH-mM-Dhw"/>
-                        <outlet property="orderIdLabel" destination="qa6-O6-M79" id="Hun-Fc-fbJ"/>
                         <outlet property="phoneNumberLabel" destination="kTZ-4o-Sia" id="4sb-MD-tYr"/>
                         <outlet property="postCodeLabel" destination="nIm-TS-3Vu" id="ZGe-0k-xq9"/>
                     </connections>

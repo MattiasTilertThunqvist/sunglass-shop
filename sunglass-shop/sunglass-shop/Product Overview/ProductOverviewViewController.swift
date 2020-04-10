@@ -61,7 +61,7 @@ class ProductOverviewViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    @objc private func handleOrdersButtonPress() {
+    @objc private func handleOrdersButtonPress() {
         let viewController = StoryboardInstance.ordersViewController()
         present(viewController, animated: true, completion: nil)
     }

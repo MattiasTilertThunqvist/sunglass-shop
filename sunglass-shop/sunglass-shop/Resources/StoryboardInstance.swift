@@ -45,4 +45,8 @@ final class StoryboardInstance {
     static func ordersViewController() -> OrdersViewController {
         return ordersStoryboard.instantiateViewController(identifier: "OrdersViewController") as! OrdersViewController
     }
+    
+    static func orderInfoViewController() -> OrderInfoViewController {
+        return ordersStoryboard.instantiateViewController(identifier: "OrderInfoViewController") as! OrderInfoViewController
+    }
 }

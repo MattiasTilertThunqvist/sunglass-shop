@@ -84,12 +84,19 @@ extension OrdersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerIdentifier) as! OrderDetailsHeaderFooterView
-        let order = orders[section]
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapHeaderInSection))
+        headerView.addGestureRecognizer(tapGesture)
         
+        let order = orders[section]
         headerView.setOrderId(to: order.id)
         headerView.setOrderDateLabel(to: order.date)
         headerView.setGrandTotalLabel(to: order.totalOrderValue())
         return headerView
+    }
+    
+    @objc private func didTapHeaderInSection() {
+        let viewController = StoryboardInstance.orderInfoViewController()
+        present(viewController, animated: true, completion: nil)
     }
     
     // MARK: Footer
