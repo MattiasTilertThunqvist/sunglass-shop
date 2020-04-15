@@ -21,7 +21,6 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak private var productTitleLabel: LargeTextLabel!
     @IBOutlet weak private var priceLabel: MediumTextLabel!
     @IBOutlet weak private var findInStoreButton: SmallButton!
-    @IBOutlet weak private var tryItOnButton: SmallButton!
     @IBOutlet weak private var productDescriptionLabel: MediumTextLabel!
     @IBOutlet weak private var addToCartButton: LargeButton!
     
@@ -29,10 +28,6 @@ class ProductDetailsViewController: UIViewController {
     
     @IBAction private func didTapFindInStoreButton(_ sender: SmallButton) {
         handleFindInStoreButtonPress()
-    }
-    
-    @IBAction private func didTapTryItOnButton(_ sender: SmallButton) {
-        handleTryItOnButtonPress()
     }
     
     @IBAction private func didTapAddToCartButton(_ sender: LargeButton) {
@@ -50,7 +45,6 @@ class ProductDetailsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shopping-cart"), style: .plain, target: self, action: #selector(handleGoToCartButtonPress))
         
         findInStoreButton.colorScheme = .blackOnTransparent
-        tryItOnButton.colorScheme = .whiteOnBlack
         addToCartButton.colorScheme = .goldOnBlack
         
         productImageView.setImage(from: productItem.imageUrlString)
@@ -69,12 +63,6 @@ class ProductDetailsViewController: UIViewController {
     
     private func handleFindInStoreButtonPress() {
         let viewController = StoryboardInstance.storesOnMapViewController()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    private func handleTryItOnButtonPress() {
-        let viewController = StoryboardInstance.tryProductViewController()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }

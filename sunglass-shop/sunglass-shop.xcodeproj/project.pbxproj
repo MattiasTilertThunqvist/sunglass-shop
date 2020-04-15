@@ -20,8 +20,6 @@
 		8A62D4F3240FD1F90054D059 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4F2240FD1F90054D059 /* LargeButton.swift */; };
 		8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A62D4F7240FDA580054D059 /* Stores.storyboard */; };
 		8A62D4FA240FDA790054D059 /* StoresOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4F9240FDA790054D059 /* StoresOnMapViewController.swift */; };
-		8A62D4FC240FDD9F0054D059 /* TryProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A62D4FB240FDD9F0054D059 /* TryProduct.storyboard */; };
-		8A62D4FE240FDDB50054D059 /* TryProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A62D4FD240FDDB50054D059 /* TryProductViewController.swift */; };
 		8A65657C2428EEF800B4E8F6 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65657B2428EEF800B4E8F6 /* Cart.swift */; };
 		8A65657E2429020D00B4E8F6 /* ExtraLargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65657D2429020D00B4E8F6 /* ExtraLargeTextLabel.swift */; };
 		8A65D976240D2D3200364FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65D975240D2D3200364FDF /* AppDelegate.swift */; };
@@ -95,8 +93,6 @@
 		8A62D4F2240FD1F90054D059 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		8A62D4F7240FDA580054D059 /* Stores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stores.storyboard; sourceTree = "<group>"; };
 		8A62D4F9240FDA790054D059 /* StoresOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresOnMapViewController.swift; sourceTree = "<group>"; };
-		8A62D4FB240FDD9F0054D059 /* TryProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryProduct.storyboard; sourceTree = "<group>"; };
-		8A62D4FD240FDDB50054D059 /* TryProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryProductViewController.swift; sourceTree = "<group>"; };
 		8A65657B2428EEF800B4E8F6 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		8A65657D2429020D00B4E8F6 /* ExtraLargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeTextLabel.swift; sourceTree = "<group>"; };
 		8A65D972240D2D3200364FDF /* sunglass-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sunglass-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,15 +202,6 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
-		8A62D4F5240FD98D0054D059 /* Try Product */ = {
-			isa = PBXGroup;
-			children = (
-				8A62D4FB240FDD9F0054D059 /* TryProduct.storyboard */,
-				8A62D4FD240FDDB50054D059 /* TryProductViewController.swift */,
-			);
-			path = "Try Product";
-			sourceTree = "<group>";
-		};
 		8A65D969240D2D3200364FDF = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +231,6 @@
 				8A65D9A5240D335600364FDF /* Product Overview */,
 				8A65D9BB240D801D00364FDF /* Product Details */,
 				8A62D4F4240FD92D0054D059 /* Stores */,
-				8A62D4F5240FD98D0054D059 /* Try Product */,
 				8A27F3F0241934E500892A95 /* Checkout */,
 				8ABD5564241A32E00041B143 /* Orders */,
 				8A65D9A6240D336F00364FDF /* Models */,
@@ -597,7 +583,6 @@
 				8ABD5566241A330E0041B143 /* Orders.storyboard in Resources */,
 				8A62D4F8240FDA580054D059 /* Stores.storyboard in Resources */,
 				8AB03150243F13FE00BCD3BA /* OrderDetailsHeaderFooterView.xib in Resources */,
-				8A62D4FC240FDD9F0054D059 /* TryProduct.storyboard in Resources */,
 				8A699D61241FB01900CBBFF7 /* PromoCollectionViewCell.xib in Resources */,
 				8A65D97F240D2D3600364FDF /* Assets.xcassets in Resources */,
 				8A65D97D240D2D3200364FDF /* ProductOverview.storyboard in Resources */,
@@ -717,7 +702,6 @@
 			files = (
 				8A47BA752417FC97002EA40D /* MiniButton.swift in Sources */,
 				8ABA19EF242D2865009F91F4 /* NetworkError.swift in Sources */,
-				8A62D4FE240FDDB50054D059 /* TryProductViewController.swift in Sources */,
 				8A65D97A240D2D3200364FDF /* ProductOverviewViewController.swift in Sources */,
 				8A65657C2428EEF800B4E8F6 /* Cart.swift in Sources */,
 				8A699D60241FB01900CBBFF7 /* PromoCollectionViewCell.swift in Sources */,

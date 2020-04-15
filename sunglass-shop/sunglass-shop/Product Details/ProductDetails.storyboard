@@ -52,25 +52,13 @@
                                                     <constraint firstAttribute="height" constant="1" id="a7q-pZ-lhR"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BqT-Lk-4aO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-Mf-lZi" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="339" width="382" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-Mf-lZi" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
-                                                        <state key="normal" title="FIND IN STORE"/>
-                                                        <connections>
-                                                            <action selector="didTapFindInStoreButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-21-VnX" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
-                                                        <rect key="frame" x="199" y="0.0" width="183" height="30"/>
-                                                        <state key="normal" title="TRY THEM ON"/>
-                                                        <connections>
-                                                            <action selector="didTapTryItOnButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="qu2-cz-5JT"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                                <state key="normal" title="FIND IN STORE"/>
+                                                <connections>
+                                                    <action selector="didTapFindInStoreButton:" destination="uHH-WP-KqQ" eventType="touchUpInside" id="ngi-mV-DOx"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z31-5T-5hv" customClass="BorderView" customModule="sunglass_shop" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="385" width="382" height="1"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -94,7 +82,6 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="z31-5T-5hv" firstAttribute="top" secondItem="BqT-Lk-4aO" secondAttribute="bottom" constant="16" id="6hY-SS-3uy"/>
                                             <constraint firstAttribute="trailing" secondItem="goh-DE-uMZ" secondAttribute="trailing" constant="16" id="9Gg-dY-DGE"/>
                                             <constraint firstItem="z31-5T-5hv" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="B9N-JU-qPe"/>
                                             <constraint firstItem="goh-DE-uMZ" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="BUN-GD-YoY"/>
@@ -102,13 +89,14 @@
                                             <constraint firstItem="PdE-kS-ULb" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="Djy-3F-Wem"/>
                                             <constraint firstItem="vST-3m-q4b" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="End-bc-vWJ"/>
                                             <constraint firstAttribute="trailing" secondItem="Xdc-md-Dhr" secondAttribute="trailing" constant="16" id="F8f-Bu-oeJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="BqT-Lk-4aO" secondAttribute="trailing" constant="16" id="Faq-kB-Xd8"/>
                                             <constraint firstItem="M4h-Sz-jgm" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="OVq-SP-x0L"/>
                                             <constraint firstItem="Amt-o3-yAG" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="On0-UT-qv1"/>
-                                            <constraint firstItem="BqT-Lk-4aO" firstAttribute="top" secondItem="Xdc-md-Dhr" secondAttribute="bottom" constant="16" id="P1j-uG-m6m"/>
                                             <constraint firstItem="Xdc-md-Dhr" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="R2g-1N-iub"/>
                                             <constraint firstItem="Xdc-md-Dhr" firstAttribute="top" secondItem="goh-DE-uMZ" secondAttribute="bottom" constant="16" id="Rh0-ZJ-Cr9"/>
+                                            <constraint firstItem="vOG-Mf-lZi" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="SBI-Zr-olX"/>
+                                            <constraint firstAttribute="trailing" secondItem="vOG-Mf-lZi" secondAttribute="trailing" constant="16" id="Sd7-np-2QB"/>
                                             <constraint firstItem="PdE-kS-ULb" firstAttribute="top" secondItem="vST-3m-q4b" secondAttribute="bottom" constant="16" id="Sfo-fL-VqF"/>
+                                            <constraint firstItem="z31-5T-5hv" firstAttribute="top" secondItem="vOG-Mf-lZi" secondAttribute="bottom" constant="16" id="TrH-RB-3Ii"/>
                                             <constraint firstAttribute="trailing" secondItem="vST-3m-q4b" secondAttribute="trailing" constant="16" id="c9K-pP-o9e"/>
                                             <constraint firstAttribute="trailing" secondItem="PdE-kS-ULb" secondAttribute="trailing" constant="16" id="f7X-tC-5Kj"/>
                                             <constraint firstAttribute="bottom" secondItem="Amt-o3-yAG" secondAttribute="bottom" constant="16" id="fYR-Zp-Avi"/>
@@ -117,10 +105,10 @@
                                             <constraint firstItem="vST-3m-q4b" firstAttribute="top" secondItem="M4h-Sz-jgm" secondAttribute="bottom" constant="8" id="nvY-DM-JTv"/>
                                             <constraint firstItem="hFT-ro-zzp" firstAttribute="top" secondItem="z31-5T-5hv" secondAttribute="bottom" constant="16" id="o6t-u0-yMn"/>
                                             <constraint firstItem="M4h-Sz-jgm" firstAttribute="top" secondItem="g3Z-ri-KsI" secondAttribute="top" constant="24" id="oUM-2M-jA4"/>
-                                            <constraint firstItem="BqT-Lk-4aO" firstAttribute="leading" secondItem="g3Z-ri-KsI" secondAttribute="leading" constant="16" id="pNb-Ye-Mqa"/>
                                             <constraint firstItem="Amt-o3-yAG" firstAttribute="top" secondItem="hFT-ro-zzp" secondAttribute="bottom" constant="8" id="qWW-ok-zaP"/>
                                             <constraint firstAttribute="trailing" secondItem="Amt-o3-yAG" secondAttribute="trailing" constant="16" id="u7B-m6-mXj"/>
                                             <constraint firstAttribute="trailing" secondItem="M4h-Sz-jgm" secondAttribute="trailing" constant="16" id="uXq-D9-iCy"/>
+                                            <constraint firstItem="vOG-Mf-lZi" firstAttribute="top" secondItem="Xdc-md-Dhr" secondAttribute="bottom" constant="16" id="wJI-je-IMm"/>
                                             <constraint firstItem="goh-DE-uMZ" firstAttribute="top" secondItem="PdE-kS-ULb" secondAttribute="bottom" constant="16" id="zFv-CA-njo"/>
                                         </constraints>
                                     </view>
@@ -162,7 +150,6 @@
                         <outlet property="productDescriptionLabel" destination="Amt-o3-yAG" id="UOf-2M-jXk"/>
                         <outlet property="productImageView" destination="M4h-Sz-jgm" id="rbl-1E-W1k"/>
                         <outlet property="productTitleLabel" destination="vST-3m-q4b" id="cxw-o4-LoR"/>
-                        <outlet property="tryItOnButton" destination="wvZ-21-VnX" id="fzo-jN-btS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TY8-hw-Jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

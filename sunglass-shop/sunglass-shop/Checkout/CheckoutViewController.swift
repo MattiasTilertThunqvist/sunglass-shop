@@ -88,7 +88,9 @@ class CheckoutViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             } else {
                 let viewController = StoryboardInstance.ordersViewController()
-                self.present(viewController, animated: true, completion: nil)
+                self.present(viewController, animated: true) {
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
             }
         }
     }
