@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PromoCollectionViewCell" customModule="sunglass_shop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-me-yPq" customClass="CustomImageView" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The perfect sidekick for sunny occasions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtl-Ww-Szd" customClass="ExtraLargeTextLabel" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="32" y="32" width="336" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZV-1e-iTK" customClass="SmallButton" customModule="sunglass_shop" customModuleProvider="target">
+                        <rect key="frame" x="167" y="338" width="66" height="30"/>
+                        <state key="normal" title="EXPLORE"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YZV-1e-iTK" secondAttribute="bottom" constant="32" id="2zu-2H-HSB"/>
+                <constraint firstAttribute="trailing" secondItem="sFP-me-yPq" secondAttribute="trailing" id="34t-k9-V5b"/>
+                <constraint firstItem="xtl-Ww-Szd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="32" id="38p-4A-dsb"/>
+                <constraint firstItem="sFP-me-yPq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OJt-jt-Bae"/>
+                <constraint firstAttribute="bottom" secondItem="sFP-me-yPq" secondAttribute="bottom" id="Zfg-SL-S4Y"/>
+                <constraint firstItem="sFP-me-yPq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ou0-Dt-Pgd"/>
+                <constraint firstItem="xtl-Ww-Szd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="t48-9c-CMA"/>
+                <constraint firstItem="YZV-1e-iTK" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="vc1-oD-Huk"/>
+                <constraint firstAttribute="trailing" secondItem="xtl-Ww-Szd" secondAttribute="trailing" constant="32" id="xDa-N8-wWP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="275" height="123"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="sFP-me-yPq" id="6y8-da-Zvy"/>
+                <outlet property="exploreButton" destination="YZV-1e-iTK" id="PU5-rc-WzT"/>
+                <outlet property="titleLabel" destination="xtl-Ww-Szd" id="zZG-is-9Tk"/>
+            </connections>
+            <point key="canvasLocation" x="298.55072463768118" y="127.90178571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -6,7 +6,11 @@ target 'sunglass-shop' do
   use_frameworks!
 
   # Pods for sunglass-shop
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore', '6.10.0' 
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Storage'
+  
   target 'sunglass-shopTests' do
     inherit! :search_paths
     # Pods for testing

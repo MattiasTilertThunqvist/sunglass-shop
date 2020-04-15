@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        styleNavigationBar()
         return true
     }
 
@@ -32,6 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    // MARK: Setup
+    
+    private func styleNavigationBar() {
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.barTintColor = .sunglassBlack
+        navigationBarAppearace.titleTextAttributes = [.foregroundColor : UIColor.white,
+                                                    NSAttributedString.Key.font: UIFont.sunglassRegularFont(.extraLarge)]
+        navigationBarAppearace.tintColor = .white
+        navigationBarAppearace.isTranslucent = false
+        navigationBarAppearace.barStyle = .black
+    }
 }
 
