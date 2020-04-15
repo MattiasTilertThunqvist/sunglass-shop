@@ -9,7 +9,8 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import FirebaseStorage  
+import FirebaseStorage
+import CoreLocation
 
 public let mockedUserID = "00M0L90EHwQaBaCMgXJ0isRhu7i2" // Mocked data, only for demo
 
@@ -21,6 +22,7 @@ class NetworkManager {
     static let storage = Storage.storage()
     private let productsRef = Firestore.firestore().collection("products")
     private let userRef = Firestore.firestore().collection("users")
+    private let storesRef = Firestore.firestore().collection("stores")
     
     // MARK: Init
     
@@ -178,6 +180,39 @@ class NetworkManager {
             
             orders.sort(by: { $0.date > $1.date })
             handler(orders, nil)
+        }
+    }
+    
+    func getStores(handler: @escaping ([Store], Error?) -> ()) {
+        storesRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Couldn't fetch stores: \(error)")
+                handler([], error)
+                return
+            }
+            
+            guard let querySnapshot = querySnapshot else {
+                print("No stores found")
+                handler([], NetworkError.noDocument)
+                return
+            }
+            
+            var stores = [Store]()
+            
+            for document in querySnapshot.documents {
+                let dictionairy = document.data()
+                guard let title = dictionairy["title"] as? String, let geoPoint = dictionairy["coordinates"] as? GeoPoint else {
+                    return
+                }
+                                
+                let latitude = CLLocationDegrees(geoPoint.latitude)
+                let longitude = CLLocationDegrees(geoPoint.longitude)
+                let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                let store = Store(title: title, coordinates: coordinates)
+                stores.append(store)
+            }
+            
+            handler(stores, nil)
         }
     }
 }

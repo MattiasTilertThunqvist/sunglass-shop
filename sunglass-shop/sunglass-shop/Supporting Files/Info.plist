@@ -60,5 +60,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is used to display the nearest store.</string>
 </dict>
 </plist>
