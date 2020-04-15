@@ -31,7 +31,6 @@ class OrderDetailsHeaderFooterView: UITableViewHeaderFooterView {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         orderDateLabel.text = dateFormatter.string(from: date)
-
     }
     
     func setTotalNrOfproduct(to value: Int) {

@@ -15,7 +15,7 @@ class StoresOnMapViewController: UIViewController {
     // MARK: Properties
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 50000
+    let regionInMeters: Double = 30000
     
     // MARK: IBOutlets
     
@@ -63,6 +63,8 @@ class StoresOnMapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             break
         case .restricted:
+            let errorAlert = UIAlertController(title: "Location service is not enabled", message: "", preferredStyle: .alert)
+            present(errorAlert, animated: true, completion: nil)
             break
         case .authorizedAlways:
             break
@@ -74,19 +76,19 @@ class StoresOnMapViewController: UIViewController {
 
 extension StoresOnMapViewController: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    // Update location when user moves
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        guard let location = locations.last else { return }
 //        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
 //        mapView.setRegion(region, animated: true)
-    }
+//    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
 }
 
-
-// MARK: Annotations
+// MARK: Store Annotations
 
 extension StoresOnMapViewController {
     
@@ -96,7 +98,7 @@ extension StoresOnMapViewController {
                 let errorAlert = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
                 self.present(errorAlert, animated: true, completion: nil)
             }
-            
+
             DispatchQueue.main.async {
                 self.layoutAnnotations(for: stores)
             }
@@ -109,9 +111,7 @@ extension StoresOnMapViewController {
         for store in stores {
             let annotation = MKPointAnnotation()
             annotation.title = store.title
-            print(annotation.title)
             annotation.coordinate = store.coordinates
-            print(store.coordinates)
             annotations.append(annotation)
         }
         

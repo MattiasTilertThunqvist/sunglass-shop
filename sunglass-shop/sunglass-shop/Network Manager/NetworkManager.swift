@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 import FirebaseStorage
 import CoreLocation
 
-public let mockedUserID = "00M0L90EHwQaBaCMgXJ0isRhu7i2" // Mocked data, only for demo
+public let mockedUserID = "00M0L90EHwQaBaCMgXJ0isRhu7i2" // Mocked data, only for demo purpose
 
 class NetworkManager {
     
@@ -87,9 +87,9 @@ class NetworkManager {
         }
         
         let orderData: [String:Any] = [
-            "id": order.id,
-            "date": order.date,
-            "items": items
+            "id" : order.id,
+            "date" : order.date,
+            "items" : items
         ]
         
         dispatchGroup.enter()

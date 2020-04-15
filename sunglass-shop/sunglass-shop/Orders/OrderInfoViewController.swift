@@ -31,7 +31,6 @@ class OrderInfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
