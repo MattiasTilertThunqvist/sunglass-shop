@@ -192,6 +192,7 @@
 				8A27F3F12419350100892A95 /* Checkout.storyboard */,
 				8A27F3F32419352100892A95 /* CheckoutViewController.swift */,
 				8A2DD5572435CF0500203459 /* CheckoutTextfieldsViewController.swift */,
+				8AB03152243F142500BCD3BA /* Product Detail Table View Cell */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -212,14 +213,6 @@
 				8A62D4FD240FDDB50054D059 /* TryProductViewController.swift */,
 			);
 			path = "Try Product";
-			sourceTree = "<group>";
-		};
-		8A62D4F6240FD9CD0054D059 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				8AB03152243F142500BCD3BA /* Cart Table View Cell */,
-			);
-			path = Cart;
 			sourceTree = "<group>";
 		};
 		8A65D969240D2D3200364FDF = {
@@ -252,7 +245,6 @@
 				8A65D9BB240D801D00364FDF /* Product Details */,
 				8A62D4F4240FD92D0054D059 /* Stores */,
 				8A62D4F5240FD98D0054D059 /* Try Product */,
-				8A62D4F6240FD9CD0054D059 /* Cart */,
 				8A27F3F0241934E500892A95 /* Checkout */,
 				8ABD5564241A32E00041B143 /* Orders */,
 				8A65D9A6240D336F00364FDF /* Models */,
@@ -376,13 +368,13 @@
 			path = "Order Details Header Table View Cell";
 			sourceTree = "<group>";
 		};
-		8AB03152243F142500BCD3BA /* Cart Table View Cell */ = {
+		8AB03152243F142500BCD3BA /* Product Detail Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
 				8AF2BD9E2416A0B500EE605C /* ProductDetailTableViewCell.xib */,
 				8AF2BD9D2416A0B500EE605C /* ProductDetailTableViewCell.swift */,
 			);
-			path = "Cart Table View Cell";
+			path = "Product Detail Table View Cell";
 			sourceTree = "<group>";
 		};
 		8AB03153243F143600BCD3BA /* Promo Collection View Cell */ = {

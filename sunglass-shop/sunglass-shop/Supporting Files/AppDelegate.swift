@@ -39,11 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func styleNavigationBar() {
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.barTintColor = .sunglassBlack
-        navigationBarAppearace.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navigationBarAppearace.titleTextAttributes = [.foregroundColor : UIColor.white,
+                                                    NSAttributedString.Key.font: UIFont.sunglassRegularFont(.extraLarge)]
         navigationBarAppearace.tintColor = .white
         navigationBarAppearace.isTranslucent = false
         navigationBarAppearace.barStyle = .black
     }
-
 }
 

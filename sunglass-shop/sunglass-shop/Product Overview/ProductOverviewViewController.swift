@@ -31,6 +31,8 @@ class ProductOverviewViewController: UIViewController {
     private func setup() {
         navigationItem.title = "Sunglasses"
         
+        
+        
         let storesButton = UIBarButtonItem(image: #imageLiteral(resourceName: "pin"), style: .plain, target: self, action: #selector(handleStoresButtonPress))
         navigationItem.leftBarButtonItem = storesButton
         
