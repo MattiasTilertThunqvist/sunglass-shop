@@ -87,6 +87,7 @@ class CheckoutViewController: UIViewController {
                 let alert = UIAlertController(title: "Couldn't place order", message: error.localizedDescription, preferredStyle: .alert)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                Cart.shared.removeAllItems()
                 let viewController = StoryboardInstance.ordersViewController()
                 self.present(viewController, animated: true) {
                     self.navigationController?.popToRootViewController(animated: true)
