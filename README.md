@@ -26,4 +26,5 @@
 ![Checkout](https://github.com/MattiasTilertThunqvist/sunglass-shop/blob/master/screenshots/checkout.png)
 ![Checkout User Info](https://github.com/MattiasTilertThunqvist/sunglass-shop/blob/master/screenshots/checkout_user_info.png)
 ![Order History](https://github.com/MattiasTilertThunqvist/sunglass-shop/blob/master/screenshots/order_history.png)
+![Order Info](https://github.com/MattiasTilertThunqvist/sunglass-shop/blob/master/screenshots/order_info.png)
 ![Stores](https://github.com/MattiasTilertThunqvist/sunglass-shop/blob/master/screenshots/stores.png)
