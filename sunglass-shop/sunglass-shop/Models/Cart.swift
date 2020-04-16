@@ -53,6 +53,10 @@ class Cart {
         }
     }
     
+    func removeAllItems() {
+        items.removeAll()
+    }
+    
     func remove(_ productItem: ProductItem) {
         items.removeAll(where: { $0.productItem.id == productItem.id })
     }
