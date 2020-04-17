@@ -15,7 +15,7 @@ class StoresOnMapViewController: UIViewController {
     // MARK: Properties
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 30000
+    let regionInMeters: Double = 1000
     
     // MARK: IBOutlets
     
